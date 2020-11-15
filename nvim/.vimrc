@@ -15,9 +15,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'shime/vim-livedown'
 Plugin 'junegunn/goyo.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'lervag/vimtex'
@@ -32,6 +30,7 @@ nnoremap S :%s//g<Left><Left>
 nmap <leader>g :Goyo<CR>
 map q <Nop>
 map Q <Nop>
+map <leader>a :%s/->/→/g<CR>
 map ,c :lcl<CR> :pc<CR> :cclose<CR>
 
 
@@ -39,7 +38,6 @@ map ,c :lcl<CR> :pc<CR> :cclose<CR>
 let g:goyo_width = "80%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
-
 
 let g:vimtex_compiler_enabled = 1
 let g:vimtex_compiler_progname = 'nvr'
@@ -52,11 +50,11 @@ set background=dark
 colorscheme default
 "imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 au BufNewFile,BufRead *.md
-    \ hi StatusLineNC ctermfg=white | 
+    \ hi StatusLineNC ctermfg=white |
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set nonu | 
+    \ set nonu |
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -73,11 +71,9 @@ set encoding=utf-8
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 hi StatusLine ctermbg=none cterm=bold
 
-" Livedown
-let g:livedown_browser = "qutebrowser"
-let g:livedown_autorun = 0
-let g:livedown_open = 1
-let g:livedown_port = 4242
+" Automatic commands
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
 
 " Custom commands
 command! Compile !pdflatex %:p|!biber file|!pdflatex %:p
