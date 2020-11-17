@@ -1,10 +1,10 @@
 #!/usr/bin/python
-# EASY-INSTALL-ENTRY-SCRIPT: 'python-slugify==4.0.1','console_scripts','slugify'
+# EASY-INSTALL-ENTRY-SCRIPT: 'notify-run==0.0.13','console_scripts','notify-run'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'python-slugify==4.0.1'
+__requires__ = 'notify-run==0.0.13'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('python-slugify==4.0.1', 'console_scripts', 'slugify')())
+    sys.exit(load_entry_point('notify-run==0.0.13', 'console_scripts', 'notify-run')())

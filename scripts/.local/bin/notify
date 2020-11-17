@@ -10,7 +10,6 @@ link = input('What link should the notification open?(leave blank for none): ')
 confirmation = input(f'Are you sure you want to send the following notification? \nMessage: {message} \nLink: {link} \n Type "confirm" to confirm or press ctrl+c to exit: ')
 
 if confirmation == "confirm" or confirmation == "Confirm":
-    os.system("pkexec --disable-internal-agent --user nico echo Password correct!")
     if link == None:
         notify.send(message)
     else:
