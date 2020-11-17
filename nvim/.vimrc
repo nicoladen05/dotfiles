@@ -35,7 +35,7 @@ map ,c :lcl<CR> :pc<CR> :cclose<CR>
 
 
 " Misc settings
-let g:goyo_width = "80%"
+let g:goyo_width = "70%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
 
