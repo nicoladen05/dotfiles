@@ -72,8 +72,8 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 hi StatusLine ctermbg=none cterm=bold
 
 " Automatic commands
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
 
 " Custom commands
-command! Compile !pdflatex %:p|!biber file|!pdflatex %:p
+command! Compile !md2pdf %:p
