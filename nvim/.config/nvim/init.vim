@@ -69,7 +69,7 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ map <F5> :!st python %:p
+    \ map <F5> :w<CR> :!st python %:p<CR>
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
