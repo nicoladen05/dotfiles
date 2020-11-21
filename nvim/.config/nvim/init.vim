@@ -12,7 +12,6 @@ set clipboard=unnamedplus
 set backspace=indent,eol,start
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
 set guicursor=i:ver100-iCursor
-set clipboard+=unnamedplus
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,6 +19,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'preservim/nerdtree'
 Plugin 'junegunn/goyo.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'lervag/vimtex'
@@ -31,6 +31,7 @@ let g:tex_flavor = "latex"
 
 " Mappings
 nnoremap S :%s//g<Left><Left>
+map <leader>n :NERDTreeToggle<CR>
 nmap <leader>g :Goyo<CR>
 map q <Nop>
 map Q <Nop>
@@ -42,6 +43,7 @@ map ,c :lcl<CR> :pc<CR> :cclose<CR>
 let g:goyo_width = "70%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
+let g:NERDTreeWinPos = "right"
 
 let g:vimtex_compiler_enabled = 1
 let g:vimtex_compiler_progname = 'nvr'

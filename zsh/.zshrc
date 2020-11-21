@@ -1,4 +1,4 @@
-# Add ~/.local/bin/ to $PATH
+# ~/.local/bin as $PATH
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -8,13 +8,10 @@ export ZSH="/home/nico/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="instantos"
-ZSH_TMUX_AUTOSTART=false
-ZSH_TMUX_AUTOSTART=false
-ZSH_TMUX_AUTOCONNECT=false
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME="instantos"
+# Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
@@ -27,7 +24,7 @@ ZSH_TMUX_AUTOCONNECT=false
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -71,8 +68,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases archlinux autojump instantos)
-[ -n "$DISPLAY" ] && plugins+=(tmux)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lupload='python3 -m md2notion bb4fc66b502b7027b87e7c42df243fa4fc6a043d0c6d853a1d1bbc24e0facd7fec92a2783079af92562af52f2a57a790a651ec9788aa5da55ae3c84df7e37cc22575da8f3826abb5be121047f0ca https://www.notion.so/baumig/Arbeiten-Themen-9ac2244a346e4bed8b9ce94442ecf01a'
-prompt_context() {}
-# fish like syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias v=nvim
+alias p="sudo pacman"

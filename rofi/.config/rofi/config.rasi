@@ -1,0 +1,12 @@
+configuration {
+	modi: "run,window,ssh";
+	font: "Monospace 10";
+	sidebar-mode: true;
+	combi-modi: "window,drun";
+	hide-scrollbar: true;
+	theme: "onedark";
+	kb-mode-next: "Alt+Right,Shift+Right,Control+Tab";
+	kb-mode-previous: "Alt+Left,Shift+Left,Control+ISO_Left_Tab";
+	kb-row-select: "";
+	kb-cancel: "Escape,Control+bracketleft";
+}
