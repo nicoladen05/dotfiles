@@ -6,9 +6,10 @@
 # Default behavior: Extract archive into new directory
 # Behavior with `-c` option: Extract contents into current directory
 
-while getopts "hc" o; do case "${o}" in
+while getopts "hck" o; do case "${o}" in
 	c) extracthere="True" ;;
-	*) printf "Options:\\n   -c: Extract archive into current directory rather than a new one.\\n" && exit 1 ;;
+	k) keepfile="True" ;;
+	*) printf "Options:\\n   -c: Extract archive into current directory rather than a new one.\\n	-k: Keep the original zip file.\\n" && exit 1 ;;
 esac done
 
 if [ -z "$extracthere" ]; then
@@ -39,6 +40,9 @@ if [ -f "$archive" ] ; then
 		*.exe) cabextract "$archive" ;;
 		*) printf "extract: '%s' - unknown archive method\\n" "$archive" ;;
 	esac
+	if [ -z "$keepfile" ]; then
+		rm -f $archive
+	fi
 else
 	printf "File \"%s\" not found.\\n" "$archive"
 fi
