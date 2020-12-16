@@ -31,12 +31,12 @@ let g:tex_flavor = "latex"
 
 " Mappings
 nnoremap S :%s//g<Left><Left>
-map <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>g :Goyo<CR>
 map q <Nop>
 map Q <Nop>
-map <leader>a :%s/->/→/g<CR>
-map ,c :w<CR> :Compile<CR>
+nmap <leader>a :%s/->/→/g<CR>
+nmap <leader>c :w<CR> :!Compile<CR>
 
 
 " Misc settings
