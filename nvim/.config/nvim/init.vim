@@ -36,7 +36,7 @@ nmap <leader>g :Goyo<CR>
 map q <Nop>
 map Q <Nop>
 map <leader>a :%s/->/→/g<CR>
-map ,c :lcl<CR> :pc<CR> :cclose<CR>
+map ,c :w<CR> :Compile<CR>
 
 
 " Misc settings
@@ -83,4 +83,4 @@ hi StatusLine ctermbg=none cterm=bold
 autocmd BufWritepre * %s/\n\+\%$//e
 
 " Custom commands
-command! Compile !md2pdf %:p
+command! Compile !compiler %:p

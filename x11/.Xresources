@@ -13,26 +13,26 @@
 /* purple	5	13 */
 /* cyan		6	14 */
 
-!Horizon
-*.background:  #1C1E27
-*.foreground:  #CACACC
-*.cursorColor: #CACACC
-*.color0:      #6C6F93
-*.color1:      #E4436F
-*.color2:      #24E39D
-*.color3:      #EDA685
-*.color4:      #00A5AF
-*.color5:      #B367CF
-*.color6:      #00A5AF
-*.color7:      #CACACC
-*.color8:      #6C6F93
-*.color9:      #E4436F
-*.color10:     #24E39D
-*.color11:     #EDA685
-*.color12:     #00A5AF
-*.color13:     #B367CF
-*.color14:     #00A5AF
-*.color15:     #CACACC* white	7	15 */
+/* !Horizon */
+/* *.background:  #1C1E27 */
+/* *.foreground:  #CACACC */
+/* *.cursorColor: #CACACC */
+/* *.color0:      #6C6F93 */
+/* *.color1:      #E4436F */
+/* *.color2:      #24E39D */
+/* *.color3:      #EDA685 */
+/* *.color4:      #00A5AF */
+/* *.color5:      #B367CF */
+/* *.color6:      #00A5AF */
+/* *.color7:      #CACACC */
+/* *.color8:      #6C6F93 */
+/* *.color9:      #E4436F */
+/* *.color10:     #24E39D */
+/* *.color11:     #EDA685 */
+/* *.color12:     #00A5AF */
+/* *.color13:     #B367CF */
+/* *.color14:     #00A5AF */
+/* *.color15:     #CACACC* white	7	15 */ */
 
 /* !! gruvbox: */
 /* *.color0: #1d2021 */
@@ -151,25 +151,25 @@
 /* *.color15:  #aabac8 */
 /* *.background:   #000000 */
 
-! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+/* ! Dracula Xresources palette */
+/* *.foreground: #F8F8F2 */
+/* *.background: #282A36 */
+/* *.color0:     #000000 */
+/* *.color8:     #4D4D4D */
+/* *.color1:     #FF5555 */
+/* *.color9:     #FF6E67 */
+/* *.color2:     #50FA7B */
+/* *.color10:    #5AF78E */
+/* *.color3:     #F1FA8C */
+/* *.color11:    #F4F99D */
+/* *.color4:     #BD93F9 */
+/* *.color12:    #CAA9FA */
+/* *.color5:     #FF79C6 */
+/* *.color13:    #FF92D0 */
+/* *.color6:     #8BE9FD */
+/* *.color14:    #9AEDFE */
+/* *.color7:     #BFBFBF */
+/* *.color15:    #E6E6E6 */
 
 /* *.background: .color0 */
 /* *.color256: 0#1d2021 */
