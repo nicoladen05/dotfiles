@@ -7,6 +7,8 @@ export TERMINAL=st
 export BROWSER=brave
 export EDITOR=nvim
 
-wal --backend haishoku -i ~/pix/wal/alena-aenami-wait.jpg
+#wal --backend haishoku -i ~/pix/wal/alena-aenami-wait.jpg
+wal -i ~/pix/wal/gentoolul.jpg
+picom &
 ~/.local/bin/remaps &
 unclutter -idle 3 &
