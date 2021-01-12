@@ -108,4 +108,5 @@ alias v=nvim
 alias p="sudo pacman"
 alias py=python
 alias gitsync="git add . && git commit -m "push" && git push"
+alias new="st &"
 alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
