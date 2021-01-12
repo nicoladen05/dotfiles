@@ -1,0 +1,12 @@
+#!/bin/sh
+
+filename="$(echo ${@} | tr -s ' ' | tr ' ' '_' | tr '[:upper:]' '[:lower:]').md"
+datecmd="\today{}"
+
+touch $filename
+
+echo -n "---\ntitle: ${@}\nauthor: Nicolas Hartmann\ndate:" >> $filename
+$datecmd >> $filename
+echo -n "lang de-DE\n---\n\n" >> $filename
+
+nvim $filename

@@ -40,7 +40,7 @@ nmap <leader>c :w<CR> :!Compile<CR>
 
 
 " Misc settings
-let g:goyo_width = "70%"
+let g:goyo_width = "60%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
 let g:NERDTreeWinPos = "right"
