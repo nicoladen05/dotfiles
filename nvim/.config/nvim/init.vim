@@ -8,7 +8,7 @@ set nocompatible
 set shell=bash
 set tw=0
 filetype off
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 set backspace=indent,eol,start
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
 set guicursor=i:ver100-iCursor
@@ -36,7 +36,10 @@ nmap <leader>g :Goyo<CR>
 map q <Nop>
 map Q <Nop>
 nmap <leader>a :%s/->/→/g<CR>
-nmap <leader>c :w<CR> :!Compile<CR>
+nmap <leader>c :w<CR> :Compile<CR>
+imap <c-u> \underline{}<Left>
+imap <c-b> ****<Left><Left>
+imap <c-i> **<Left>
 
 
 " Misc settings
@@ -61,6 +64,7 @@ au BufNewFile,BufRead *.md
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set nonu |
+    \ imap
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |

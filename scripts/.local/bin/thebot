@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+# coding: utf-8
+
+from __future__ import unicode_literals, absolute_import, print_function
+
+import thebot
+import sys
+import server_reloader
+
+from time import sleep
+
+bot = None
+
+
+def run_bot(*args):
+    global bot
+    bot = thebot.Bot(args)
+
+    while not bot.exiting:
+        sleep(1)
+
+    bot.close()
+
+
+def on_reload():
+    print('Reloading code…')
+    bot.close()
+
+
+def on_exit():
+    print('Exiting…')
+    bot.close()
+
+
+def main():
+    server_reloader.main(
+        run_bot,
+        args=tuple(sys.argv[1:]),
+        before_reload=on_reload,
+        before_exit=on_exit,
+        watch_on_files=False,
+    )
+
+
+if __name__ == '__main__':
+    main()
+
