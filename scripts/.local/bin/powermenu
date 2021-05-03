@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function powermenu {
+	options="cancel\nshutdown\nrestart\nsleep\nlock"
+	selected=$(echo -e $options | rofi -dmenu)
+	if [[ $selected = "shutdown" ]]; then
+		poweroff
+	elif [[ $selected = "restart" ]]; then
+		reboot
+	elif [[ $selected = "sleep" ]]; then
+		systemctl suspend
+	elif [[ $selected = "lock" ]]; then
+		/home/nico/.local/bin/i3lock-fancy-multimonitor/lock
+	elif [[ $selected = "cancel" ]]; then
+		return
+	fi
+}
+
+
+powermenu

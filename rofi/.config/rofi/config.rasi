@@ -4,7 +4,7 @@ configuration {
 	sidebar-mode: true;
 	combi-modi: "window,drun";
 	hide-scrollbar: true;
-	theme: "onedark";
+	theme: "slate";
 	kb-mode-next: "Alt+Right,Shift+Right,Control+Tab";
 	kb-mode-previous: "Alt+Left,Shift+Left,Control+ISO_Left_Tab";
 	kb-row-select: "";
