@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# This script is called on startup to remap keys.
+# Increase key speed via a rate change
+# Map the caps lock key to super...
+setxkbmap -option caps:5
+killall xcape 2>/dev/null ; xcape -e 'Super_L=5'
