@@ -50,7 +50,7 @@ bindsym Print exec /home/nico/.local/bin/maimpick
 # Shutdown menu
 bindsym $mod+BackSpace exec /home/nico/.local/bin/powermenu
 
-# Sticky windows
+# Sticky windows toggle
 bindsym $mod+Shift+f floating toggle, sticky toggle 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
