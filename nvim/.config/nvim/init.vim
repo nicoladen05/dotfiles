@@ -28,7 +28,6 @@ filetype plugin indent on
 let python_highlight_all=1
 let g:tex_flavor = "latex"
 
-
 " Mappings
 nnoremap S :%s//g<Left><Left>
 nmap <leader>n :NERDTreeToggle<CR>
@@ -37,9 +36,6 @@ map q <Nop>
 map Q <Nop>
 nmap <leader>a :%s/->/→/g<CR>
 nmap <leader>c :w<CR> :Compile<CR>
-imap <c-u> \underline{}<Left>
-imap <c-b> ****<Left><Left>
-imap <c-i> **<Left>
 
 
 " Misc settings
@@ -69,11 +65,10 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ map <F5> :w<CR> :!st python %:p<CR>
+    \ map <F5> :w<CR> :!alacritty -e python3 %:p<CR>
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
