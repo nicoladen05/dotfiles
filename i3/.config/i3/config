@@ -55,6 +55,9 @@ bindsym $mod+BackSpace exec /home/nico/.local/bin/powermenu
 # Sticky windows toggle
 bindsym $mod+Shift+f floating toggle, sticky toggle 
 
+# Alt+Tab menu
+exec --no-startup-id alttab -d 1 -theme Paper -bg '#1D1F21' -fg '#ffffff' -frame '#405642' -font xft:monospace
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
