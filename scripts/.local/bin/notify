@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from notify_run import Notify
 import os
 
