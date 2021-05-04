@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:monospace 8
 
 # Remove window title
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 new_window 1pixel
 
 # Set the gaps
@@ -42,7 +42,9 @@ exec unclutter --timeout 3 &
 exec dunst &
 
 # Change some colors
-client.focused_inactive #333333 #222222 #ffffff #484e50 #222222
+client.focused_inactive #333333 #1D1F21 #ffffff #1D1F21 #1D1F21
+client.focused #405642 #405642 #fdf6e3 #405642
+client.unfocused #1D1F21 #1D1F21 #93a1a1 #586e75
 
 # Screenshot key
 bindsym Print exec /home/nico/.local/bin/maimpick
