@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Jetbrains Mono 10
 
 # Remove window title
 for_window [class="^.*"] border pixel 3
@@ -30,7 +30,7 @@ bindsym $mod+y gaps inner all toggle 10; gaps outer all toggle 5
 exec xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --left-of DP-0 --rotate right --rate 75 --mode 1920x1080 &
 
 # Set the wallpaper
-exec feh --bg-center /home/nico/pix/wal/leaves.jpg &
+exec feh --bg-fill /home/nico/pix/wal/woods.jpg &
 
 # Set keyboard layout
 exec /home/nico/.local/bin/remaps
@@ -44,7 +44,7 @@ exec dunst &
 # Change some colors
 client.focused_inactive #333333 #1D1F21 #ffffff #1D1F21 #1D1F21
 client.focused #405642 #405642 #fdf6e3 #405642
-client.unfocused #1D1F21 #1D1F21 #93a1a1 #586e75
+client.unfocused #1D1F21 #1D1F21 #93a1a1 #1D1F21
 
 # Screenshot key
 bindsym Print exec /home/nico/.local/bin/maimpick
@@ -54,9 +54,6 @@ bindsym $mod+BackSpace exec /home/nico/.local/bin/powermenu
 
 # Sticky windows toggle
 bindsym $mod+Shift+f floating toggle, sticky toggle 
-
-# Alt+Tab menu
-exec --no-startup-id alttab -d 1 -theme Paper -bg '#1D1F21' -fg '#ffffff' -frame '#405642' -font xft:monospace
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -200,7 +197,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
 # resize window (you can also use the mouse for that)
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 

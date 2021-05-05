@@ -109,7 +109,8 @@ alias py=python
 alias gitsync="git add . && git commit -m "push" && git push"
 alias new="st &"
 alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
-alias pom="python ~/pomodoro/main.py"
+alias pom="python ~/dev/pomodoro/cli.py"
+alias o="setsid -f"
 
 # vi mode
 bindkey -v
