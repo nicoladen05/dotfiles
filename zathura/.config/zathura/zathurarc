@@ -13,9 +13,9 @@ map J zoom out
 map i recolor
 map p print
 
-set recolor   
-set recolor-lightcolor \#16181a
-set recolor-keephue
-set default-bg \#16181a
-set statusbar-bg                "#16181a"
-set inputbar-bg                 "#16181a"
+" set recolor   
+" set recolor-lightcolor \#16181a
+" set recolor-keephue
+" set default-bg \#16181a
+" set statusbar-bg                "#16181a"
+" set inputbar-bg                 "#16181a"

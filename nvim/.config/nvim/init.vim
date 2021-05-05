@@ -34,6 +34,10 @@ nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>g :Goyo<CR>
 nmap <leader>a :%s/->/→/g<CR>
 nmap <leader>c :w<CR> :Compile<CR>
+nmap j gj
+nmap k gk
+nmap J <down>
+nmap K <up>
 
 
 " Misc settings
