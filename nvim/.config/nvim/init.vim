@@ -8,7 +8,7 @@ set nocompatible
 set shell=bash
 set tw=0
 filetype off
-set clipboard=unnamed
+set clipboard=unnamedplus
 set backspace=indent,eol,start
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
 set guicursor=i:ver100-iCursor
@@ -32,8 +32,6 @@ let g:tex_flavor = "latex"
 nnoremap S :%s//g<Left><Left>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>g :Goyo<CR>
-map q <Nop>
-map Q <Nop>
 nmap <leader>a :%s/->/→/g<CR>
 nmap <leader>c :w<CR> :Compile<CR>
 
