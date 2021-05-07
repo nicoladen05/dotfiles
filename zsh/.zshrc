@@ -10,7 +10,7 @@ export ZSH="/home/nico/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="fwalch"
+ZSH_THEME="common"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,6 +111,7 @@ alias new="st &"
 alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
 alias pom="python ~/dev/pomodoro/cli.py"
 alias o="setsid -f"
+alias ls="exa"
 
 # vi mode
 bindkey -v
