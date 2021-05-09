@@ -109,7 +109,8 @@ alias py=python
 alias gitsync="git add . && git commit -m "push" && git push"
 alias new="st &"
 alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
-alias pom="python ~/dev/pomodoro/cli.py"
+alias pom="python ~/dev/pomodoro/main.py"
+alias lg="lazygit"
 alias o="setsid -f"
 alias ls="exa"
 
@@ -132,3 +133,15 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
