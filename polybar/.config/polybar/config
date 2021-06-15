@@ -1,0 +1,62 @@
+[colors]
+foreground = ${xrdb:color7:#222}
+background = ${xrdb:color0:#222}
+urgent     = ${xrdb:color2:#222}
+focused    = ${xrdb:color6:#222}
+faded      = ${xrdb:color3:#222}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[bar/bar]
+width               = 66%
+height              = 35
+offset-x            = 17%
+offset-y            = 10
+fixed-center        = true
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+padding-left        = 4
+padding-right       = 4
+font-0              = Terminus:pixelsize=10;2
+modules-left        = title
+modules-center      = workspaces
+modules-right       = weather volume time
+override-redirect   = false
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/volume]
+type = internal/pulseaudio
+label-muted = Muted
+click-right = pavucontrol
+format-volume-margin = 4
+format-muted-margin = 4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/workspaces]
+type                    = internal/bspwm
+label-focused-foreground = ${colors.focused}
+label-urgent-foreground = ${colors.urgent}
+label-empty = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/weather]
+type = custom/script
+exec = curl -s "wttr.in/?format=%f" | sed 's/+//'
+interval = 1800
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/time]
+type                     = internal/date
+interval                 = 25.0
+date                     = %H:%M
+date-alt		 = %A, %d %B %Y
+format-time-margin = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/title]
+type = internal/xwindow
+label-maxlen = 100
+format-title-margin = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[settings]
+screenchange-reload = true
