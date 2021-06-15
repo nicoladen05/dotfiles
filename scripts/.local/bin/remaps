@@ -6,7 +6,7 @@ xset r rate 300 50
 # German keyboard layout
 setxkbmap de
 # Set the mouse sensititvity
-xinput --set-prop "USB Gaming Mouse" 298 -0.4
+xinput --set-prop "USB Gaming Mouse" 298 -0.75
 # Map the caps lock key to super...
 setxkbmap -option caps:super
 # But when it is pressed only once, treat it as escape.
