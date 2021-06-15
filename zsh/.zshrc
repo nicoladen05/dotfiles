@@ -19,7 +19,7 @@ ZSH_THEME="common"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Automatically start x on tty1
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+# if [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -112,7 +112,6 @@ alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
 alias pom="python ~/dev/pomodoro/main.py"
 alias lg="lazygit"
 alias o="setsid -f"
-alias ls="exa"
 
 # vi mode
 bindkey -v
