@@ -23,7 +23,7 @@ bspc rule -a Zathura state=tiled
 
 xsetroot -cursor_name left_ptr &
 
-xinput set-prop 9 298 -0.7 &
+xinput set-prop 9 298 -0.8 &
 
 /home/nico/.local/bin/remaps &
 /home/nico/.local/bin/wal -R &
