@@ -2,7 +2,7 @@
 foreground = ${xrdb:color7:#222}
 background = ${xrdb:color0:#222}
 urgent     = ${xrdb:color2:#222}
-focused    = ${xrdb:color6:#222}
+focused    = ${xrdb:color1:#222}
 faded      = ${xrdb:color3:#222}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
