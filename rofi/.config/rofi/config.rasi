@@ -1,6 +1,6 @@
 configuration {
 	modi: "run,window,ssh";
-	font: "Terminus 10";
+	font: "Iosevka 10";
 	sidebar-mode: true;
 	combi-modi: "window,drun";
 	hide-scrollbar: true;
