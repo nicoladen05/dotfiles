@@ -8,7 +8,7 @@ function powermenu {
 	elif [[ $selected = "shutdown" ]]; then
 		poweroff
 	elif [[ $selected = "reboot" ]]; then
-		reboot
+		reboot now
 	elif [[ $selected = "sleep" ]]; then
 		systemctl suspend
 	elif [[ $selected = "logout" ]]; then
