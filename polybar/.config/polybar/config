@@ -33,6 +33,8 @@ format-muted-margin = 4
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/workspaces]
 type                    = internal/bspwm
+pin-workspaces = false
+label-dimmed-foreground = ${colors.foreground}
 label-focused-foreground = ${colors.focused}
 label-urgent-foreground = ${colors.urgent}
 label-empty = 

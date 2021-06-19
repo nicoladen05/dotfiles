@@ -112,6 +112,7 @@ alias mupdf="/mnt/c/bin/mupdf/mupdf.exe"
 alias pom="python ~/dev/pomodoro/main.py"
 alias lg="lazygit"
 alias o="setsid -f"
+alias ttyper="ttyper -l english1000"
 
 # vi mode
 bindkey -v
