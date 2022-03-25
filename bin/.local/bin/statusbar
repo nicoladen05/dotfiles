@@ -1,0 +1,3 @@
+#!/bin/bash
+
+while script; do xsetroot -name " $(pamixer --get-volume)% $(date +%d %b %R) " && sleep 10; done

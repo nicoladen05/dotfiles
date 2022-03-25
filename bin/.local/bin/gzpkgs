@@ -1,0 +1,202 @@
+#!/usr/bin/env bash
+#         .             .              .		  
+#         .             .              .		  
+#         |             |              |           .	  
+# ,-. ,-. |-. ,-. . ,-. |  ,_, ,-. ,-. |-. ,-,-. . |- ,_, 
+# | | ,-| | | |   | |-' |   /  `-. |   | | | | | | |   /  
+# `-| `-^ ^-' '   ' `-' `' '"' `-' `-' ' ' ' ' ' ' `' '"' 
+#  ,|							  
+#  `'							  
+# GITHUB:https://github.com/gabrielzschmitz		  
+# INSTAGRAM:https://www.instagram.com/gabrielz.schmitz/   
+# DOTFILES:https://github.com/gabrielzschmitz/dotfiles/   
+
+cat << "EOF"
+
+	#############################################################
+	##         .             .              .                  ##
+	##         |             |              |           .      ##
+	## ,-. ,-. |-. ,-. . ,-. |  ,_, ,-. ,-. |-. ,-,-. . |- ,_, ##
+	## | | ,-| | | |   | |-' |   /  `-. |   | | | | | | |   /  ##
+	## `-| `-^ ^-' '   ' `-' `' '"' `-' `-' ' ' ' ' ' ' `' '"' ##
+	##  ,|                                                     ##
+	##  `'                                                     ##
+	#############################################################
+	#############################################################
+	##                                                         ##
+	##              Packages installation start:              ##
+	##                                                         ##
+	#############################################################
+
+EOF
+
+sudo pacman -S --needed base-devel; cd $HOME/.local/src &&\
+git clone https://aur.archlinux.org/paru.git && cd paru &&\
+makepkg -si && cd && rm -rf $HOME/.local/src/paru
+ 
+sudo pacman -S artix-archlinux-support
+
+
+echo "# /etc/pacman.conf
+
+[options]
+HoldPkg      = pacman glibc
+Architecture = auto
+SigLevel    = Required DatabaseOptional
+LocalFileSigLevel = Optional
+
+# Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
+#IgnorePkg   =
+#IgnoreGroup =
+#NoUpgrade   =
+#NoExtract   =
+
+# Misc options
+# ILoveCandy
+Color
+CheckSpace
+
+# ARTIX
+[system]
+Include = /etc/pacman.d/mirrorlist
+[world]
+Include = /etc/pacman.d/mirrorlist
+[galaxy]
+Include = /etc/pacman.d/mirrorlist
+[lib32]
+Include = /etc/pacman.d/mirrorlist
+
+[universe]
+Server = https://universe.artixlinux.org/\$arch
+Server = https://mirror1.artixlinux.org/universe/\$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/\$arch
+Server = https://artixlinux.qontinuum.space:4443/universe/os/\$arch
+
+# ARCH
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
+[community]
+Include = /etc/pacman.d/mirrorlist-arch
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
+" > pacman.conf
+
+sudo mv pacman.conf /etc/pacman.conf
+sudo pacman-key --populate archlinux && paru -Syyu
+
+declare -a pkgs=("btop"
+"bat"
+"bc"
+"blueman"
+"bluez"
+"bluez-openrc"
+"bluez-utils"
+"cbonsai"
+"celluloid"
+"devour"
+"doasedit"
+"dosfstools"
+"dunst"
+"elogind-openrc"
+"etcher-bin"
+"gcolor3"
+"git"
+"hugo"
+"imlib2"
+"inkscape"
+"lf"
+"libtool"
+"libxft"
+"libxinerama"
+"linux-firmware"
+"linux-headers"
+"linux"
+"lsd"
+"lxappearance-gtk3"
+"man-db"
+"man-pages"
+"mpc"
+"mpd"
+"mpv"
+"ncmpcpp"
+"neovim"
+"networkmanager"
+"networkmanager-openrc"
+"nextcloud-client"
+"nodejs"
+"npm"
+"numlockx"
+"obs-studio"
+"olive"
+"onlyoffice-bin"
+"opendoas"
+"pamixer"
+"paru"
+"pavucontrol"
+"pcmanfm-gtk3"
+"picom-jonaburg-git"
+"polkit-gnome"
+"puddletag"
+"pulseaudio"
+"pulseaudio-bluetooth"
+"python-gobject"
+"python-pygments"
+"screenkey"
+"scrot"
+"signal-desktop"
+"sxiv"
+"udiskie"
+"udisks2"
+"ungoogled-chromium"
+"xautolock"
+"xbanish"
+"xclip"
+"xdotool"
+"xdg-user-dirs"
+"xorg-xbacklight"
+"xorg-xinit"
+"xwallpaper"
+"yarn"
+"youtube-dl"
+"zathura"
+"zathura-cb"
+"zathura-djvu"
+"zathura-pdf-mupdf"
+"zathura-ps"
+"zsh")
+
+for x in "${pkgs[@]}"; do
+	paru --noconfirm --needed -S "$x"
+done
+
+sudo cp -r .local/share/icons/* /usr/share/icons/
+sudo cp -r .local/share/themes/* /usr/share/themes/
+sudo cp -r .local/share/fonts/* /usr/share/fonts/
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+cat << "EOF"
+
+	#############################################################
+	##         .             .              .                  ##
+	##         |             |              |           .      ##
+	## ,-. ,-. |-. ,-. . ,-. |  ,_, ,-. ,-. |-. ,-,-. . |- ,_, ##
+	## | | ,-| | | |   | |-' |   /  `-. |   | | | | | | |   /  ##
+	## `-| `-^ ^-' '   ' `-' `' '"' `-' `-' ' ' ' ' ' ' `' '"' ##
+	##  ,|                                                     ##
+	##  `'                                                     ##
+	#############################################################
+	#############################################################
+	##                                                         ##
+	##            Packages installation completed.            ##
+	##                                                         ##
+	#############################################################
+	#############################################################
+	##                                                         ##
+	##                   Recommendations:                     ##
+	##            Set controller mode to bredr in              ##
+	##           sudo nvim /etc/bluetooth/main.conf            ##
+	##                                                         ##
+	#############################################################
+
+EOF
+

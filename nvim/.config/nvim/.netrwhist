@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/nico/dev/discord-led'
+let g:netrw_dirhist_0='/home/nico/.config/x11'
+let g:netrw_dirhist_9='/home/nico/.config/wal'
+let g:netrw_dirhist_8='/home/nico/.config/wal/templates'
+let g:netrw_dirhist_7='/home/nico'
+let g:netrw_dirhist_6='/home/nico/.local/share/nvim'
+let g:netrw_dirhist_5='/home/nico/.local/share/xorg'
+let g:netrw_dirhist_4='/home/nico/.local/src/st'
+let g:netrw_dirhist_3='/home/nico/.config/cordless'
+let g:netrw_dirhist_2='/home/nico/.local/src/st'

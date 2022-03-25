@@ -1,0 +1,19 @@
+#!/bin/sh
+#         .             .              .                  
+#         |             |              |           .      
+# ,-. ,-. |-. ,-. . ,-. |  ,_, ,-. ,-. |-. ,-,-. . |- ,_, 
+# | | ,-| | | |   | |-' |   /  `-. |   | | | | | | |   /  
+# `-| `-^ ^-' '   ' `-' `' '"' `-' `-' ' ' ' ' ' ' `' '"' 
+#  ,|                                                     
+#  `'                                                     
+# GITHUB:https://github.com/gabrielzschmitz               
+# INSTAGRAM:https://www.instagram.com/gabrielz.schmitz/   
+# DOTFILES:https://github.com/gabrielzschmitz/dotfiles/   
+
+# Script to make US with accents keyboard layout the default
+# plus turn on the numlock and speed up the keypresses
+
+setxkbmap us alt-intl
+numlockx on
+xset r rate 300 50
+
