@@ -43,6 +43,8 @@ Plugin 'akinsho/toggleterm.nvim'
 " Org mode
 Plugin 'nvim-orgmode/orgmode'
 Plugin 'akinsho/org-bullets.nvim'
+"Markdown editing
+Plugin 'ixru/nvim-markdown'
 "Themes
 " Bufferline
 Plugin 'akinsho/bufferline.nvim'
@@ -145,6 +147,8 @@ nnoremap <silent><C-w> :BufferLineCloseRight<CR>
 " Misc settings
 syntax enable
 
+
+let g:vim_markdown_math = 1
 let g:goyo_width = "60%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1

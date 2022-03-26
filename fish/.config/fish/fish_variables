@@ -22,7 +22,6 @@ SETUVAR _fisher_jethrokuan_2F_z_files:/home/nico/\x2econfig/fish/functions/__z\x
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/nico/\x2econfig/fish/functions/fisher\x2efish\x1e/home/nico/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:/home/nico/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e/home/nico/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/home/nico/\x2econfig/fish/functions/fish_title\x2efish\x1e/home/nico/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_plugins:jethrokuan/z\x1ejorgebucaran/fisher\x1efranciscolourenco/done\x1ejorgebucaran/hydro
-SETUVAR _hydro_git_74694:master\u2022\x20
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
