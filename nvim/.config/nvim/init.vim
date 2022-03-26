@@ -40,7 +40,12 @@ Plugin 'windwp/nvim-autopairs'
 Plugin 'numToStr/Comment.nvim'
 "Toggle term
 Plugin 'akinsho/toggleterm.nvim'
+" Org mode
+Plugin 'nvim-orgmode/orgmode'
+Plugin 'akinsho/org-bullets.nvim'
 "Themes
+" Bufferline
+Plugin 'akinsho/bufferline.nvim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'catppuccin/nvim', {'name': 'catppuccin'}
@@ -123,6 +128,20 @@ nnoremap <leader>tn <cmd>set nu!<cr>
 
 nnoremap <leader>p <cmd>Format<cr>
 
+" Move around in windows
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+" Bufferline
+nnoremap <silent>L :BufferLineCycleNext<CR>
+nnoremap <silent>H :BufferLineCyclePrev<CR>
+nnoremap <silent>ctrl+shift+l :BufferLineMoveNext<CR>
+nnoremap <silent>ctrl+shift+h :BufferLineMovePrev<CR>
+nnoremap <silent><C-q> :BufferLineCloseLeft<CR>
+nnoremap <silent><C-w> :BufferLineCloseRight<CR>
+
 " Misc settings
 syntax enable
 
@@ -130,7 +149,6 @@ let g:goyo_width = "60%"
 let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
 let g:NERDTreeWinPos = "right"
-set spelllang=de_de
 
 let g:dashboard_custom_header = [
    \'        ▄▄▄▄▄███████████████████▄▄▄▄▄     ',
@@ -212,5 +230,7 @@ require "user.autopairs"
 require "user.comment"
 require "user.toggleterm"
 require "user.nvim-tree"
+require "user.bufferline"
+require "user.orgmode"
 
 EOF
