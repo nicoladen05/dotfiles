@@ -40,7 +40,7 @@ device_connected() {
 # Useful for status bars like polybar, etc.
 print_status() {
     if power_on; then
-        printf ' '
+        printf '   '
 
         mapfile -t paired_devices < <(bluetoothctl paired-devices | grep -F Device | cut -d ' ' -f 2)
         counter=0
@@ -62,7 +62,7 @@ print_status() {
         done
         printf "\n"
     else
-        echo "  Bt down"
+        echo ""
     fi
 }
 

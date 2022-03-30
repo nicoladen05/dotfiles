@@ -15,19 +15,20 @@
 #define TERMCLASS "st"
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
-static const unsigned int gappih    = 5;        /* horiz inner gap between windows */
-static const unsigned int gappiv    = 5;        /* vert inner gap between windows */
+static const unsigned int gappih    = 8;        /* horiz inner gap between windows */
+static const unsigned int gappiv    = 8;        /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 32;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
-static const char *fonts[]          = { "Terminus:size=12:antialias=true:autohint=false" };
+static const int vertpad            = 0;       /* vertical padding of bar */
+static const int sidepad            = 0;       /* horizontal padding of bar */
+// static const char *fonts[]          = { "Terminus:size=12:antialias=true:autohint=false" };
+static const char *fonts[]          = { "Iosevka Nerd Font:size=12.5:antialias=true:autohint=false" };
 static char normbgcolor[]           = "#1E1E2E";
 static char normbordercolor[]       = "#1E1E2E";
 static char normfgcolor[]           = "#D9E0EE";
@@ -185,6 +186,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("mpc volume 0") },
 	{ MODKEY,			XK_F11,	   spawn,	   SHCMD("mpc volume -5") },
 	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("mpc volume +5") },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("lofi") },
 	{ 0, XF86XK_AudioPrev,			   spawn,	   SHCMD("mpc prev && disccover") },
 	{ 0, XF86XK_AudioNext,			   spawn,	   SHCMD("mpc next && disccover") },
 	{ 0, XF86XK_AudioPlay,			   spawn,	   SHCMD("mpc toggle && disccover") },

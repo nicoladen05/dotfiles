@@ -29,6 +29,3 @@ alias install="yay -S"
 alias remove="yay -Rns"
 alias update="yay -Syu"
 alias search="yay -Ss"
-
-# Fancy sudo prompt
-alias sudo="sudo -p '   '"

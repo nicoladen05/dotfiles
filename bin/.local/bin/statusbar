@@ -1,3 +1,33 @@
-#!/bin/bash
+#!/bin/sh
+#         .             .              .		  
+#         |             |              |           .	  
+# ,-. ,-. |-. ,-. . ,-. |  ,_, ,-. ,-. |-. ,-,-. . |- ,_, 
+# | | ,-| | | |   | |-' |   /  `-. |   | | | | | | |   /  
+# `-| `-^ ^-' '   ' `-' `' '"' `-' `-' ' ' ' ' ' ' `' '"' 
+#  ,|							  
+#  `'							  
+# GITHUB:https://github.com/gabrielzschmitz		  
+# INSTAGRAM:https://www.instagram.com/gabrielz.schmitz/   
+# DOTFILES:https://github.com/gabrielzschmitz/dotfiles/   
 
-while script; do xsetroot -name " $(pamixer --get-volume)% $(date +%d %b %R) " && sleep 10; done
+# System informations menu
+
+# Options
+uptime=" $(sysinfo-uptime)"
+internet="$(sysinfo-internet)"
+time="$(sysinfo-time)"
+memory="$(sysinfo-memory)"
+weather="$(sysinfo-weather)"
+disks="$(sysinfo-disks)"
+cpu="$(sysinfo-cpu)"
+#battery="$(sysinfo-batteryicon)$(sysinfo-battery)"
+#manual="  Rice manual"
+
+volume="  $(pamixer --get-volume-human)"
+bluetooth="$(sysinfo-bt)"
+
+# Variables
+#options="$uptime\n$internet\n$dates\n$memory\n$weather\n$packages\n$disks\n$cpu\n$battery\n$manual"
+options="$disk  $cpu  $memory  $weather$bluetooth  $internet  $volume  $time " 
+# Choices
+echo -e "$options"

@@ -29,7 +29,7 @@ bluetooth="$(sysinfo-bt)"
 
 # Variables
 #options="$uptime\n$internet\n$dates\n$memory\n$weather\n$packages\n$disks\n$cpu\n$battery\n$manual"
-options="$dates\n$uptime\n$volume\n$bluetooth\n$internet\n$weather\n$memory\n$cpu\n$disks\n$packages"
+options="$dates\n$uptime\n$volume\n$bluetooth\n$internet\n$weather\n$memory\n$cpu\n$disks"
 
 # Choices
 chosen="$(echo -e "$options" | dmenu)"
@@ -48,9 +48,6 @@ case $chosen in
         ;;
     "$weather")
 	    	notify-send -t 2750 " The weather today:" && setsid -f "st" -c weatherreport -e less -Srf "${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
-        ;;
-    "$packages")
-	    	notify-send -t 2750 " Installed packages:" "$(sysinfo-packages)" && setsid -f "st" -c packagesupgrade -e sysinfo-packagesupgrade
         ;;
     "$disks")
 	    	notify-send -t 2750 " Disks:" "$(lsblk --output NAME,SIZE,TYPE)"

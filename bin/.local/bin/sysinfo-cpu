@@ -10,6 +10,5 @@
 # INSTAGRAM:https://www.instagram.com/gabrielz.schmitz/   
 # DOTFILES:https://github.com/gabrielzschmitz/dotfiles/   
 
-cpu="$(sensors | awk '/Core 0/ {print $3}')"
+cpu="$(sensors | awk '/Core 0/ {print $3}' | sed 's/+//g')"
 printf "%s%s" " " " $cpu"
-

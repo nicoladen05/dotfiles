@@ -12,8 +12,14 @@ set clipboard=unnamedplus
 set backspace=indent,eol,start
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
 set guicursor=i:ver100-iCursor
+set mouse=a
+set nobackup
+set nowritebackup
+set noerrorbells
+set noswapfile
+set undofile
+set undodir="~/.cache"
 
-" Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Requiered
@@ -58,6 +64,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'kyazdani42/nvim-tree.lua'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'kdheepak/lazygit.nvim'
+Plugin 'Pocco81/TrueZen.nvim'
 " Plugin 'junegunn/goyo.vim'
 " Plugin 'mattn/emmet-vim'
 " Plugin 'lervag/vimtex'
@@ -110,7 +117,8 @@ nnoremap S :%s//g<Left><Left>
 map N :norm 
 nnoremap <leader>dl <cmd>g/^$/d<cr>
 map <leader>n :NvimTreeToggle<CR>
-map <leader>z :Goyo<CR>
+map <leader>zz :TZAtaraxis<CR>
+map <leader>zm :TZMinimal<CR>
 map <leader>a :%s/->/→/g<CR>
 map <leader>c :w<CR> :Compile<CR>
 map <leader>s :setlocal spell!<CR>
@@ -146,11 +154,11 @@ nnoremap <silent><C-w> :BufferLineCloseRight<CR>
 
 " Misc settings
 syntax enable
+" Hide statusline
+
 
 
 let g:vim_markdown_math = 1
-let g:goyo_width = "60%"
-let g:goyo_height = "80%"
 let g:vim_markdown_folding_disabled = 1
 let g:NERDTreeWinPos = "right"
 
@@ -185,8 +193,13 @@ let g:vimtex_view_general_viewer = 'zathura'
 set nu
 set relativenumber
 set cursorline
+set smartcase
+set autoread
+set incsearch
+set hidden
 set linebreak
 set wildmenu
+set termguicolors
 syntax on
 set laststatus=2
 set background=dark
@@ -236,5 +249,6 @@ require "user.toggleterm"
 require "user.nvim-tree"
 require "user.bufferline"
 require "user.orgmode"
+require "user.zen"
 
 EOF

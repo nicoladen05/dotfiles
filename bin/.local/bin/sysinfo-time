@@ -10,7 +10,5 @@
 # INSTAGRAM:https://www.instagram.com/gabrielz.schmitz/   
 # DOTFILES:https://github.com/gabrielzschmitz/dotfiles/   
 
-packageswdependencies="$(pacman -Q | wc -l)"
-packageswodependencies="$(pacman -Qe | wc -l)"
-printf "%s%s%s%s" " " " $packageswdependencies" "   " "$packageswodependencies"
-
+time=$(date '+%d %b %R')
+printf "%s%s%s" " " " $time"

@@ -7,7 +7,7 @@ export TERMINAL=st
 export BROWSER=chromium
 export EDITOR=nvim
 
-feh --bg-scale $HOME/pix/wal/blue_unicat.png &
+feh --bg-scale $HOME/.config/wallpaper &
 
 remaps &
 picom &
