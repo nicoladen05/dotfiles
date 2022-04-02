@@ -138,6 +138,8 @@ nnoremap <leader>tn <cmd>set nu!<cr>
 
 nnoremap <leader>p <cmd>Format<cr>
 
+nnoremap <leader>P :lua require("nabla").popup()<CR>
+
 " Move around in windows
 nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
@@ -160,7 +162,6 @@ syntax enable
 
 let g:vim_markdown_math = 1
 let g:vim_markdown_folding_disabled = 1
-let g:NERDTreeWinPos = "right"
 
 let g:dashboard_custom_header = [
    \'        ▄▄▄▄▄███████████████████▄▄▄▄▄     ',
