@@ -69,20 +69,20 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 /* symbol     arrange function */
-{ "[T]",      tile },			/* 0 first entry is default */
-{ "[M]",      monocle },		/* 1 */
-{ "[S]",      spiral },			/* 2 */
-{ "[DW]",     dwindle },		/* 3 */
-{ "[D]",      deck },			/* 4 */
-{ "[BS]",     bstack },			/* 5 */
-{ "[BSH]",    bstackhoriz },		/* 6 */
-{ "[G]",      grid },			/* 7 */
-{ "[RG]",     nrowgrid },		/* 8 */
-{ "[HG]",     horizgrid },		/* 9 */
-{ "[GG]",     gaplessgrid },		/* 10 */
-{ "[C]",      centeredmaster },		/* 11 */
-{ "[CF]",     centeredfloatingmaster },	/* 12 */
-{ "[F]",      NULL },			/* 13 no layout function means floating behavior */
+{ "",      tile },			/* 0 first entry is default */
+{ "M",      monocle },		/* 1 */
+{ "S",      spiral },			/* 2 */
+{ "DW",     dwindle },		/* 3 */
+{ "D",      deck },			/* 4 */
+{ "BS",     bstack },			/* 5 */
+{ "BSH",    bstackhoriz },		/* 6 */
+{ "G",      grid },			/* 7 */
+{ "RG",     nrowgrid },		/* 8 */
+{ "HG",     horizgrid },		/* 9 */
+{ "GG",     gaplessgrid },		/* 10 */
+{ "C",      centeredmaster },		/* 11 */
+{ "CF",     centeredfloatingmaster },	/* 12 */
+{ "F",      NULL },			/* 13 no layout function means floating behavior */
 { NULL,       NULL },			/* 14 */
 };
 

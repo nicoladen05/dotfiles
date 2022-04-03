@@ -14,6 +14,8 @@ case '*Linux'
     :
 end
 
+bash -c "if [[ $(tty) = /dev/tty1 ]]; then exec startx; fi"
+
 # Useful shortcuts
 alias v=$EDITOR
 alias py=python

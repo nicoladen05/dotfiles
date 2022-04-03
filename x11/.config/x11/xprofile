@@ -9,6 +9,7 @@ export EDITOR=nvim
 
 feh --bg-scale $HOME/.config/wallpaper &
 
+dwmblocks &
 remaps &
 picom &
 dunst &
