@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka Nerd Font:size=14:antialias=true:autohint=true";
-static char *font2[] = { "Iosevka Nerd Font:size=14:antialias=true:autohint=true" };
-static int borderpx = 20;
+static char *font = "Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true";
+static char *font2[] = { "Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true" };
+static int borderpx = 15;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -17,7 +17,7 @@ static int borderpx = 20;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/usr/bin/fish";
+static char *shell = "/bin/fish";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -75,7 +75,7 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 1;
+const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 0;
@@ -104,37 +104,37 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 4;
+unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.85;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#20232f", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#806382",
-	"#436668",
-	"#8c8089",
-	"#4f6589",
-	"#8f6b8f",
-	"#446781",
-	"#8c8089",
-	"#9d8f92",
-	"#8f6e8d",
-	"#59729a",
-	"#9d8f92",
+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cc241d",
+	"#98971a",
+	"#d79921",
+	"#458588",
+	"#b16286",
+	"#689d6a",
+	"#a89984",
+	"#928374",
+	"#fb4934",
+	"#b8bb26",
+	"#fabd2f",
 	"#83a598",
-	"#9f7699",
-	"#4d7694",
-	"#9096ae",
+	"#d3869b",
+	"#8ec07c",
+	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#a2a6ba", /* 256 -> cursor */
-	"#35394a", /* 257 -> rev cursor*/
-	"#20232f", /* 258 -> bg */
-	"#9096ae", /* 259 -> fg */
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#282828", /* 258 -> bg */
+	"#ebdbb2", /* 259 -> fg */
 };
 
 

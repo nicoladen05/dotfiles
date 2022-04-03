@@ -1,10 +1,9 @@
 #!/bin/bash
 
 packages=$(yay -Qu | wc -l)
-echo $packages
 
-if packages > 1; then
+if [[ $packages = 1 ]]; then
 	echo " $packages"
-else
-	echo ""
+ else
+ 	echo ""
 fi
