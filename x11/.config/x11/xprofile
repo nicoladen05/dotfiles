@@ -3,14 +3,13 @@
 # This file runs when logging into a graphical session
 # xwallpaper --maximize ~/.config/wallpaper.jpg
 
+# Export environment variables
 export TERMINAL=st
 export BROWSER=chromium
 export EDITOR=nvim
 
-feh --bg-scale $HOME/.config/wallpaper &
-
-dwmblocks &
-remaps &
-picom &
-dunst &
-unclutter -idle 3 &
+# dwmblocks &
+# remaps &
+# picom &
+# dunst &
+# unclutter -idle 3 &

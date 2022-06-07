@@ -1,1 +1,0 @@
-archive/zsh/.zshrc

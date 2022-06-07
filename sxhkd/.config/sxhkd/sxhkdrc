@@ -1,0 +1,151 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty &
+
+# program launcher
+#super + d
+	#/home/nico/.config/rofi/launchers/text/launcher.sh
+super + d
+	rofi -show drun
+
+# web browser
+super + w
+	firefox
+
+# make sxhkd reload its configuration files:
+super + shift + c
+	pkill -usr1 -x sxhkd
+
+# take a screenshot
+print
+	/home/nico/.local/bin/maimpick
+
+# powermenu
+super + backspace
+	/home/nico/.config/rofi/applets/android/powermenu.sh
+
+# toggle picom for games
+super + bracketright
+	picom &
+
+super + shift + bracketright
+	killall picom
+
+# change brightness
+super + f10
+	/home/nico/.local/scripts/brightness.sh -0.1
+
+super + f11
+	/home/nico/.local/scripts/brightness.sh 0.1
+
+super + F9
+	xrandr --output DP-0 --brightness 1 && xrandr --output HDMI-0 --brightness 1
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + shift + r
+	bspc wm -r
+
+# close and kill
+super + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + shift + f
+	bspc node -g sticky
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus or send to the given desktop
+super + {1-9}
+	bspc desktop -f {1-9}
+
+super + shift + {1-9}
+	bspc node -d {1-9}
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + {Left,Down,Up,Right}
+	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0}
+
+# contract a window by moving one of its side inward
+super + shift + {Left,Down,Up,Right}
+	bspc node -z {right -40 0,top 0 40,bottom 0 -40,left 40 0}
+
+#
+# media keys
+#
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+XF86AudioLowerVolume + shift
+	pactl set-sink-volume @DEFAULT_SINK@ -1%
+XF86AudioRaiseVolume + shift
+	pactl set-sink-volume @DEFAULT_SINK@ +1%
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioMute + shift
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+XF86AudioPlay
+	playerctl play-pause
+XF86AudioNext
+	playerctl next
+XF86AudioPrev
+	playerctl previous
+XF86AudioStop
+	playerctl stopayerctl stop

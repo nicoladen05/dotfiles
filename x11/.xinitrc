@@ -7,4 +7,4 @@ fi
 xrdb $HOME/.Xresources &
 xinput set-prop 13 "libinput Accel Speed" -0.85 &
 
-exec dwm
+exec bspwm
