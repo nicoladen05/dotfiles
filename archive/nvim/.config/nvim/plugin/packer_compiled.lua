@@ -69,11 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  Colorschemes = {
-    loaded = true,
-    path = "/home/nico/.local/share/nvim/site/pack/packer/start/Colorschemes",
-    url = "https://github.com/LunarVim/Colorschemes"
-  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/Comment.nvim",
@@ -124,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "/home/nico/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
+    url = "https://github.com/lunarvim/darkplus.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -138,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/nico/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -173,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/home/nico/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

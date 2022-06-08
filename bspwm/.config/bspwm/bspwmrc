@@ -5,6 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x unclutter > /dev/null || unclutter --timeout 3 &
+~/.config/polybar/launch.sh &
 
 # Configure monitors
 xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --left-of DP-0 --rotate right --rate 75 --mode 1920x1080 &
