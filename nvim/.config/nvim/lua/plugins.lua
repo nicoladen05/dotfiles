@@ -108,6 +108,9 @@ return packer.startup(function(use)
   -- stausline
   use "nvim-lualine/lualine.nvim"
 
+  -- pywal
+  use "dylanaraps/wal.vim"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
