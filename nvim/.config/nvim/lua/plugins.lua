@@ -103,13 +103,16 @@ return packer.startup(function(use)
   -- project management
   use "ahmedkhalf/project.nvim"
   -- discord
---  use "andweeb/presence.nvim"
+  use "andweeb/presence.nvim"
 
   -- stausline
   use "nvim-lualine/lualine.nvim"
 
   -- pywal
   use "dylanaraps/wal.vim"
+
+  -- zen mode
+  use "folke/zen-mode.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

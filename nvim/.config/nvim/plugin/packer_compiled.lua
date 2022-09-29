@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/nico/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
+  },
   ["project.nvim"] = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/project.nvim",
@@ -248,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nico/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/nico/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

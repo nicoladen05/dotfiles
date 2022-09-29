@@ -36,7 +36,7 @@ case "$ext" in
 	h) sudo make install ;;
 	java) javac -d classes "$file" && java -cp classes "${1%.*}" ;;
 	m) octave "$file" ;;
-	md) pandoc "$file" --pdf-engine=xelatex -V linkcolor:blue -V geometry:a4paper -V geometry:margin=2cm -V mainfont="Source Sans Pro" -V fontsize=12pt -o "$base".pdf ;;
+	md) pandoc "$file" --pdf-engine=tectonic -V linkcolor:blue -V geometry:a4paper -V geometry:margin=2cm -V mainfont="Source Sans Pro" -V fontsize=12pt -o "$base".pdf ;;
 	mom) preconv "$file" | refer -PS -e | groff -mom -kept -T pdf > "$base".pdf ;;
 	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
 	org) emacs "$file" --batch -u "$USER" -f org-latex-export-to-pdf ;;
