@@ -1,0 +1,32 @@
+#!/bin/bash
+
+status="$(playerctl status)"
+title="$(playerctl metadata xesam:title)"
+artist="$(playerctl metadata xesam:artist)"
+players="$(playerctl -l)"
+
+get_data ()
+{
+    case "$players" in
+        *"spotify"*) icon="阮"
+        ;;
+        *) icon=""
+        ;;
+    esac
+
+    case "$status" in
+        "Paused") text="$title - $artist  "
+        ;;
+        "Playing") text="$title - $artist"
+        ;;
+        *) test = "None"
+        ;;
+    esac
+}
+
+if [ status = "No players found" ]; then
+    exit;
+else
+    get_data
+    echo "$icon $text"
+fi
