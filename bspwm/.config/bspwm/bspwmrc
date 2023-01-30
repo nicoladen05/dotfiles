@@ -34,6 +34,10 @@ bspc rule -a Zathura state=tiled
 
 xsetroot -cursor_name left_ptr &
 
+# Set mouse sens
+xinput set-prop 9 "libinput Accel Speed" -0.4
+4
+
 # Keyboard layout
 /home/nico/.local/bin/remaps &
 
