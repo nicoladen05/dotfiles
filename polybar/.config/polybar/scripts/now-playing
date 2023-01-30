@@ -24,4 +24,4 @@ get_data ()
 }
 
 get_data
-echo "$icon $text"
+echo "$icon  $text"

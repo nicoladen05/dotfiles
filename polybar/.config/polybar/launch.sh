@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+source ~/.cache/wal/colors.sh
+
+# set transparent color for polybar
+export color0_alpha="#99${color0/'#'}"
+export color8_alpha="#22${color8/'#'}"
+
 # Terminate already running bar instances
 killall polybar
 
