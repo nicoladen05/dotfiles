@@ -25,8 +25,8 @@ print
 	/home/nico/.local/bin/maimpick
 
 # powermenu
-super + backspace
-	/home/nico/.config/rofi/applets/android/powermenu.sh
+super + p
+    rofi -show power-menu -modi power-menu:/home/nico/.local/bin/rofi-powermenu
 
 # toggle picom for games
 super + bracketright

@@ -92,3 +92,17 @@ key("i", "jk", "<ESC>", opts)
 key("v", ">", ">gv", opts)
 key("v", "<", "<gv", opts)
 
+-- Remaps for colemak
+key("n", "n", "j", opts)
+key("n", "e", "k", opts)
+key("n", "i", "l", opts)
+key("n", "k", "i", opts)
+key("n", "j", "n", opts)
+key("n", "l", "e", opts)
+
+key("v", "n", "j", opts)
+key("v", "e", "k", opts)
+key("v", "i", "l", opts)
+key("v", "k", "i", opts)
+key("v", "j", "n", opts)
+key("v", "l", "e", opts)

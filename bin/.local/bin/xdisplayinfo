@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+
+# This script gets information of the current display,
+# where "current display" is the display the mouse is hovered over.
+#
+# https://github.com/lu0/current-x-display-info
+
+set -euo pipefail
+
+declare -A _PROPERTIES=(
+    ["name"]="Name of the current display"
+    ["resolution"]="Resolution as [width]x[height]"
+    ["offset-x"]="X coordinate of the top-left corner"
+    ["offset-y"]="Y coordinate of the top-left corner"
+    ["width"]="Resolution along the X axis"
+    ["height"]="Resolution along the Y axis"
+    ["window-id"]="ID of the active window (decimal)"
+)
+
+xdisplayinfo::__show_property() {
+    local property_name="${1:?}"
+    echo "${_PROPERTIES[$property_name]}"
+}
+
+xdisplayinfo::__show_all() {
+    local property_name
+    for property_name in "${!_PROPERTIES[@]}"; do
+        echo -e "$property_name: ${_PROPERTIES[$property_name]}"
+    done
+}
+
+_OPTIONS="$(xdisplayinfo::__show_all)\nall: All properties"; readonly _OPTIONS
+
+xdisplayinfo::__show_usage_and_exit() {
+    cat <<- EOF
+		Get information of the current display on systems using X.
+
+		USAGE:
+		  xdisplayinfo   [OPTION]
+
+		OPTIONS:
+		$(echo -e "${_OPTIONS}" | column -ts ':' | sed 's/^/  --/ ; s/$/./')
+	EOF
+    exit 1
+}
+
+xdisplayinfo::_reload_properties() {
+    # Regexps to match contiguous numbers and
+    # patterns [width]x[height]+[offset-x]+[offset-y]
+    local -r nums_re="[0-9]+"
+    local -r dims_re="${nums_re}x${nums_re}\+${nums_re}\+${nums_re}"
+
+    # `xrandr --current` is faster than plain `xrandr`,
+    # since it doesn't re-evaluate for hardware changes
+    local connected_info; connected_info=$(xrandr --current |grep -w connected)
+
+    local display_names
+    readarray -t display_names < <(echo "$connected_info" | cut -d" " -f1)
+
+    local dimensions
+    readarray -t dimensions < <(echo "$connected_info" | grep -Po "$dims_re")
+
+
+    local display_index
+    for display_index in "${!display_names[@]}"; do
+
+        local parsed_dimension_properties
+        readarray -t parsed_dimension_properties < \
+            <(echo "${dimensions[$display_index]}" | grep -Po "$nums_re")
+
+        local width="${parsed_dimension_properties[0]}"
+        local height="${parsed_dimension_properties[1]}"
+        local x_left="${parsed_dimension_properties[2]}"
+        local y_top="${parsed_dimension_properties[3]}"
+
+        local x_right=$(( x_left + width ))
+        local y_bottom=$(( y_top + height ))
+
+        # Evaluates to mouse variables: X, Y, SCREEN, WINDOW
+        eval "$(xdotool getmouselocation --shell)"
+
+        if (( X > x_left && X < x_right )) && (( Y > y_top && Y < y_bottom ))
+        then
+            _PROPERTIES[name]="${display_names[$display_index]}"
+            _PROPERTIES[resolution]="${width}x${height}"
+            _PROPERTIES[width]="$width"
+            _PROPERTIES[height]="$height"
+            _PROPERTIES[offset-x]="$x_left"
+            _PROPERTIES[offset-y]="$y_top"
+            _PROPERTIES[window-id]="$WINDOW"
+            break
+        fi
+    done
+}
+
+xdisplayinfo::__parse_cli_options() {
+    while getopts h-: OPT; do
+        local long_option="${OPT##-}${OPTARG:-}"
+
+        if [ "$long_option" == "all" ]; then
+            xdisplayinfo::_reload_properties
+            xdisplayinfo::__show_all
+            return 0
+        elif [ -v "_PROPERTIES[$long_option]" ]; then
+            xdisplayinfo::_reload_properties
+            xdisplayinfo::__show_property "$long_option"
+            return 0
+        fi
+    done
+    xdisplayinfo::__show_usage_and_exit
+}
+
+if [[ "${#BASH_SOURCE[@]}" -eq 1 ]]; then
+    xdisplayinfo::__parse_cli_options "$@"
+fi
