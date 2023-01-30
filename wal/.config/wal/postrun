@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# source wal colors.
+source ~/.cache/wal/colors.sh
+
+# export envar with alpha set.
+export color0_alpha="#99${color0/'#'}"
+export color0_dunst="#${color0/'#'}99"
+export color8_alpha="#22${color8/'#'}"
+
+envsubst < ~/.config/dunst/dunstrc.temp > ~/.config/dunst/dunstrc
+killall dunst
+dunst &
+
+wal-discord -t -o ~/.config/BetterDiscord/themes/pywal.theme.css

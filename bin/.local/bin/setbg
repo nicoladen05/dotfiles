@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wal -i $1 -o ~/.config/wal/postrun $2
+
+notify-send "Wallpaper set!" "The wallpaper $1 has been set"

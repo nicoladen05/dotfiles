@@ -28,6 +28,9 @@ print
 super + p
     rofi -show power-menu -modi power-menu:/home/nico/.local/bin/rofi-powermenu
 
+super + u
+    i3lock-fancy-dualmonitor -f Iosevka
+
 # toggle picom for games
 super + bracketright
 	picom &

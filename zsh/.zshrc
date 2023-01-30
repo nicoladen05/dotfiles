@@ -9,6 +9,8 @@ source ~/.cache/wal/colors.sh
 
 # set transparent color for polybar
 export color0_alpha="#99${color0/'#'}"
+export color8_alpha="#22${color8/'#'}"
+export color0_dunst="#${color0/'#'}99"
 
 # Plugins
 source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

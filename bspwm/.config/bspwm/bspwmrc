@@ -13,9 +13,13 @@ xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --lef
 # Configure desktops
 bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
 
+# Source colors
+. "${HOME}/.cache/wal/colors.sh"
+
 # Configure bpswm
-bspc config active_border_color #424242
-bspc config normal_border_color #151515
+bspc config normal_border_color "$color0"
+bspc config active_border_color "$color1"
+bspc config presel_feedback_color "$color1"
 
 bspc config border_width         1
 bspc config window_gap          12
