@@ -44,16 +44,16 @@
   script = ~/.config/dunst/sound.sh
 
 [urgency_low]
-  background = "#13181099"
+  background = "#12151299"
   foreground = "#8C977D"
   timeout = 5
 
 [urgency_normal]
-  background = "#13181099"
+  background = "#12151299"
   foreground = "#E8E3E3"
   timeout = 10
 
 [urgency_critical]
-  background = "#13181099"
+  background = "#12151299"
   foreground = "#B66467"
   timeout = 20
