@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme codemonkey
+  colorscheme pywal
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

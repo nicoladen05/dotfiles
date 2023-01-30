@@ -109,7 +109,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
 
   -- pywal
-  use "dylanaraps/wal.vim"
+  use "AlphaTechnolog/pywal.nvim"
 
   -- zen mode
   use "folke/zen-mode.nvim"

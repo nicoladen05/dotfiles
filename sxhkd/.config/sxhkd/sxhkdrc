@@ -78,6 +78,16 @@ super + shift + f
 	bspc node -g sticky
 
 #
+# multi monitor
+#
+
+super + {comma, period}
+    bspc monitor --focus {prev, next}
+
+super + shift + {comma, period}
+    bspc node -m {west, east} --follow
+
+#
 # focus/swap
 #
 

@@ -34,7 +34,7 @@ xsetroot -cursor_name left_ptr &
 /home/nico/.local/bin/remaps &
 
 # Set the wallpaper
-feh --bg-center ~/.config/wallpaper
+wal -R
 
 # Check for new system updates
 if [ $(yay -Qu | wc -l) -gt 0 ]

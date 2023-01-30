@@ -28,6 +28,9 @@ opt.autoindent = true
 -- System clipboard
 opt.clipboard = "unnamedplus"
 
+-- Colors
+opt.termguicolors = true
+
 -- Use mouse
 opt.mouse = "a"
 
