@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "kyazdani42/nvim-web-devicons"
-  use "xiyaowong/nvim-transparent" -- transparent bq
+  --[[ use "xiyaowong/nvim-transparent" -- transparent bq ]]
 
   -- Automatically close brackets
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
@@ -107,9 +107,6 @@ return packer.startup(function(use)
 
   -- stausline
   use "nvim-lualine/lualine.nvim"
-
-  -- pywal
-  use "AlphaTechnolog/pywal.nvim"
 
   -- zen mode
   use "folke/zen-mode.nvim"
