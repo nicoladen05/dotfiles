@@ -52,6 +52,8 @@ return packer.startup(function(use)
 
   -- colorschemes
   use "LunarVim/Colorschemes" -- collection of colorschemes
+  use "sainnhe/gruvbox-material"
+
 
   -- filetree
   use "kyazdani42/nvim-tree.lua"

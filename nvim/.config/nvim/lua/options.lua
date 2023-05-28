@@ -83,7 +83,7 @@ key("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 key("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-key("n", "<S-l>", ":bnext<CR>", opts)
+key("n", "<S-i>", ":bnext<CR>", opts)
 key("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
