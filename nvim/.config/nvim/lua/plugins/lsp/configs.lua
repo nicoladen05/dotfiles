@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { }
+local servers = { "pyright" }
 
 lsp_installer.setup {
 	ensure_installed = servers

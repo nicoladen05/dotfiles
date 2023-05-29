@@ -72,7 +72,7 @@ g.maplocalleader = ' '
 
 -- Better window navigation
 key("n", "<C-h>", "<C-w>h", opts)
-key("n", "<C-j>", "<C-w>j", opts)
+key("n", "<C-n>", "<C-w>j", opts)
 key("n", "<C-k>", "<C-w>k", opts)
 key("n", "<C-l>", "<C-w>l", opts)
 
