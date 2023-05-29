@@ -19,5 +19,3 @@ alias sconf="nvim ~/.config/sxhkd/sxhkdrc"
 alias v="nvim"
 alias p="sudo pacman"
 alias lg="lazygit"
-
-source "$HOME/.cargo/env"

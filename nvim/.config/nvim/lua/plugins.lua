@@ -105,7 +105,7 @@ return packer.startup(function(use)
   -- project management
   use "ahmedkhalf/project.nvim"
   -- discord
-  use "andweeb/presence.nvim"
+  --[[ use "andweeb/presence.nvim" ]]
 
   -- stausline
   use "nvim-lualine/lualine.nvim"
