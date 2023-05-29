@@ -72,7 +72,7 @@ g.maplocalleader = ' '
 
 -- Better window navigation
 key("n", "<C-h>", "<C-w>h", opts)
-key("n", "<C-j>", "<C-w>j", opts)
+key("n", "<C-n>", "<C-w>j", opts)
 key("n", "<C-k>", "<C-w>k", opts)
 key("n", "<C-l>", "<C-w>l", opts)
 
@@ -83,7 +83,7 @@ key("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 key("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-key("n", "<S-l>", ":bnext<CR>", opts)
+key("n", "<S-i>", ":bnext<CR>", opts)
 key("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
