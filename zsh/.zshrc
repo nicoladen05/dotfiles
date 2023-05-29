@@ -15,6 +15,7 @@ alias ls="ls --color"
 alias zconf="nvim ~/.zshrc"
 alias bconf="nvim ~/.config/bspwm/bspwmrc"
 alias sconf="nvim ~/.config/sxhkd/sxhkdrc"
+alias pconf="nvim ~/.config/polybar/config.ini"
 
 alias v="nvim"
 alias p="sudo pacman"
