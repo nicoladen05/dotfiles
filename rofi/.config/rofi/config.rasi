@@ -6,7 +6,6 @@ configuration {
 }
 
 @theme "/dev/null"
-@import "~/.cache/wal/colors-rofi-dark"
 
 /* * { */
 /*   bg: #121212; */

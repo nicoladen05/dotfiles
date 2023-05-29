@@ -1,27 +1,33 @@
 #! /bin/sh
 
+# Configure monitors
+xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --left-of DP-1 --mode 1920x1080 --rotate right --rate 75 &
+
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom &
+# pgrep -x picom > /dev/null || picom &
+pgrep -x xcompmgr > /dev/null || xcompmgr &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x unclutter > /dev/null || unclutter --timeout 3 &
-~/.config/polybar/launch.sh &
 
-# Configure monitors
-xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --left-of DP-0 --rotate right --rate 75 --mode 1920x1080 &
+# pgrep -x pipewire > /dev/null || pipewire &
+# pgrep -x pipewire-pulse > /dev/null || pipewire-pulse &
+# pgrep -x wireplumber > /dev/null || wireplumber &
+
+~/.config/polybar/launch.sh &
 
 # Configure desktops
 bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
 
 # Source colors
-. "${HOME}/.cache/wal/colors.sh"
+# . "${HOME}/.cache/wal/colors.sh"
 
 # Configure bpswm
 bspc config normal_border_color "$color0"
 bspc config focused_border_color "$color1"
 bspc config presel_feedback_color "$color1"
 
-bspc config border_width         1
+bspc config border_width         2
 bspc config window_gap          12
 
 bspc config split_ratio          0.5
@@ -35,17 +41,11 @@ bspc rule -a Zathura state=tiled
 xsetroot -cursor_name left_ptr &
 
 # Set mouse sens
-xinput set-prop 9 "libinput Accel Speed" -0.4
-4
+# xinput set-prop 9 "libinput Accel Speed" -0.4
 
 # Keyboard layout
-/home/nico/.local/bin/remaps &
+~/.local/bin/remaps &
 
 # Set the wallpaper
-wal -R
-
-# Check for new system updates
-if [ $(yay -Qu | wc -l) -gt 0 ]
-then
-    notify-send "Updates availible!" "$(yay -Qu | wc -l) Updates are availible"
-fi
+# wal -R
+feh --bg-fill ~/pix/wal/marek-piwnicki-XzZ0qzvQcnw-unsplash.jpg

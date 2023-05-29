@@ -3,18 +3,11 @@ eval "$(starship init zsh)"
 # Export path
 export PATH="$PATH:$HOME/.local/bin/"
 
-# load pywal colors
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors.sh
-
-# set transparent color for polybar
-export color0_alpha="#99${color0/'#'}"
-export color8_alpha="#22${color8/'#'}"
-export color0_dunst="#${color0/'#'}99"
+export XDG_RUNTIME_DIR=/run/user/1000/
 
 # Plugins
-source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+#source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # aliases
 alias ls="ls --color"

@@ -1,0 +1,5 @@
+[restore-stream]
+Audio/Sink:node.name:auto_null:channelMap=FL;FR;
+Audio/Sink:node.name:auto_null:channelVolumes=0.31442183256149;0.31442183256149;
+Audio/Sink:node.name:auto_null:mute=false
+Audio/Sink:node.name:auto_null:volume=1.0

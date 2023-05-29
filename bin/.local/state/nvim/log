@@ -1,0 +1,10 @@
+WRN 2023-05-29T00:05:05.129 ?.1572     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T00:05:58.930 ?.2955     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T00:07:59.152 ?.5463     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T00:09:46.184 ?.7517     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T00:10:28.264 ?.8063     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T00:11:48.336 ?.8743     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T12:52:25.073 ?.2689     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T12:55:37.322 ?.1252     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T13:04:56.937 ?.1684     server_start:164: Failed to start server: no such file or directory: /run/user/1000//
+WRN 2023-05-29T13:06:08.281 ?.1947     server_start:164: Failed to start server: no such file or directory: /run/user/1000//

@@ -1,0 +1,152 @@
+     0.000 D | <> Log initialized.
+     0.001 D | <> No migration needed from "PolyMC"
+     0.001 D | <> No migration needed from "MultiMC"
+     0.001 D | "Prism Launcher" , (c) 2013-2021  "Prism Launcher Contributors\n© 2021-2022 PolyMC Contributors \n© 2012-2021 MultiMC Contributors"
+     0.001 D | Version                    :  "6.3"
+     0.001 D | Git commit                 :  "GITDIR-NOTFOUND"
+     0.001 D | Git refspec                :  "refs/heads/stable"
+     0.001 D | Work dir before adjustment :  "/home/nico"
+     0.001 D | Work dir after adjustment  :  "/home/nico/.dotfiles/bin/.local/share/PrismLauncher"
+     0.001 D | Adjusted by                :  "Persistent data path"
+     0.001 D | Binary path                :  "/usr/bin"
+     0.001 D | Application root path      :  "/usr"
+     0.001 D | <> Paths set.
+     0.031 D | Detected default console font: "DejaVu Sans Mono" , substitutions: ""
+     0.035 D | <> Settings loaded.
+     0.038 D | Detecting proxy settings...
+     0.038 D | Using no proxy is an option!
+     0.038 D | <> Network done.
+     0.038 C | Exception: "Unable to open /home/nico/.dotfiles/bin/.local/share/PrismLauncher/translations/index_v2.json for reading: No such file or directory"
+     0.039 C | Translations Download Failed: index file not readable
+     0.039 W | Selected invalid language "" , defaulting to "en_US"
+     0.039 D | Your language is ""
+     0.039 D | <> Translations loaded.
+     0.039 D | Started watching  "/home/nico/.dotfiles/bin/.local/share/PrismLauncher/icons"
+     0.039 D | Sorting icon list...
+     0.039 D | <> Instance icons intialized.
+     0.040 D | [Theme] <> Icon themes initialized.
+     0.040 D | [Theme] <> Initializing Widget Themes
+     0.040 D | [Theme] Determining System Theme...
+     0.040 D | [Theme] System theme seems to be: "fusion"
+     0.040 D | [Theme] Considering theme from theme factory: "windows"
+     0.040 D | [Theme] Considering theme from theme factory: "fusion"
+     0.040 D | [Theme] System theme has been determined to be: "Fusion"
+     0.040 D | [Theme] Loading Built-in Theme: "system"
+     0.040 D | [Theme] Loading Built-in Theme: "dark"
+     0.040 D | [Theme] Loading Built-in Theme: "bright"
+     0.040 D | [Theme] Theme Folder Path:  "/home/nico/.dotfiles/bin/.local/share/PrismLauncher/themes"
+     0.040 D | [Theme] <> Widget themes initialized.
+     0.040 D | Instance path              :  "instances"
+     0.040 D | Loading Instances...
+     0.040 D | Discovering instances in "/home/nico/.dotfiles/bin/.local/share/PrismLauncher/instances"
+     0.040 D | <> Instances loaded.
+     0.040 D | Loading accounts...
+     0.040 C | "Failed to read the account list file (accounts.json)."
+     0.040 D | <> Accounts loaded.
+     0.040 D | <> Cache initialized.
+     0.040 D | Downloading Translations Index...
+     0.040 D | Task "NetJob(Translations Index)" starting for the first time
+     0.040 D | <> Icon theme set.
+     0.040 D | [Theme] applying theme "System"
+     0.040 D | <> Application theme set.
+     0.067 D | Task "Net::Download(0x556f78d15c40)" starting for the first time
+     0.067 D | Downloading  "https://i18n.prismlauncher.org/index_v2.json"
+     0.394 D | Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
+     0.395 D | Task "NetJob(Translations Index)" succeeded
+     0.395 D | Got translations index!
+     0.398 W | QAbstractItemModel::endInsertRows:  Invalid index ( 70 , 1 ) in model TranslationsModel(0x556f78c0a6f0)
+     0.398 W | QAbstractItemModel::endInsertRows:  Invalid index ( 70 , 0 ) in model TranslationsModel(0x556f78c0a6f0)
+     0.661 W | Cannot update builtin language "en_US"
+     0.664 D | Dir changed: "/home/nico/.dotfiles/bin/.local/share/PrismLauncher/translations"
+     2.055 D | Task "JavaListLoadTask(0x556f78c53670)" starting for the first time
+     2.056 D | Linux Java detection incomplete - defaulting to "java"
+     2.056 D | Probing the following Java paths: 
+     2.056 D |   "java"
+     2.056 D |   "/usr/lib/jvm/openjdk11/jre/bin/java"
+     2.056 D |   "/usr/lib/jvm/openjdk11/bin/java"
+     2.056 D |   "/usr/lib64/jvm/openjdk11/jre/bin/java"
+     2.057 D |   "/usr/lib64/jvm/openjdk11/bin/java"
+     2.057 D |   ""
+     2.057 D | Task "JavaCheckerJob(0x556f78bd3720)" starting for the first time
+     2.057 D | "Java detection"  started.
+     2.057 D | "Running java checker: java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.058 D | "Running java checker: /usr/lib/jvm/openjdk11/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.059 D | "Running java checker: /usr/lib/jvm/openjdk11/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.059 D | "Running java checker: /usr/lib64/jvm/openjdk11/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.060 D | "Running java checker: /usr/lib64/jvm/openjdk11/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.060 D | "Running java checker: -jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.060 D | Java checker has failed to start.
+     2.060 D | Process environment:
+     2.060 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LD_LIBRARY_PATH=", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.060 D | Native environment:
+     2.060 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.060 D | "Java detection" progress: 1 / 6
+     2.075 D | Java checker has failed to start.
+     2.075 D | Process environment:
+     2.075 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LD_LIBRARY_PATH=", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.075 D | Native environment:
+     2.075 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.075 D | "Java detection" progress: 2 / 6
+     2.077 D | Java checker has failed to start.
+     2.077 D | Process environment:
+     2.077 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LD_LIBRARY_PATH=", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.077 D | Native environment:
+     2.077 D | ("DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-F1ceYTYu53,guid=f88557c44b7c9a7f868a1e6f6473d1e8", "DISPLAY=:0", "HOME=/home/nico", "LANG=en_US.UTF-8", "LC_COLLATE=C", "LOGNAME=nico", "LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.svg=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:", "MAIL=/var/mail/nico", "MOTD_SHOWN=pam", "MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins", "PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin", "PWD=/home/nico", "SHELL=/bin/bash", "SHLVL=1", "TERM=linux", "USER=nico", "WINDOWPATH=1", "XAUTHORITY=/home/nico/.Xauthority", "_=/bin/rofi")
+     2.077 D | "Java detection" progress: 3 / 6
+     2.116 D | STDOUT "os.arch=amd64\njava.version=11.0.12\njava.vendor=Void\n"
+     2.116 W | STDERR ""
+     2.116 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     2.116 D | Java checker succeeded.
+     2.116 D | "Java detection" progress: 4 / 6
+     2.117 D | STDOUT "os.arch=amd64\njava.version=11.0.12\njava.vendor=Void\n"
+     2.117 W | STDERR ""
+     2.117 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     2.117 D | Java checker succeeded.
+     2.117 D | "Java detection" progress: 5 / 6
+     2.119 D | STDOUT "os.arch=amd64\njava.version=11.0.12\njava.vendor=Void\n"
+     2.119 W | STDERR ""
+     2.119 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     2.120 D | Java checker succeeded.
+     2.120 D | "Java detection" progress: 6 / 6
+     2.120 D | Task "JavaCheckerJob(0x556f78bd3720)" succeeded
+     2.120 D | Found the following valid Java installations:
+     2.120 D |   "11.0.12" "amd64" "java"
+     2.120 D |   "11.0.12" "amd64" "/usr/lib/jvm/openjdk11/bin/java"
+     2.120 D |   "11.0.12" "amd64" "/usr/lib64/jvm/openjdk11/bin/java"
+     2.120 D | Task "JavaListLoadTask(0x556f78c53670)" succeeded
+     2.120 D | "Running java checker: /usr/lib/jvm/openjdk11/bin/java-Xms512m -Xmx4096m -jar /usr/share/prismlauncher/JavaCheck.jar"
+     2.175 D | STDOUT "os.arch=amd64\njava.version=11.0.12\njava.vendor=Void\n"
+     2.175 W | STDERR ""
+     2.175 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     2.175 D | Java checker succeeded.
+     6.991 D | Wizard result = 0
+     7.015 D | Reloading news.
+     7.015 D | Task "NetJob(News RSS Feed)" starting for the first time
+     7.026 D | <> Main window shown.
+     7.028 D | Task "Net::Download(0x556f78cf1400)" starting for the first time
+     7.028 D | Downloading  "https://prismlauncher.org/feed/feed.xml"
+     7.189 D | Download succeeded: "https://prismlauncher.org/feed/feed.xml"
+     7.190 D | Task "NetJob(News RSS Feed)" succeeded
+     7.190 D | Finished loading RSS feed.
+     7.197 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
+     7.197 D | Loaded news entry "Prism Launcher Release 6.2, now available"
+     7.197 D | Loaded news entry "Prism Launcher Release 6.1, now available"
+     7.197 D | Loaded news entry "Prism Launcher Release 6.0, now available"
+     7.198 D | Loaded news entry "Prism Launcher Release 5.2, now available"
+     7.198 D | Loaded news entry "Prism Launcher Release 5.1, now available"
+     7.198 D | Loaded news entry "Prism Launcher Release 5.0, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.4.2, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.4.1, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.4.0, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.3.2, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.3.1, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.3.0, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+     7.198 D | Loaded news entry "PolyMC Update 1.2.1, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.2.0, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.1.1, now available"
+     7.198 D | Loaded news entry "PolyMC Update 1.1.0, now available"
+     7.198 D | Loaded news entry "Moving on"
+     7.199 D | Loaded news entry "Modrinth support and Mod downloading"
+     7.199 D | Loaded news entry "New maintainers and step down."
+     7.199 D | News loading succeeded.
