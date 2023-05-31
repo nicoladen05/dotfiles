@@ -50,4 +50,4 @@ xinput set-prop 11 "libinput Accel Speed" -0.4
 
 # Set the wallpaper
 # wal -R
-feh --bg-fill ~/pix/wal/marek-piwnicki-XzZ0qzvQcnw-unsplash.jpg
+feh --bg-fill ~/pix/wal/5m5kLI9.png
