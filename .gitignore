@@ -1,2 +1,2 @@
-./bin/.local/share/
-./bin/.local/state/
+bin/.local/share
+bin/.local/state
