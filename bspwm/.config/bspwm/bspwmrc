@@ -1,5 +1,7 @@
 #! /bin/sh
 
+xrdb ~/.Xresources
+
 # Configure monitors
 xrandr --output DP-0 --mode 2560x1440 --rate 165 --primary --output HDMI-0 --left-of DP-1 --mode 1920x1080 --rotate right --rate 75 &
 
@@ -41,7 +43,7 @@ bspc rule -a Zathura state=tiled
 xsetroot -cursor_name left_ptr &
 
 # Set mouse sens
-# xinput set-prop 9 "libinput Accel Speed" -0.4
+xinput set-prop 11 "libinput Accel Speed" -0.4
 
 # Keyboard layout
 ~/.local/bin/remaps &
