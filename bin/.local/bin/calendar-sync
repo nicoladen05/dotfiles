@@ -1,5 +1,0 @@
-#!/bin/bash
-
-notify-send Syncing "Starting a calendar sync" -i /usr/share/icons/Paper/512x512/status/sync-synchronizing.png
-
-calcurse-caldav && notify-send "Sync successful" "The calendar server didn't return any errors" -i /usr/share/icons/Paper/512x512/status/sync-synchronizing.png || notify-send "Sync failed!" "The calendar sync has failed" -i /usr/share/icons/Paper/512x512/status/sync-error.png

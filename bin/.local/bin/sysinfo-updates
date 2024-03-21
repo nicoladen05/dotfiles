@@ -1,9 +1,0 @@
-#!/bin/bash
-
-packages=$(yay -Qu | wc -l)
-
-if [[ $packages = 1 ]]; then
-	echo " $packages"
- else
- 	echo ""
-fi

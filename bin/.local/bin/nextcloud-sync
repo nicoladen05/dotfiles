@@ -1,5 +1,0 @@
-#!/bin/bash
-
-notify-send Syncing "Starting a nextcloud sync" -i /usr/share/icons/Paper/512x512/status/sync-synchronizing.png
-
-nextcloudcmd -u Nico -p Tiger+Minka /home/nico/nextcloud 192.168.2.200 && notify-send "Sync successful" "Nextcloud didn't return any errors" -i /usr/share/icons/Paper/512x512/status/sync-synchronizing.png || notify-send "Sync failed!" "The nextcloud sync has failed" -i /usr/share/icons/Paper/512x512/status/sync-error.png
