@@ -8,10 +8,6 @@ local opts = { noremap = true, silent = true }
 -------------
 -- OPTIONS --
 -------------
--- Nvim tree
-g.loaded_netrw = 1
-g.loaded_netrwPlugin = 1
-
 -- Undo files
 opt.undofile = true
 opt.undodir = "/home/nico/.cache"
@@ -44,22 +40,21 @@ opt.viminfo = ""
 opt.viminfofile = "NONE"
 
 -- Quality of life
-opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-opt.autoread = true
-opt.backup = false
-opt.compatible = false
-opt.errorbells = false
-opt.hidden = true
-opt.incsearch = true
-opt.shell = "zsh"
-opt.shortmess = "atI"
-opt.showmode = false
-opt.smartcase = true
-opt.swapfile = false
-opt.ttimeoutlen = 5
-opt.wrap = false
-opt.writebackup = false
-opt.encoding = "UTF-8"
+-- opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+-- opt.autoread = true
+-- opt.backup = false
+-- opt.compatible = false
+-- opt.errorbells = false
+-- opt.hidden = true
+-- opt.incsearch = true
+-- opt.shell = "zsh"
+-- opt.shortmess = "atI"
+-- opt.showmode = false
+-- opt.smartcase = true
+-- opt.swapfile = false
+-- opt.ttimeoutlen = 5
+-- opt.wrap = false
+-- opt.writebackup = false
 
 
 --------------
@@ -87,8 +82,6 @@ key("n", "<S-i>", ":bnext<CR>", opts)
 key("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
--- Press jk fast to enter
-key("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
