@@ -66,6 +66,7 @@ local plugins = {
 
   -- fuzzy finder
   "nvim-telescope/telescope.nvim",
+  "olacin/telescope-gitmoji.nvim",
 
   -- gitsigns
   "lewis6991/gitsigns.nvim",

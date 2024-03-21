@@ -3,6 +3,7 @@ if not status_ok then
   return
 end
 
+
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -93,17 +94,17 @@ local mappings = {
 
   f = {
     name = "Find",
-    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Compile" },
-    t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-    p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    R = { "<cmd>Telescope registers<cr>", "Registers" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Compile" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   },
   p = {
     name = "Packer",
@@ -117,6 +118,7 @@ local mappings = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+    e = { "<cmd>Telescope gitmoji<cr>", "Gitmoji" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
     p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
