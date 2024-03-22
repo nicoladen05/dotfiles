@@ -148,7 +148,7 @@ extensions = {
               end
               -- Insert text instead of emoji in message
               local emoji_text = entry.value.text
-              vim.cmd(':!git add % && git commit -m "' .. emoji_text .. ' ' .. msg .. '"')
+              vim.cmd(':silent !git add % && git commit -m "' .. emoji_text .. ' ' .. msg .. '"')
           end)
       end,
     },
