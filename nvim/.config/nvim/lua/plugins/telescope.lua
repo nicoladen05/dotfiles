@@ -130,7 +130,27 @@ pickers = {
 extensions = {
 -- Your extension configuration goes here:
    gitmoji = {
-
+      action = function(entry)
+          -- entry = {
+          --   display = "🐛 Fix a bug.",
+          --   index = 4,
+          --   ordinal = "Fix a bug.",
+          --   value = {
+          --     description = "Fix a bug.",
+          --     text = ":bug:",
+          --     value = "🐛"
+          --   }
+          -- }
+          local emoji = entry.value.value
+          vim.ui.input({ prompt = "Enter commit message: " .. emoji .. " "}, function(msg)
+              if not msg then
+                  return
+              end
+              -- Insert text instead of emoji in message
+              local emoji_text = entry.value.text
+              vim.cmd(':!git add % && git commit -m "' .. emoji_text .. ' ' .. msg .. '"')
+          end)
+      end,
     },
 -- extension_name = {
 --   extension_config_key = value,
