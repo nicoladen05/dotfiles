@@ -25,6 +25,7 @@ local plugins = {
   -- colorschemes
   "LunarVim/Colorschemes", -- collection of colorschemes
   "sainnhe/gruvbox-material",
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
 
   -- filetree

@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # Export path
 export PATH="$PATH:$HOME/.local/bin/"
