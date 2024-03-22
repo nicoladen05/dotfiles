@@ -57,7 +57,7 @@ local plugins = {
   "neovim/nvim-lspconfig", -- enable LSP
   "williamboman/nvim-lsp-installer", -- simple to use language server installer
   "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
-  "jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
+  "stevearc/conform.nvim", -- for formatters and linters
   "williamboman/mason.nvim", -- install things
   "williamboman/mason-lspconfig.nvim",
   "kosayoda/nvim-lightbulb", -- show a lightbulb when a codeaction is availible
