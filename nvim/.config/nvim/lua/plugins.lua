@@ -79,6 +79,7 @@ local plugins = {
 
   -- commenting
   "numToStr/Comment.nvim", -- Easily comment stuff
+  "JoosepAlviste/nvim-ts-context-commentstring",
   "folke/todo-comments.nvim",
 
   -- toggle term
