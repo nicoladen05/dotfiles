@@ -149,7 +149,7 @@ local mappings = {
           "<cmd>Telescope lsp_workspace_diagnostics<cr>",
           "Workspace Diagnostics",
         },
-        f = { "<cmd>lua require('conform')format()<cr>", "Format" },
+        f = { "<cmd>lua require('conform').format()<cr>", "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
         j = {
