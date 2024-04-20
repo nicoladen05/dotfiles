@@ -34,7 +34,7 @@ local plugins = {
     "nvim-neo-tree/neo-tree.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",   -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
   },
@@ -118,7 +118,7 @@ local plugins = {
   -- surround
   {
     "kylechui/nvim-surround",
-    version = "*",   -- Use for stability; omit to use `main` branch for the latest features
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup()
