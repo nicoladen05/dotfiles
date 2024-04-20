@@ -13,6 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- Initiailize
 local plugins = {
   "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
@@ -128,4 +129,4 @@ local opts = {}
 
 require("lazy").setup(plugins, opts)
 
-vim.cmd.colorscheme "gruvbox-material"
+vim.cmd.colorscheme "catppuccin-frappe"
