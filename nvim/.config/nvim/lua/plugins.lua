@@ -26,42 +26,42 @@ local plugins = {
   -- colorschemes
   "LunarVim/Colorschemes", -- collection of colorschemes
   "sainnhe/gruvbox-material",
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",                 name = "catppuccin", priority = 1000 },
 
 
   -- filetree
   {
-      "nvim-neo-tree/neo-tree.nvim",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-        "MunifTanjim/nui.nvim",
-      }
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",   -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   },
 
   -- cmp plugins
-  "hrsh7th/nvim-cmp", -- The completion plugin
-  "hrsh7th/cmp-buffer", -- buffer completions
-  "hrsh7th/cmp-path", -- path completions
-  "hrsh7th/cmp-cmdline", -- cmdline completions
-  "saadparwaiz1/cmp_luasnip", -- snippet completions
+  "hrsh7th/nvim-cmp",                -- The completion plugin
+  "hrsh7th/cmp-buffer",              -- buffer completions
+  "hrsh7th/cmp-path",                -- path completions
+  "hrsh7th/cmp-cmdline",             -- cmdline completions
+  "saadparwaiz1/cmp_luasnip",        -- snippet completions
   "hrsh7th/cmp-nvim-lsp",
-  "lewis6991/impatient.nvim", -- speeds up the loading of plugins
+  "lewis6991/impatient.nvim",        -- speeds up the loading of plugins
   "antoinemadec/FixCursorHold.nvim", -- This is needed to fix lsp doc highlight
-  "folke/which-key.nvim", -- show popup with keys on leader
+  "folke/which-key.nvim",            -- show popup with keys on leader
 
   -- snippets
-  "L3MON4D3/LuaSnip", --snippet engine
+  "L3MON4D3/LuaSnip",             --snippet engine
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   -- LSP
-  "neovim/nvim-lspconfig", -- enable LSP
+  "neovim/nvim-lspconfig",           -- enable LSP
   "williamboman/nvim-lsp-installer", -- simple to use language server installer
-  "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
-  "stevearc/conform.nvim", -- for formatters and linters
-  "williamboman/mason.nvim", -- install things
+  "tamago324/nlsp-settings.nvim",    -- language server settings defined in json for
+  "stevearc/conform.nvim",           -- for formatters and linters
+  "williamboman/mason.nvim",         -- install things
   "williamboman/mason-lspconfig.nvim",
-  "kosayoda/nvim-lightbulb", -- show a lightbulb when a codeaction is availible
+  "kosayoda/nvim-lightbulb",         -- show a lightbulb when a codeaction is availible
 
   -- syntax
   { "nvim-treesitter/nvim-treesitter", build = ':TSUpdate' },
@@ -79,7 +79,6 @@ local plugins = {
 
   -- commenting
   "numToStr/Comment.nvim", -- Easily comment stuff
-  "JoosepAlviste/nvim-ts-context-commentstring",
   "folke/todo-comments.nvim",
 
   -- toggle term
@@ -104,25 +103,25 @@ local plugins = {
 
   -- ai
   {
-      "Exafunction/codeium.nvim",
-      dependencies = {
-          "nvim-lua/plenary.nvim",
-          "hrsh7th/nvim-cmp",
-      },
-      config = function()
-          require("codeium").setup({
-          })
-      end
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({
+      })
+    end
   },
 
   -- surround
   {
-      "kylechui/nvim-surround",
-      version = "*", -- Use for stability; omit to use `main` branch for the latest features
-      event = "VeryLazy",
-      config = function()
-          require("nvim-surround").setup()
-      end
+    "kylechui/nvim-surround",
+    version = "*",   -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end
   },
 }
 local opts = {}
