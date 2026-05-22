@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.75.4",
+  "theme": "dark",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "medium",
+  "hideThinkingBlock": true,
+  "packages": [
+    "git:github.com/kotarac/pi-fetch"
+  ]
+}
