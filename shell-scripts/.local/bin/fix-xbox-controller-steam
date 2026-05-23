@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This is a workaround for https://github.com/atar-axis/xpadneo/issues/605
+
+sudo udevadm trigger
+
+if pgrep -x steam >/dev/null; then
+    pkill -15 steam
+fi
+
+notify-send -u low "   Controller fixed" "You can now start your game"
