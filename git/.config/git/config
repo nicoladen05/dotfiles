@@ -1,0 +1,61 @@
+# See https://git-scm.com/docs/git-config
+
+
+[user]
+	name = nicoladen05
+	email = me@nicoladen.dev
+	signingkey = ~/.ssh/id_ed25519.pub
+
+[credential]
+    helper = store           # Store credentials for remotes without key-auth
+
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgsign = true           # Sign commits
+
+[fetch]
+	prune = true             # Remove deleted remote branches locally
+
+[pull]
+	rebase = true 			 # Rebase (instead of merge) on pull
+
+[push]
+    autoSetupRemote = true   # Automatically set upstream branch on push
+    followTags = true        # Automatically push tags that are missing on the remote
+
+[diff]
+	algorithm = histogram    # Clearer diffs on moved/edited lines
+	colorMoved = plain       # Highlight moved blocks in diffs
+	mnemonicPrefix = true    # More intuitive refs in diff output
+
+[column]
+	ui = auto                # Output in columns when possible
+
+[branch]
+	sort = -committerdate    # Sort branches by most recent commit first
+
+[tag]
+	sort = -version:refname  # Sort version numbers as you would expect
+	gpgsign = true           # Sign tags
+
+[stash]
+    showStash = true         # Show stash entries in status output
+
+[rerere]
+	enabled = true           # Record and reuse conflict resolutions
+
+[gpg]
+	format = ssh             # Sign commits with SSH key instead of GPG
+
+[alias]
+    lg = log --graph --oneline --decorate --all
+    lga = log --graph --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr'
+    c = commit -m
+    a = add -A
+    st = status -sb
+    ca = commit --amend --no-edit
+    rbi = rebase --interactive
+    rba = rebase --abort
+    rbc = rebase --continue
