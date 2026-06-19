@@ -1,11 +1,16 @@
 {
-  "lastChangelogVersion": "0.79.0",
+  "lastChangelogVersion": "0.79.6",
   "theme": "dark",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "medium",
-  "hideThinkingBlock": true,
+  "defaultProvider": "openrouter",
+  "defaultModel": "z-ai/glm-5.2",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": false,
   "packages": [
-    "git:github.com/kotarac/pi-fetch"
-  ]
+    "git:github.com/kotarac/pi-fetch",
+    "npm:@calesennett/pi-codex-usage"
+  ],
+  "pi-codex-usage": {
+    "usageMode": "left",
+    "refreshWindow": "7d"
+  }
 }
