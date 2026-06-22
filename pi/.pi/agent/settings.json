@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.79.6",
+  "lastChangelogVersion": "0.79.10",
   "theme": "dark",
-  "defaultProvider": "openrouter",
-  "defaultModel": "z-ai/glm-5.2",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "high",
   "hideThinkingBlock": false,
   "packages": [
