@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HA_URL="${HA_URL:-http://192.168.2.180:8123}"
+
+case "${1:-}" in
+  sit|sitting|1)
+    POSITION="sitting"
+    WEBHOOK_ID="omarchy_desk_sit_8cb65b7ce6b54ba99c4b"
+    ;;
+  stand|standing|2)
+    POSITION="standing"
+    WEBHOOK_ID="omarchy_desk_stand_b5ce7d90d43a4ab6950a"
+    ;;
+  *)
+    echo "Usage: desk-memory sit|stand" >&2
+    exit 64
+    ;;
+esac
+
+if curl -fsS --max-time 5 -X POST "${HA_URL%/}/api/webhook/${WEBHOOK_ID}" >/dev/null; then
+  command -v notify-send >/dev/null && notify-send -a Omarchy -u low -i preferences-desktop "󱈹    Moving desk" "      ${POSITION^} position" -t 2500 || true
+else
+  command -v notify-send >/dev/null && notify-send -a Omarchy -u critical -i dialog-error "    Desk movement failed" "      Could not move to ${POSITION} position" -t 5000 || true
+  exit 1
+fi
