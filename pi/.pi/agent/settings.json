@@ -1,16 +1,24 @@
 {
-  "lastChangelogVersion": "0.79.10",
+  "lastChangelogVersion": "0.80.2",
   "theme": "dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "medium",
   "hideThinkingBlock": false,
   "packages": [
     "git:github.com/kotarac/pi-fetch",
-    "npm:@calesennett/pi-codex-usage"
-  ],
-  "pi-codex-usage": {
-    "usageMode": "left",
-    "refreshWindow": "7d"
-  }
+    {
+      "source": "npm:@dietrichgebert/ponytail",
+      "extensions": [],
+      "skills": [
+        "./skills"
+      ]
+    },
+    "npm:pi-hashline-edit-pro",
+    "npm:pi-spark",
+    "npm:pi-rtk-optimizer",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@hypabolic/pi-hypa",
+    "npm:pi-subagents"
+  ]
 }
