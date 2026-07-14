@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.80.2",
+  "lastChangelogVersion": "0.80.6",
   "theme": "dark",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.6-terra",
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": false,
   "packages": [
@@ -14,11 +14,13 @@
         "./skills"
       ]
     },
-    "npm:pi-hashline-edit-pro",
     "npm:pi-spark",
+    "npm:pi-hashline-edit-pro",
     "npm:pi-rtk-optimizer",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@hypabolic/pi-hypa",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-impeccable",
+    "npm:remote-pi"
   ]
 }
