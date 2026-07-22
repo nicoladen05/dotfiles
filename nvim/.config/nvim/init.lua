@@ -1,6 +1,16 @@
 vim.g.mapleader = " "
 vim.g.astro_typescript = "enable"
 
+-- Custom normal-mode layout: h n e i = left down up right.
+vim.keymap.set("n", "n", "j")
+vim.keymap.set("n", "e", "k")
+vim.keymap.set("n", "i", "l")
+
+-- Move displaced normal-mode commands.
+vim.keymap.set("n", "k", "i")
+vim.keymap.set("n", "j", "n")
+vim.keymap.set("n", "l", "e")
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
