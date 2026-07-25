@@ -39,6 +39,7 @@ require("lazy").setup({
     performance = {
         rtp = {
             -- Preserve Ubuntu's multiarch runtime path so Neovim can find its bundled Tree-sitter parsers.
+            -- See: https://github.com/folke/lazy.nvim/issues/2177
             reset = false,
         },
     },
