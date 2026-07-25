@@ -41,7 +41,9 @@ local server_configurations = {
         },
     },
     marksman = {},
+    svelte = {},
     tailwindcss = {},
+    taplo = {},
     ts_ls = {},
     yamlls = function(schemastore)
         return {
@@ -142,8 +144,6 @@ local function configure_lsp()
     })
 end
 
--- Mason never installs anything implicitly. Its UI and :LspInstall are the
--- explicit entry points, and only servers already installed by Mason are enabled.
 return {
     "mason-org/mason-lspconfig.nvim",
     lazy = false,
@@ -162,9 +162,30 @@ return {
         "neovim/nvim-lspconfig",
         "b0o/SchemaStore.nvim",
         "saghen/blink.cmp",
+        {
+            "WhoIsSethDaniel/mason-tool-installer.nvim",
+            opts = {
+                ensure_installed = {
+                    "prettier",
+                },
+                auto_update = false,
+                run_on_start = true,
+            },
+        },
     },
     opts = {
-        ensure_installed = {},
+        ensure_installed = {
+            "cssls",
+            "eslint",
+            "html",
+            "jsonls",
+            "marksman",
+            "svelte",
+            "tailwindcss",
+            "taplo",
+            "ts_ls",
+            "yamlls",
+        },
         automatic_enable = true,
     },
     config = function(_, opts)

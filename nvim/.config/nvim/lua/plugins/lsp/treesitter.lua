@@ -1,10 +1,24 @@
--- Parsers are installed explicitly with :TSInstall.
+local ensure_installed = {
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "markdown_inline",
+    "svelte",
+    "toml",
+    "typescript",
+    "yaml",
+}
+
 return {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     opts = {},
     config = function(_, opts)
-        require("nvim-treesitter").setup(opts)
+        local treesitter = require("nvim-treesitter")
+        treesitter.setup(opts)
+        treesitter.install(ensure_installed)
 
         local highlight_group = vim.api.nvim_create_augroup("treesitter_highlight", { clear = true })
         vim.api.nvim_create_autocmd("FileType", {

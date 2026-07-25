@@ -22,6 +22,10 @@ local linters_by_filetype = {
     sh = {
         { name = "shellcheck", executable = "shellcheck" },
     },
+    svelte = {
+        { name = "eslint_d", executable = "eslint_d", first = true },
+        { name = "eslint", executable = "eslint", first = true },
+    },
     typescript = {
         { name = "eslint_d", executable = "eslint_d", first = true },
         { name = "eslint", executable = "eslint", first = true },

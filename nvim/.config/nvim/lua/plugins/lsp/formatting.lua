@@ -9,6 +9,8 @@ local formatters_by_filetype = {
     lua = { "stylua" },
     markdown = { "prettierd", "prettier", stop_after_first = true },
     sh = { "shfmt" },
+    svelte = { "prettierd", "prettier", stop_after_first = true },
+    toml = { "taplo" },
     typescript = { "prettierd", "prettier", stop_after_first = true },
     typescriptreact = { "prettierd", "prettier", stop_after_first = true },
     yaml = { "prettierd", "prettier", stop_after_first = true },
