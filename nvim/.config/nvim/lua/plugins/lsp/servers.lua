@@ -150,6 +150,13 @@ return {
     dependencies = {
         {
             "mason-org/mason.nvim",
+            keys = {
+                {
+                    "<leader>lM",
+                    "<cmd>Mason<cr>",
+                    desc = "LSP: Mason",
+                },
+            },
             opts = {},
         },
         "neovim/nvim-lspconfig",
