@@ -32,6 +32,7 @@ require("lazy").setup({
         require("plugins.which-key"),
         require("plugins.mini-pick"),
         require("plugins.neo-tree"),
+        { import = "plugins.lsp" },
     },
     checker = {
         enabled = true,
