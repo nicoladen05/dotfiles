@@ -117,18 +117,6 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-;; Use Codex from a native Emacs buffer through the Agent Client Protocol.
-(use-package! agent-shell
-  :commands (agent-shell agent-shell-openai-start-codex)
-  :init
-  (setq agent-shell-preferred-agent-config 'codex
-        agent-shell-openai-authentication '((:login . t))
-        agent-shell-openai-codex-acp-command
-        (list (expand-file-name "~/.local/bin/codex-acp"))))
-
-(map! :leader
-      :desc "Open Codex agent" "o a" #'agent-shell)
-
 ;; Search and manage Raindrop.io bookmarks, including Org dynamic blocks.
 ;; The token is read from auth-source first, then RAINDROP_TOKEN.
 (use-package! raindrop
