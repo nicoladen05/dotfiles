@@ -113,6 +113,14 @@
         "e" #'treemacs-previous-line
         "i" #'treemacs-RET-action))
 
+;; Open the persistent Ghostel terminal on the right.
+(set-popup-rule! "^\\*doom:ghostel-popup"
+  :side 'right
+  :size 0.4
+  :select t
+  :quit nil
+  :ttl nil)
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
