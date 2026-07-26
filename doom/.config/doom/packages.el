@@ -54,6 +54,10 @@
 
 (package! catppuccin-theme)
 
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)
+
 (package! raindrop
   :recipe (:host github
            :repo "Artawower/raindrop.el"
