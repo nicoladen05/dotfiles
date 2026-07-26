@@ -157,6 +157,23 @@
        :desc "Update links from heading tags" "u"
        #'raindrop-insert-or-update-links-under-heading))
 
+;; Astro files use web-mode for editing and Astro's language server via Eglot.
+(use-package! web-mode
+  :mode ("\\.astro\\'" . astro-mode)
+  :config
+  (define-derived-mode astro-mode web-mode "Astro"))
+
+(after! eglot
+  (add-to-list
+   'eglot-server-programs
+   '(astro-mode
+     . ("astro-ls" "--stdio"
+        :initializationOptions
+        (:typescript
+         (:tsdk "./node_modules/typescript/lib"))))))
+
+(add-hook 'astro-mode-hook #'eglot-ensure)
+
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
