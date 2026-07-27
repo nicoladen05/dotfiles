@@ -1,5 +1,6 @@
 -- Leader key
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- Custom normal-mode layout: h n e i = left down up right.
 vim.keymap.set("n", "n", "j")

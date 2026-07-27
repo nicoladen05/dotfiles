@@ -151,13 +151,13 @@
 (map! :leader
       :desc "Search Raindrop bookmarks" "s r" #'raindrop-search
       (:prefix "n"
-       (:prefix ("r" . "raindrop")
-        :desc "Search bookmarks" "s" #'raindrop-search
-        :desc "Create bookmark" "c" #'raindrop-search-create-bookmark
-        :desc "Create from clipboard" "b" #'raindrop-search-create-from-browser
-        :desc "Create from kill ring" "y" #'raindrop-search-create-from-kill-ring
-        :desc "Toggle search open target" "o" #'raindrop-search-toggle-enter-action
-        :desc "Clear Raindrop cache" "x" #'raindrop-clear-cache)))
+               (:prefix ("r" . "raindrop")
+                :desc "Search bookmarks" "s" #'raindrop-search
+                :desc "Create bookmark" "c" #'raindrop-search-create-bookmark
+                :desc "Create from clipboard" "b" #'raindrop-search-create-from-browser
+                :desc "Create from kill ring" "y" #'raindrop-search-create-from-kill-ring
+                :desc "Toggle search open target" "o" #'raindrop-search-toggle-enter-action
+                :desc "Clear Raindrop cache" "x" #'raindrop-clear-cache)))
 
 (map! :map org-mode-map
       :localleader
@@ -182,6 +182,9 @@
 
 (add-hook 'astro-mode-hook #'eglot-ensure)
 
+;; Use bash mode for .env files
+(add-to-list 'auto-mode-alist
+             '("\\.env\\(?:\\..*\\)?\\'" . bash-ts-mode))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
