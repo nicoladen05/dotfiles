@@ -38,6 +38,12 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
+;; Use lambda-line in place of Doom's built-in modeline.
+(use-package! lambda-line
+  :demand t
+  :config
+  (lambda-line-mode 1))
+
 ;; Only show Centaur Tabs when the current tab group has multiple buffers.
 (after! centaur-tabs
   (defvar-local my/centaur-tabs-hidden-for-single-tab nil)
