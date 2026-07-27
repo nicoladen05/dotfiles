@@ -1,4 +1,7 @@
 # Auto-attach tmux for interactive SSH logins.
+# Do not intercept non-interactive SSH commands such as mosh-server startup.
+status is-interactive; or return
+
 if not set -q SSH_CONNECTION; and not set -q SSH_TTY
     return
 end
