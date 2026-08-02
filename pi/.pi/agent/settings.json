@@ -1,12 +1,11 @@
 {
-  "lastChangelogVersion": "0.80.6",
+  "lastChangelogVersion": "0.83.0",
   "theme": "dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
-  "hideThinkingBlock": false,
+  "hideThinkingBlock": true,
   "packages": [
-    "git:github.com/kotarac/pi-fetch",
     {
       "source": "npm:@dietrichgebert/ponytail",
       "extensions": [],
@@ -21,6 +20,9 @@
     "npm:@hypabolic/pi-hypa",
     "npm:pi-subagents",
     "npm:pi-impeccable",
-    "npm:remote-pi"
+    "npm:remote-pi",
+    "npm:pi-intercom",
+    "npm:pi-prompt-template-model",
+    "npm:pi-web-access"
   ]
 }
