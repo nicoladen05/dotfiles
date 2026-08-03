@@ -20,6 +20,9 @@ string match -q -r 'UTF-8|utf8' -- "$locale"; or set -gx LANG C.UTF-8
 if type -q herdr
     exec herdr
     return $status
+else if test -x "$HOME/.local/bin/herdr"
+    exec "$HOME/.local/bin/herdr"
+    return $status
 end
 type -q tmux; or return
 

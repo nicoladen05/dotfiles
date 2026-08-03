@@ -11,6 +11,10 @@ if command -v herdr >/dev/null 2>&1; then
     exec herdr
     return $?
 fi
+if [ -x "$HOME/.local/bin/herdr" ]; then
+    exec "$HOME/.local/bin/herdr"
+    return $?
+fi
 command -v tmux >/dev/null 2>&1 || return 0
 
 if tmux has-session 2>/dev/null; then
