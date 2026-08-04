@@ -54,10 +54,10 @@
 
 (package! catppuccin-theme)
 
-(package! lambda-line
-  :recipe (:type git
-           :repo "https://codeberg.org/Lambda-Emacs/lambda-line.git")
-  :pin "ae8a59db0eb29a845bf55c6738dc096d7fca36f3")
+;; (package! lambda-line
+;;   :recipe (:type git
+;;            :repo "https://codeberg.org/Lambda-Emacs/lambda-line.git")
+;;   :pin "ae8a59db0eb29a845bf55c6738dc096d7fca36f3")
 
 (package! raindrop
   :recipe (:host github
