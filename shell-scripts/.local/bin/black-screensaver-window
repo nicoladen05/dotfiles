@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Inner half of the fully-black screensaver. Runs inside the terminal window
+# opened by black-screensaver. Paints nothing at all: on an OLED panel every
+# pixel is genuinely off, so there is no emission and no burn-in risk.
+# Exits on any keypress or when the window loses focus.
+
+screensaver_in_focus() {
+  hyprctl activewindow -j | jq -e '.class == "org.omarchy.screensaver"' >/dev/null 2>&1
+}
+
+exit_screensaver() {
+  hyprctl keyword cursor:invisible false &>/dev/null || true
+  printf '\033[?25h' # restore text cursor
+  pkill -f org.omarchy.screensaver 2>/dev/null
+  exit 0
+}
+
+trap exit_screensaver SIGINT SIGTERM SIGHUP SIGQUIT
+
+printf '\033]11;rgb:00/00/00\007' # background black
+printf '\033]10;rgb:00/00/00\007' # foreground black
+printf '\033[2J\033[H'            # clear screen
+printf '\033[?25l'                # hide text cursor
+
+hyprctl keyword cursor:invisible true &>/dev/null
+
+while true; do
+  if read -rn1 -t 1 || ! screensaver_in_focus; then
+    exit_screensaver
+  fi
+done
