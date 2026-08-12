@@ -12,6 +12,9 @@ vim.opt.mouse = "a"
 -- Persistent undo
 vim.opt.undofile = true
 
+-- System clipboard as default register
+vim.opt.clipboard = "unnamedplus"
+
 -- Indentation
 vim.opt.autoindent = true
 vim.opt.smartindent = true
