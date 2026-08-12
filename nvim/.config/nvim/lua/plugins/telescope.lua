@@ -14,17 +14,31 @@ return {
 			end,
 			desc = "Find Files",
 		},
-		-- {
-		-- 	"<leader>,",
-		-- 	function()
-		-- 		require("telescope.builtin")
-		-- 	end,
-		-- },
+		{
+			"<leader>,",
+			function()
+				require("telescope.builtin").buffers()
+			end,
+			desc = "Switch Buffers",
+		},
+		{
+			"<leader>/",
+			function()
+				require("telescope.builtin").live_grep()
+			end,
+			desc = "Grep Project",
+		},
 	},
 
 	opts = {
 		pickers = {
 			find_files = {
+				theme = "ivy",
+			},
+			buffers = {
+				theme = "ivy",
+			},
+			live_grep = {
 				theme = "ivy",
 			},
 		},

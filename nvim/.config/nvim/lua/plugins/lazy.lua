@@ -38,6 +38,8 @@ require("lazy").setup({
 		require("plugins.coding.mason"),
 		require("plugins.coding.treesitter"),
 
+		require("plugins.ui.gitsigns"),
+
 		require("plugins.mini.mini-comment"),
 		require("plugins.mini.mini-pairs"),
 	},
