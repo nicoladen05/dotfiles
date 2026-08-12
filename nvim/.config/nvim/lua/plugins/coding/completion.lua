@@ -1,30 +1,30 @@
 return {
-    "saghen/blink.cmp",
+	"saghen/blink.cmp",
 
-    dependencies = {
-        "saghen/blink.lib",
-        "rafamadriz/friendly-snippets",
-    },
+	dependencies = {
+		"saghen/blink.lib",
+		"rafamadriz/friendly-snippets",
+	},
 
-    build = function()
-        ---@diagnostic disable-next-line: undefined-field
-        require('blink.cmp').build():pwait()
-    end,
+	build = function()
+		---@diagnostic disable-next-line: undefined-field
+		require("blink.cmp").build():pwait()
+	end,
 
-    opts = {
-        keymap = { preset = 'super-tab' },
+	opts = {
+		keymap = { preset = "enter" },
 
-        appearance = {
-            use_nvim_cmp_as_default = false,
-            nerd_font_variant = "mono",
-        },
+		appearance = {
+			use_nvim_cmp_as_default = false,
+			nerd_font_variant = "mono",
+		},
 
-        completion = {
-            accept = {
-                auto_brackets = {
-                    enabled = true,
-                },
-            }
-        }
-    },
+		completion = {
+			accept = {
+				auto_brackets = {
+					enabled = true,
+				},
+			},
+		},
+	},
 }

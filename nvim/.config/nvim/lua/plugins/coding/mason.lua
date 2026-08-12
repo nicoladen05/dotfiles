@@ -24,8 +24,7 @@ return {
 				"stylua",
 
 				-- TypeScript
-				"typescript-language-server",
-				"prettierd",
+				"ts_ls",
 			},
 		},
 	},
