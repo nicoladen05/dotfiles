@@ -33,4 +33,3 @@ vim.keymap.set("x", ">", ">gv")
 -- Better LSP Bindings
 vim.keymap.set("n", "g.", vim.lsp.buf.code_action)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format)

@@ -33,6 +33,7 @@ require("lazy").setup({
         require("plugins.colorscheme"),
 
         require("plugins.coding.completion"),
+        require("plugins.coding.formatting"),
         require("plugins.coding.lsp"),
         require("plugins.coding.mason"),
         require("plugins.coding.treesitter"),
