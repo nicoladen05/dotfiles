@@ -55,3 +55,7 @@ require("lazy").setup({
 		},
 	},
 })
+
+vim.keymap.set("n", "<leader>l", function()
+	require("lazy").show()
+end, { desc = "Open Lazy" })
