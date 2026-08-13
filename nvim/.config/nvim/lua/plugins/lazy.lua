@@ -31,6 +31,7 @@ require("lazy").setup({
 		require("plugins.neo-tree"),
 		require("plugins.telescope"),
 		require("plugins.colorscheme"),
+		require("plugins.fugitive"),
 
 		require("plugins.coding.completion"),
 		require("plugins.coding.debugger"),
