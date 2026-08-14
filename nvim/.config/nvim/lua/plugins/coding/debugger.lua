@@ -2,14 +2,14 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 
-        -- config = function()
-        --     local dap = require("dap")
-        --
-        --     dap.configurations.javascript = {
-        --         type = "js-debug-adapter"
-        --     }
-        --
-        -- end
+		-- config = function()
+		--     local dap = require("dap")
+		--
+		--     dap.configurations.javascript = {
+		--         type = "js-debug-adapter"
+		--     }
+		--
+		-- end
 
 		keys = {
 			{
