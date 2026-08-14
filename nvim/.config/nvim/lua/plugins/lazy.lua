@@ -42,6 +42,7 @@ require("lazy").setup({
 
 		require("plugins.ui.gitsigns"),
 		require("plugins.ui.project"),
+		require("plugins.ui.whichkey"),
 
 		require("plugins.mini.mini-comment"),
 		require("plugins.mini.mini-pairs"),
