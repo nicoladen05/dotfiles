@@ -46,6 +46,7 @@ require("lazy").setup({
 
 		require("plugins.mini.mini-comment"),
 		require("plugins.mini.mini-pairs"),
+		require("plugins.mini.mini-surround"),
 	},
 	checker = {
 		enabled = true,
