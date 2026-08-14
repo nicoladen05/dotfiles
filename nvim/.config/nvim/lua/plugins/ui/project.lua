@@ -1,13 +1,8 @@
 return {
-	"ahmedkhalf/project.nvim",
+	"DrKJeff16/project.nvim",
+	cmd = { "Project" },
 
-	-- Detection runs off VimEnter/BufEnter autocmds registered in setup(),
-	-- so this has to be loaded at startup to see opened buffers.
-	lazy = false,
-
-	config = function()
-		require("project_nvim").setup()
-	end,
+	opts = {},
 
 	keys = {
 		{
