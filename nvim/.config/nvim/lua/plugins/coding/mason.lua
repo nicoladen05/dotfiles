@@ -24,7 +24,7 @@ return {
 				"stylua",
 
 				-- TypeScript
-				"ts_ls",
+				"vtsls",
 			},
 		},
 	},
