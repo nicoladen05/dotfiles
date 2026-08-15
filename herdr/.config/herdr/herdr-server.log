@@ -1,0 +1,111 @@
+2026-08-14T17:25:41.885879Z  INFO herdr::api::server: api server listening path=/home/nico/.config/herdr/herdr.sock
+2026-08-14T17:25:41.886368Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-14T17:25:41.900595Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-14T17:25:41.901833Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-14T17:25:41.902530Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=29182
+2026-08-14T17:25:41.902638Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-08-14T17:25:41.902644Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-14T17:25:41.902851Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:25:41.902858Z  INFO herdr::server::headless: created startup workspace cwd=/home/nico
+2026-08-14T17:25:41.902901Z  INFO herdr::server::headless: client protocol socket listening path=/home/nico/.config/herdr/herdr-client.sock
+2026-08-14T17:25:41.902919Z  INFO herdr::server::headless: herdr server started api_socket=/home/nico/.config/herdr/herdr.sock client_socket=/home/nico/.config/herdr/herdr-client.sock
+2026-08-14T17:25:41.903034Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=29153
+2026-08-14T17:25:41.954022Z  INFO herdr::server::headless: client connected client_id=2 cols=123 rows=28 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-14T17:25:42.015155Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-14T17:25:44.723276Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:25:44.724363Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=29767
+2026-08-14T17:25:44.724454Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-14T17:25:45.702049Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:25:45.703036Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=30269
+2026-08-14T17:25:45.703113Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-14T17:25:46.455850Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:25:46.459265Z  INFO herdr::pane: pane session terminated pane=3 pid=30269 signal=Hangup
+2026-08-14T17:25:46.459859Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-14T17:25:46.894753Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:25:46.898337Z  INFO herdr::pane: pane session terminated pane=2 pid=29767 signal=Hangup
+2026-08-14T17:25:46.898430Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-08-14T17:25:47.535277Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:25:47.536276Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=30773
+2026-08-14T17:25:47.536338Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:25:48.064158Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:25:48.067587Z  INFO herdr::pane: pane session terminated pane=4 pid=30773 signal=Hangup
+2026-08-14T17:25:48.067664Z  WARN herdr::app::actions: PaneDied for unknown pane pane=4
+2026-08-14T17:25:48.817877Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:25:48.818884Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=31275
+2026-08-14T17:25:48.818946Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:25:53.821154Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/nico/.config/herdr/session.json workspaces=1
+2026-08-14T17:26:01.632704Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=5 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:26:01.636082Z  INFO herdr::pane: pane session terminated pane=5 pid=31275 signal=Hangup
+2026-08-14T17:26:01.636167Z  WARN herdr::app::actions: PaneDied for unknown pane pane=5
+2026-08-14T17:26:02.858291Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:26:02.859289Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=31833
+2026-08-14T17:26:02.859353Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-14T17:26:03.871253Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=6 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:26:03.874768Z  INFO herdr::pane: pane session terminated pane=6 pid=31833 signal=Hangup
+2026-08-14T17:26:03.875294Z  WARN herdr::app::actions: PaneDied for unknown pane pane=6
+2026-08-14T17:26:04.535141Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=7 rows=27 cols=97 scrollback_limit_bytes=10000000
+2026-08-14T17:26:04.536104Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=7 pid=32370
+2026-08-14T17:26:04.536159Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:07.347071Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:07.786214Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.000147Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.133768Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.258066Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.315170Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.471867Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:08.573294Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-14T17:26:11.926382Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=7 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T17:26:11.929660Z  INFO herdr::pane: pane session terminated pane=7 pid=32370 signal=Hangup
+2026-08-14T17:26:11.929740Z  WARN herdr::app::actions: PaneDied for unknown pane pane=7
+2026-08-14T17:26:15.473165Z  INFO herdr::server::headless: client detached client_id=2
+2026-08-14T17:26:15.480166Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-14T17:26:16.930243Z  INFO herdr::server::headless: client connected client_id=4 cols=80 rows=24 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-14T17:26:16.930452Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/nico/.config/herdr/session.json workspaces=1
+2026-08-14T17:26:17.030841Z  INFO herdr::server::headless: client resize client_id=4 cols=123 rows=28 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:17.932773Z  INFO herdr::server::headless: client resize client_id=4 cols=80 rows=24 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:17.933109Z  INFO herdr::server::headless: client detached client_id=4
+2026-08-14T17:26:17.933326Z  INFO herdr::server::headless: client disconnected client_id=4
+2026-08-14T17:26:18.954258Z  INFO herdr::server::headless: client connected client_id=6 cols=80 rows=24 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-14T17:26:19.054851Z  INFO herdr::server::headless: client resize client_id=6 cols=123 rows=28 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:20.457931Z  INFO herdr::server::headless: client resize client_id=6 cols=80 rows=24 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:20.458252Z  INFO herdr::server::headless: client detached client_id=6
+2026-08-14T17:26:20.458495Z  INFO herdr::server::headless: client disconnected client_id=6
+2026-08-14T17:26:23.489939Z  INFO herdr::server::headless: client connected client_id=8 cols=80 rows=24 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-14T17:26:23.590784Z  INFO herdr::server::headless: client resize client_id=8 cols=123 rows=58 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:23.792151Z  INFO herdr::server::headless: client resize client_id=8 cols=80 rows=24 cell_width_px=0 cell_height_px=0
+2026-08-14T17:26:23.792590Z  INFO herdr::server::headless: client detached client_id=8
+2026-08-14T17:26:23.792803Z  INFO herdr::server::headless: client disconnected client_id=8
+2026-08-14T18:18:08.926931Z  INFO herdr::server::headless: server shutdown initiated
+2026-08-14T18:18:08.977010Z  INFO herdr::server::headless: completing server shutdown
+2026-08-14T18:18:08.977204Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/nico/.config/herdr/session.json workspaces=1
+2026-08-14T18:18:08.977216Z  INFO herdr::server::headless: headless server exiting
+2026-08-14T18:18:08.977884Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-14T18:18:08.981645Z  INFO herdr::pane: pane session terminated pane=1 pid=29182 signal=Hangup
+2026-08-14T18:18:08.981975Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=29153
+2026-08-15T12:39:25.829138Z  INFO herdr::api::server: api server listening path=/home/nico/.config/herdr/herdr.sock
+2026-08-15T12:39:25.829885Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-15T12:39:25.830545Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=76907
+2026-08-15T12:39:25.830657Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-15T12:39:25.830665Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-15T12:39:25.853148Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-15T12:39:25.854274Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/nico
+2026-08-15T12:39:25.854336Z  INFO herdr::server::headless: client protocol socket listening path=/home/nico/.config/herdr/herdr-client.sock
+2026-08-15T12:39:25.854358Z  INFO herdr::server::headless: herdr server started api_socket=/home/nico/.config/herdr/herdr.sock client_socket=/home/nico/.config/herdr/herdr-client.sock
+2026-08-15T12:39:25.854691Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=76889
+2026-08-15T12:39:25.890520Z  INFO herdr::server::headless: client connected client_id=2 cols=123 rows=58 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-15T12:39:26.227908Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-15T12:39:32.499638Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=57 cols=97 scrollback_limit_bytes=10000000
+2026-08-15T12:39:32.500520Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=77477
+2026-08-15T12:39:32.500591Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t5"
+2026-08-15T12:39:33.074101Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-15T12:39:33.078143Z  INFO herdr::pane: pane session terminated pane=2 pid=77477 signal=Hangup
+2026-08-15T12:39:33.079214Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-08-15T12:39:34.659789Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=57 cols=97 scrollback_limit_bytes=10000000
+2026-08-15T12:39:34.660688Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=77984
+2026-08-15T12:39:34.660749Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-15T12:39:36.135028Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-08-15T12:39:36.139118Z  INFO herdr::pane: pane session terminated pane=3 pid=77984 signal=Hangup
+2026-08-15T12:39:36.139195Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-15T12:39:37.079616Z  INFO herdr::server::headless: client detached client_id=2
+2026-08-15T12:39:37.080735Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-15T12:39:41.140719Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/nico/.config/herdr/session.json workspaces=1
