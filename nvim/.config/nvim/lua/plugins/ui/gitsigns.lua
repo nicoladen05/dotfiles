@@ -1,13 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
 
-	config = function()
-		-- Fix colorscheme
-		vim.api.nvim_set_hl(0, "GitSignsAdd", { link = "DiffAdd" })
-		vim.api.nvim_set_hl(0, "GitSignsChange", { link = "DiffChange" })
-		vim.api.nvim_set_hl(0, "GitSignsDelete", { link = "DiffDelete" })
-	end,
-
 	opts = {
 		signs = {
 			add = { text = "▎" },
