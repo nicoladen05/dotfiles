@@ -3,9 +3,9 @@ return {
 
 	opts = {
 		mappings = {
-			add = "ys",
-			delete = "ds",
-			replace = "cs",
+			add = "gsa",
+			delete = "gsd",
+			replace = "gsr",
 		},
 	},
 }
