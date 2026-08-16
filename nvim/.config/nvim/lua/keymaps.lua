@@ -31,5 +31,5 @@ vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
 -- Better LSP Bindings
-vim.keymap.set("n", "g.", vim.lsp.buf.code_action)
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set({ "n", "v" }, "g.", vim.lsp.buf.code_action)
+vim.keymap.set({ "n", "v" }, "gd", vim.lsp.buf.definition)

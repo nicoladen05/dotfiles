@@ -28,10 +28,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugin setup
 require("lazy").setup({
 	spec = {
-		require("plugins.neo-tree"),
-		require("plugins.telescope"),
 		require("plugins.colorscheme"),
 		require("plugins.fugitive"),
+		require("plugins.neo-tree"),
+		require("plugins.telescope"),
 
 		require("plugins.coding.completion"),
 		require("plugins.coding.debugger"),
@@ -47,6 +47,8 @@ require("lazy").setup({
 		require("plugins.mini.mini-comment"),
 		require("plugins.mini.mini-pairs"),
 		require("plugins.mini.mini-surround"),
+
+		require("plugins.addons.leetcode"),
 	},
 	checker = {
 		enabled = true,
