@@ -33,3 +33,7 @@ vim.keymap.set("x", ">", ">gv")
 -- Better LSP Bindings
 vim.keymap.set({ "n", "v" }, "g.", vim.lsp.buf.code_action)
 vim.keymap.set({ "n", "v" }, "gd", vim.lsp.buf.definition)
+
+-- Navigate quickfix/location list
+vim.keymap.set({ "n", "v" }, "<M-n>", "<cmd>cnext<cr>")
+vim.keymap.set({ "n", "v" }, "<M-e>", "<cmd>cprev<cr>")
