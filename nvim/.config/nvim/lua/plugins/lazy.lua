@@ -38,6 +38,7 @@ require("lazy").setup({
 		require("plugins.coding.formatting"),
 		require("plugins.coding.lsp"),
 		require("plugins.coding.mason"),
+		require("plugins.coding.refactoring"),
 		require("plugins.coding.treesitter"),
 
 		require("plugins.ui.gitsigns"),
@@ -49,9 +50,6 @@ require("lazy").setup({
 		require("plugins.mini.mini-surround"),
 
 		require("plugins.addons.leetcode"),
-	},
-	checker = {
-		enabled = true,
 	},
 	performance = {
 		rtp = {
