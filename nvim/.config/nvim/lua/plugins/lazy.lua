@@ -50,7 +50,6 @@ require("lazy").setup({
 		require("plugins.mini.mini-surround"),
 
 		require("plugins.addons.leetcode"),
-		require("plugins.addons.prettycomment"),
 	},
 	performance = {
 		rtp = {
