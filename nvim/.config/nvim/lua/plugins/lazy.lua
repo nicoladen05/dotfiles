@@ -34,6 +34,7 @@ require("lazy").setup({
 		require("plugins.telescope"),
 
 		require("plugins.coding.completion"),
+		require("plugins.coding.99"),
 		require("plugins.coding.debugger"),
 		require("plugins.coding.formatting"),
 		require("plugins.coding.lsp"),

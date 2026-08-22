@@ -1,6 +1,8 @@
 {
+  "99": { "branch": "master", "commit": "c17422457027c913c76c75a921fca1e623d2678e" },
   "async.nvim": { "branch": "main", "commit": "99aed904ae1253c27fac60b862b6d73ef1380e54" },
   "blink.cmp": { "branch": "main", "commit": "e116ff9c5c1c2ed6bcdb2e0a6e547099876a8116" },
+  "blink.compat": { "branch": "main", "commit": "2ed6d9a28b07fa6f3bface818470605f8896408c" },
   "blink.lib": { "branch": "main", "commit": "c8fdc12c8a2fab6cf786dd7141a283f8079f902b" },
   "conform.nvim": { "branch": "master", "commit": "016802de402556da54c36bd7359b441266b01cdd" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
