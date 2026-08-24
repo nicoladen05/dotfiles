@@ -20,6 +20,7 @@ end
 local formatter_spec = {
 	lua = { "stylua" },
 	python = { "isort", "black" },
+	prisma = { "prismals" },
 }
 
 add_prettier_formatters(formatter_spec)
