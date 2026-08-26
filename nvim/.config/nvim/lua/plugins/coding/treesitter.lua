@@ -16,7 +16,6 @@ return {
 			"css",
 			"diff",
 			"html",
-			"html",
 			"java",
 			"javascript",
 			"jsdoc",
