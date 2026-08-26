@@ -8,7 +8,7 @@ return {
 		{
 			"<leader>fp",
 			function()
-				require("telescope").extensions.projects.projects(require("telescope.themes").get_ivy())
+				require("telescope").extensions.projects.projects()
 			end,
 			desc = "Find Projects",
 		},

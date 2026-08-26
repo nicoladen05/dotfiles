@@ -31,19 +31,7 @@ return {
 			},
 		},
 
-		opts = {
-			pickers = {
-				find_files = {
-					theme = "ivy",
-				},
-				buffers = {
-					theme = "ivy",
-				},
-				live_grep = {
-					theme = "ivy",
-				},
-			},
-		},
+		opts = {},
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
