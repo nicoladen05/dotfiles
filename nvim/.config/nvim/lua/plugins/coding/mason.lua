@@ -53,7 +53,10 @@ return {
 		opts = {
 			ensure_installed = {
 				"eslint_d",
+				"markdownlint-cli2",
 				"prettierd",
+				"ruff",
+				"shellcheck",
 				"shfmt",
 				"stylua",
 			},

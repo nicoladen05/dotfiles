@@ -37,6 +37,7 @@ require("lazy").setup({
 		require("plugins.coding.99"),
 		require("plugins.coding.debugger"),
 		require("plugins.coding.formatting"),
+		require("plugins.coding.linting"),
 		require("plugins.coding.lsp"),
 		require("plugins.coding.mason"),
 		require("plugins.coding.refactoring"),
@@ -44,6 +45,7 @@ require("lazy").setup({
 
 		require("plugins.ui.gitsigns"),
 		require("plugins.ui.project"),
+		require("plugins.ui.trouble"),
 		require("plugins.ui.whichkey"),
 
 		require("plugins.mini.mini-comment"),
