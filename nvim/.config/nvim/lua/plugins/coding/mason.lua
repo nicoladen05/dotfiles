@@ -19,12 +19,43 @@ return {
 
 		opts = {
 			ensure_installed = {
+				-- Bash
+				"bashls",
+
+				-- CSS
+				"cssls",
+
 				-- Lua
 				"lua_ls",
-				"stylua",
+
+				-- Prisma
+				"prismals",
+
+				-- Svelte
+				"svelte",
+
+				-- Tailwind CSS
+				"tailwindcss",
 
 				-- TypeScript
 				"vtsls",
+			},
+		},
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+
+		dependencies = {
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
+		},
+
+		opts = {
+			ensure_installed = {
+				"eslint_d",
+				"prettierd",
+				"shfmt",
+				"stylua",
 			},
 		},
 	},
