@@ -49,8 +49,6 @@ require("lazy").setup({
 		require("plugins.mini.mini-comment"),
 		require("plugins.mini.mini-pairs"),
 		require("plugins.mini.mini-surround"),
-
-		require("plugins.addons.leetcode"),
 	},
 	performance = {
 		rtp = {
