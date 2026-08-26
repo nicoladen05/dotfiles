@@ -21,7 +21,7 @@ return {
 				port = "${port}",
 				executable = {
 					command = vim.fn.stdpath("data") .. "/mason/bin/js-debug-adapter",
-					args = { "${port}" },
+					args = { "${port}", "127.0.0.1" },
 				},
 			}
 
