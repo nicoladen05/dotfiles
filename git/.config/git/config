@@ -2,8 +2,10 @@
 
 
 [user]
-	name = nicoladen05
-	email = me@nicoladen.dev
+	name = Nicolas Hartmann
+	email = nicolas.hartmann@ptb.de
+    ; name = nicoladen05
+    ; name = me@nicoladen.dev
 	signingkey = ~/.ssh/id_ed25519.pub
 
 [credential]
