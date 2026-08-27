@@ -5,6 +5,9 @@ return {
 	opts = {
 		suggestion = {
 			auto_trigger = true,
+			keymap = {
+				accept = false,
+			},
 		},
 	},
 	config = function(_, opts)

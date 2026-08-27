@@ -12,7 +12,26 @@ return {
 	end,
 
 	opts = {
-		keymap = { preset = "enter" },
+		keymap = {
+			preset = "enter",
+			["<Tab>"] = {
+				function(cmp)
+					if cmp.is_visible() then
+						return cmp.accept()
+					end
+
+					local suggestion = require("copilot.suggestion")
+					if suggestion.is_visible() then
+						suggestion.accept()
+						return true
+					end
+
+					return false
+				end,
+				"snippet_forward",
+				"fallback",
+			},
+		},
 
 		appearance = {
 			use_nvim_cmp_as_default = false,
