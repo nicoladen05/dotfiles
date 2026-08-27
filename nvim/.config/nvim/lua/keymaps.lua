@@ -30,6 +30,10 @@ vim.keymap.set({ "n", "v", "o" }, "L", "E")
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
+-- Keep the cursor centered when scrolling half a page.
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
 -- Switch between buffers
 vim.keymap.set({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>")
 vim.keymap.set({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>")
