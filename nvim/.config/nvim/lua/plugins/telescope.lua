@@ -31,7 +31,15 @@ return {
 			},
 		},
 
-		opts = {},
+		opts = {
+			defaults = {
+				file_ignore_patterns = {
+					"node_modules/",
+					"%.git/",
+					"dist/",
+				},
+			},
+		},
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
