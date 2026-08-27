@@ -7,6 +7,7 @@ vim.keymap.set({ "n", "v", "o" }, "n", "j")
 vim.keymap.set({ "n", "v", "o" }, "e", "k")
 vim.keymap.set({ "n", "v", "o" }, "i", "l")
 vim.keymap.set({ "n", "v", "o" }, "N", "J")
+vim.keymap.set({ "n", "v", "o" }, "E", vim.lsp.buf.hover)
 vim.keymap.set({ "n", "v", "o" }, "I", "L")
 
 -- Remap movments between windows
@@ -28,6 +29,17 @@ vim.keymap.set({ "n", "v", "o" }, "L", "E")
 -- Keep the selection active when changing indentation.
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
+
+-- Switch between buffers
+vim.keymap.set({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>")
+vim.keymap.set({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>")
+
+-- Better LSP Bindings
+vim.keymap.set({ "n", "v" }, "g.", vim.lsp.buf.code_action)
+vim.keymap.set({ "n", "v" }, "gd", vim.lsp.buf.definition)
+vim.keymap.set({ "n", "v" }, "<leader>cd", function()
+	vim.diagnostic.open_float()
+end)
 
 -- Navigate quickfix/location list
 vim.keymap.set({ "n", "v" }, "<M-n>", "<cmd>cnext<cr>")
