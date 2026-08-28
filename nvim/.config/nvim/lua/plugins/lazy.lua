@@ -32,6 +32,7 @@ require("lazy").setup({
 		require("plugins.fugitive"),
 		require("plugins.neo-tree"),
 		require("plugins.telescope"),
+		require("plugins.toggleterm"),
 
 		require("plugins.coding.completion"),
 		require("plugins.coding.copilot"),
