@@ -32,7 +32,6 @@ return {
 					local git = statusline.section_git({ trunc_width = 40 })
 					local diagnostics = statusline.section_diagnostics({ trunc_width = 75 })
 					local filename = statusline.section_filename({ trunc_width = 120 })
-					local location = statusline.section_location({ trunc_width = 40 })
 
 					return statusline.combine_groups({
 						{ hl = mode_hl, strings = { mode } },
@@ -40,7 +39,7 @@ return {
 						"%<",
 						{ hl = "MiniStatuslineFilename", strings = { filename } },
 						"%=",
-						{ hl = mode_hl, strings = { location } },
+						{ hl = mode_hl, strings = { "%P" } },
 					})
 				end,
 				inactive = function()
