@@ -5,7 +5,25 @@ return {
 	},
 	config = function()
 		local _99 = require("99")
+		local picker_utils = require("99.extensions.pickers")
 		local tmp_dir = vim.fn.stdpath("cache") .. "/99"
+
+		local function select_current(items, current, prompt, on_choice)
+			local current_index = math.max(vim.fn.index(items, current) + 1, 1)
+
+			Snacks.picker.select(items, {
+				prompt = prompt .. " (current: " .. current .. ")",
+				snacks = {
+					on_show = function(picker)
+						picker.list:view(current_index)
+					end,
+				},
+			}, function(choice)
+				if choice then
+					on_choice(choice)
+				end
+			end)
+		end
 
 		-- 99 does not include a Codex provider yet, but its provider API supports
 		-- using Codex's non-interactive mode as a small local adapter.
@@ -80,11 +98,16 @@ return {
 		end, { desc = "99: Vibe project" })
 
 		vim.keymap.set("n", "<leader>9m", function()
-			require("99.extensions.telescope").select_model()
+			picker_utils.get_models(nil, function(models, current)
+				select_current(models, current, "99: Select Model", picker_utils.on_model_selected)
+			end)
 		end, { desc = "99: Select model" })
 
 		vim.keymap.set("n", "<leader>9p", function()
-			require("99.extensions.telescope").select_provider()
+			local info = picker_utils.get_providers()
+			select_current(info.names, info.current, "99: Select Provider", function(name)
+				picker_utils.on_provider_selected(name, info.lookup)
+			end)
 		end, { desc = "99: Select provider" })
 	end,
 }

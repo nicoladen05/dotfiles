@@ -2,13 +2,17 @@ return {
 	"DrKJeff16/project.nvim",
 	cmd = { "Project" },
 
-	opts = {},
+	opts = {
+		snacks = {
+			enabled = true,
+		},
+	},
 
 	keys = {
 		{
 			"<leader>fp",
 			function()
-				require("telescope").extensions.projects.projects()
+				require("project.extensions.snacks").pick()
 			end,
 			desc = "Find Projects",
 		},
