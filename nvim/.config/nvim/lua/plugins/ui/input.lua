@@ -24,6 +24,22 @@ return {
 			end,
 			desc = "Grep Project",
 		},
+		{
+			"<C-/>",
+			function()
+				Snacks.terminal.toggle()
+			end,
+			mode = { "n", "t" },
+			desc = "Toggle Terminal",
+		},
+		{
+			"<C-_>",
+			function()
+				Snacks.terminal.toggle()
+			end,
+			mode = { "n", "t" },
+			desc = "Toggle Terminal",
+		},
 	},
 	opts = {
 		input = {
@@ -55,6 +71,27 @@ return {
 								},
 							},
 						},
+					},
+				},
+			},
+		},
+		terminal = {
+			win = {
+				height = 15,
+				keys = {
+					term_normal = {
+						"<Esc>",
+						"<cmd>stopinsert<cr>",
+						mode = "t",
+						desc = "Leave terminal mode",
+					},
+					term_interrupt = {
+						"<C-c>",
+						function(self)
+							vim.fn.chansend(vim.bo[self.buf].channel, "\003")
+						end,
+						mode = { "n", "t" },
+						desc = "Interrupt terminal process",
 					},
 				},
 			},

@@ -32,7 +32,6 @@ require("lazy").setup({
 		require("plugins.colorscheme"),
 		require("plugins.fugitive"),
 		require("plugins.neo-tree"),
-		require("plugins.toggleterm"),
 
 		require("plugins.coding.autotag"),
 		require("plugins.coding.completion"),
