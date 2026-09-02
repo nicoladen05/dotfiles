@@ -42,6 +42,7 @@ return {
 		},
 	},
 	opts = {
+		bigfiles = { enabled = true },
 		input = {
 			enabled = true,
 			win = {
@@ -75,6 +76,7 @@ return {
 				},
 			},
 		},
+		quickfile = { enabled = true },
 		terminal = {
 			win = {
 				height = 15,
