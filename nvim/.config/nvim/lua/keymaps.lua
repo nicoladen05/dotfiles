@@ -45,6 +45,6 @@ vim.keymap.set({ "n", "v" }, "<leader>cd", function()
 	vim.diagnostic.open_float()
 end)
 
--- Navigate quickfix/location list
-vim.keymap.set({ "n", "v" }, "<M-n>", "<cmd>cnext<cr>")
-vim.keymap.set({ "n", "v" }, "<M-e>", "<cmd>cprev<cr>")
+-- Navigate quickfix list
+vim.keymap.set({ "n", "v" }, "]c", "<cmd>cnext<cr>")
+vim.keymap.set({ "n", "v" }, "[c", "<cmd>cprev<cr>")
