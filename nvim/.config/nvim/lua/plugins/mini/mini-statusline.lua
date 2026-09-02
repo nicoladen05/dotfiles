@@ -70,5 +70,11 @@ return {
 
 		set_highlights()
 		vim.api.nvim_create_autocmd("ColorScheme", { callback = set_highlights })
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "neo-tree",
+			callback = function()
+				vim.b.ministatusline_disable = true
+			end,
+		})
 	end,
 }
