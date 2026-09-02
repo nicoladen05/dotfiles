@@ -8,6 +8,7 @@ return {
 	},
 	cmd = "Neotree",
 	opts = {
+		use_popups_for_input = false,
 		filesystem = {
 			follow_current_file = {
 				enabled = true,
