@@ -9,7 +9,6 @@ return {
 	opts = {
 		indent = { enable = true },
 		highlight = { enable = true },
-		folds = { enable = true },
 		ensure_installed = {
 			"bash",
 			"c",
@@ -59,6 +58,9 @@ return {
 
 				if parser then
 					vim.treesitter.start(args.buf, language)
+					vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+					vim.wo[0][0].foldmethod = "expr"
+					vim.wo[0][0].foldlevel = 99
 				end
 			end,
 		})
