@@ -6,6 +6,12 @@
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 
+secrets_file="${XDG_CONFIG_HOME:-$HOME/.config}/secrets.env"
+if [[ -r $secrets_file ]]; then
+    source "$secrets_file"
+fi
+unset secrets_file
+
 #  ──────────── Aliases ─────────────
 alias ..='cd ..'
 alias ...='cd ../..'
