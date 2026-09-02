@@ -46,6 +46,7 @@ require("lazy").setup({
 		require("plugins.coding.treesitter"),
 
 		require("plugins.ui.gitsigns"),
+		require("plugins.ui.input"),
 		require("plugins.ui.project"),
 		require("plugins.ui.trouble"),
 		require("plugins.ui.whichkey"),
