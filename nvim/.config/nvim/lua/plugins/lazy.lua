@@ -31,8 +31,10 @@ require("lazy").setup({
 		require("plugins.atlas"),
 		require("plugins.colorscheme"),
 		require("plugins.fugitive"),
+		require("plugins.git-conflict"),
 		require("plugins.harpoon"),
 		require("plugins.neo-tree"),
+		require("plugins.oil"),
 		require("plugins.snacks"),
 
 		require("plugins.coding.autotag"),
