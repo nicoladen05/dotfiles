@@ -46,6 +46,7 @@ require("lazy").setup({
 		require("plugins.coding.mason"),
 		require("plugins.coding.refactoring"),
 		require("plugins.coding.treesitter"),
+		require("plugins.coding.ts-error-translator"),
 
 		require("plugins.ui.gitsigns"),
 		require("plugins.ui.project"),
