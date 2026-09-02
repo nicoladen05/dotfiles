@@ -34,6 +34,7 @@ require("lazy").setup({
 		require("plugins.neo-tree"),
 		require("plugins.toggleterm"),
 
+		require("plugins.coding.autotag"),
 		require("plugins.coding.completion"),
 		require("plugins.coding.copilot"),
 		require("plugins.coding.99"),
