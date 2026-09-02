@@ -28,6 +28,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugin setup
 require("lazy").setup({
 	spec = {
+		require("plugins.atlas"),
 		require("plugins.colorscheme"),
 		require("plugins.fugitive"),
 		require("plugins.neo-tree"),
