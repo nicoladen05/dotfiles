@@ -16,7 +16,7 @@ export default function (pi: ExtensionAPI) {
     },
   });
 
-  pi.registerShortcut("ctrl+shift+u", {
+  pi.registerShortcut("alt+u", {
     description: "Undo the last user message",
     handler: (ctx) => {
       if (!ctx.isIdle()) return ctx.ui.notify("Wait for the agent to finish or press Esc first", "warning");
