@@ -8,6 +8,7 @@ return {
 			"<cmd>Oil<cr>",
 			desc = "Open Parent Directory",
 		},
+		{ "<leader>o", "<cmd>Oil<cr>", desc = "Open Parent Directory" },
 	},
 	opts = {},
 }
