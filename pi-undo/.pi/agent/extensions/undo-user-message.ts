@@ -19,9 +19,13 @@ export default function (pi: ExtensionAPI) {
   pi.registerShortcut("alt+u", {
     description: "Undo the last user message",
     handler: (ctx) => {
-      if (!ctx.isIdle()) return ctx.ui.notify("Wait for the agent to finish or press Esc first", "warning");
       if (ctx.ui.getEditorText().trim()) return ctx.ui.notify("Clear the current draft before undoing", "warning");
-      pi.sendUserMessage("/undo", { expandPromptTemplates: true });
+      if (ctx.isIdle()) {
+        pi.sendUserMessage("/undo", { expandPromptTemplates: true });
+        return;
+      }
+      ctx.abort();
+      pi.sendUserMessage("/undo", { deliverAs: "followUp", expandPromptTemplates: true });
     },
   });
 }
