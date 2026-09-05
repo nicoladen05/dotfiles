@@ -1,9 +1,16 @@
-import type { ExtensionAPI, ExtensionContext } from "@earendil-works/pi-coding-agent";
+import type {
+  ExtensionAPI,
+  ExtensionContext,
+} from "@earendil-works/pi-coding-agent";
 
-type SessionEntry = ReturnType<ExtensionContext["sessionManager"]["getBranch"]>[number];
+type SessionEntry = ReturnType<
+  ExtensionContext["sessionManager"]["getBranch"]
+>[number];
 
 function findLastUserMessage(entries: SessionEntry[]) {
-  return entries.findLast((entry) => entry.type === "message" && entry.message.role === "user");
+  return entries.findLast(
+    (entry) => entry.type === "message" && entry.message.role === "user",
+  );
 }
 
 export default function (pi: ExtensionAPI) {
@@ -19,13 +26,20 @@ export default function (pi: ExtensionAPI) {
   pi.registerShortcut("alt+u", {
     description: "Undo the last user message",
     handler: (ctx) => {
-      if (ctx.ui.getEditorText().trim()) return ctx.ui.notify("Clear the current draft before undoing", "warning");
+      if (ctx.ui.getEditorText().trim())
+        return ctx.ui.notify(
+          "Clear the current draft before undoing",
+          "warning",
+        );
       if (ctx.isIdle()) {
         pi.sendUserMessage("/undo", { expandPromptTemplates: true });
         return;
       }
       ctx.abort();
-      pi.sendUserMessage("/undo", { deliverAs: "followUp", expandPromptTemplates: true });
+      pi.sendUserMessage("/undo", {
+        deliverAs: "followUp",
+        expandPromptTemplates: true,
+      });
     },
   });
 }
@@ -36,5 +50,9 @@ if (import.meta.main) {
     { type: "message", id: "reply", message: { role: "assistant" } },
     { type: "message", id: "last", message: { role: "user" } },
   ] as unknown as SessionEntry[];
-  if (findLastUserMessage(entries)?.id !== "last" || findLastUserMessage([]) !== undefined) throw new Error("self-check failed");
+  if (
+    findLastUserMessage(entries)?.id !== "last" ||
+    findLastUserMessage([]) !== undefined
+  )
+    throw new Error("self-check failed");
 }
