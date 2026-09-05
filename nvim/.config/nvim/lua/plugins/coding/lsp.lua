@@ -16,6 +16,12 @@ return {
 	},
 
 	config = function()
+		vim.lsp.config("vtsls", {
+			settings = {
+				vtsls = { autoUseWorkspaceTsdk = true },
+			},
+		})
+
 		local lsp_group = vim.api.nvim_create_augroup("user-lsp", { clear = true })
 
 		vim.api.nvim_create_autocmd("LspAttach", {
