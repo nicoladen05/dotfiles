@@ -16,7 +16,7 @@ return {
 		vim.keymap.set("i", "<CR>", function()
 			local col = vim.fn.col(".") - 1
 			if vim.api.nvim_get_current_line():sub(col, col + 2) == "></" then
-				return vim.keycode("<CR><C-o>O")
+				return vim.keycode("<CR><C-o>O<C-i>")
 			end
 			return pairs.cr()
 		end, { expr = true, replace_keycodes = false, desc = "Expand pairs and tags" })
