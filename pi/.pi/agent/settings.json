@@ -1,28 +1,18 @@
 {
-  "lastChangelogVersion": "0.84.2",
-  "theme": "dark",
+  "lastChangelogVersion": "0.85.1",
+  "theme": "omarchy-system",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
-  "defaultThinkingLevel": "high",
-  "hideThinkingBlock": false,
+  "defaultModel": "gpt-5.6-sol",
+  "enabledModels": [
+    "openrouter/z-ai/glm-5.3-flash",
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-6-astra",
+    "openai-codex/gpt-5.6-sol"
+  ],
   "packages": [
-    {
-      "source": "npm:@dietrichgebert/ponytail",
-      "extensions": [],
-      "skills": [
-        "./skills"
-      ]
-    },
     "npm:pi-spark",
-    "npm:pi-hashline-edit-pro",
-    "npm:pi-rtk-optimizer",
-    "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:@hypabolic/pi-hypa",
-    "npm:pi-subagents",
-    "npm:pi-impeccable",
-    "npm:remote-pi",
-    "npm:pi-intercom",
-    "npm:pi-prompt-template-model",
-    "npm:pi-web-access"
-  ]
+    "npm:@dietrichgebert/ponytail"
+  ],
+  "hideThinkingBlock": false,
+  "quietStartup": true
 }
