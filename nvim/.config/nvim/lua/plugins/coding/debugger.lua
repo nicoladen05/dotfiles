@@ -183,7 +183,8 @@ return {
 		cmd = { "DapInstall", "DapUninstall" },
 
 		opts = {
-			ensure_installed = { "js" },
+			ensure_installed = { "js", "delve" },
+			handlers = {},
 		},
 	},
 }
