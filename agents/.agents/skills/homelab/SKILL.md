@@ -1,6 +1,6 @@
 ---
 name: homelab
-description: Operate and maintain Nico's homelab hosts and services. Use whenever a task concerns the docker, agents, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
+description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, agents, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
 ---
 
 # Homelab
@@ -12,7 +12,7 @@ description: Operate and maintain Nico's homelab hosts and services. Use wheneve
 - Do not modify `/opt/scripts` on `docker`, especially its critical backup script, without explicit permission.
 - Do not open a firewall port on `vps` without explicit permission.
 - Preserve data and inspect the existing configuration before editing. Never recreate, remove, prune, or reset stateful services unless the user explicitly approves it.
-- Use `sudo` remotely when required. Do not copy secrets into chat or the final report.
+- Do not run remote commands that require `sudo`. Give the command to the user, wait for them to run it, and then continue. Do not copy secrets into chat or the final report.
 
 ## Workflow
 
