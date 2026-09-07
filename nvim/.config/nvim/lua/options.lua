@@ -10,6 +10,11 @@ vim.opt.signcolumn = "yes"
 -- Mouse
 vim.opt.mouse = "a"
 
+-- Briefly highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+    callback = function() vim.hl.on_yank({ timeout = 150 }) end,
+})
+
 -- Persistent undo
 vim.opt.undofile = true
 
