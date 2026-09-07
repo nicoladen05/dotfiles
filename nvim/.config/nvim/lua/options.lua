@@ -12,7 +12,9 @@ vim.opt.mouse = "a"
 
 -- Briefly highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function() vim.hl.hl_op({ higroup = "Visual", timeout = 200 }) end,
+	callback = function()
+		vim.hl.hl_op({ higroup = "Visual", timeout = 200 })
+	end,
 })
 
 -- Persistent undo
