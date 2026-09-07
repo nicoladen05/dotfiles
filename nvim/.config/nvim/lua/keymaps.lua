@@ -27,10 +27,10 @@ vim.keymap.set({ "n", "v", "o" }, "J", "N")
 vim.keymap.set({ "n", "v", "o" }, "L", "E")
 
 -- Move lines down/up.
-vim.keymap.set("n", "<A-n>", "<cmd>move .+1<cr>==")
-vim.keymap.set("n", "<A-e>", "<cmd>move .-2<cr>==")
-vim.keymap.set("x", "<A-n>", ":move '>+1<cr>gv=gv")
-vim.keymap.set("x", "<A-e>", ":move '<-2<cr>gv=gv")
+vim.keymap.set("n", "<leader>mn", "<cmd>move .+1<cr>==")
+vim.keymap.set("n", "<leader>me", "<cmd>move .-2<cr>==")
+vim.keymap.set("x", "<leader>mn", ":move '>+1<cr>gv=gv")
+vim.keymap.set("x", "<leader>me", ":move '<-2<cr>gv=gv")
 
 -- Keep the selection active when changing indentation.
 vim.keymap.set("x", "<", "<gv")
