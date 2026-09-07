@@ -60,6 +60,7 @@ Services:
 - `packwiz-suggestion-bot` — Discord bot for Minecraft mod suggestions; source: <https://github.com/nicoladen05/packwiz-suggestion-bot>
 - `paperless` — scanned-document library
 - `shelfmark` — ebook downloader
+- `superlocal` — private email client; Tailscale: `https://superlocal.coati-newton.ts.net`
 - `vaultwarden` — password manager; public: `https://vaultwarden.nicoladen.dev`
 - `watchtower` — automatic updates for Docker containers
 
