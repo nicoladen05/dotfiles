@@ -38,25 +38,22 @@ description: Operate and maintain my homelab hosts and services. Use whenever a 
 
 ## Shared conventions
 
-- All hosts resolve by the hostnames below and accept Tailscale SSH as `nico`.
 - Expose every user-facing service privately with Tailscale Serve at `https://<service>.coati-newton.ts.net`.
 - On Docker hosts, store each Compose project at `/opt/containers/<service>/compose.yml`.
 - Store user data at `/srv/<service>`. Small state files may live beside `compose.yml`.
 - Prefer environment variables directly in `compose.yml`, not a separate `.env` file. Never inline secrets that are already managed securely.
-- Use `cloudflared` for public HTTP services. Use `vps` for Minecraft or public non-HTTP services that cannot use Cloudflare tunnels.
+- Use `cloudflared` for public HTTP services.
 
 ## Hosts
 
 ### `docker`
 
-Main Docker host. Compose projects live at `/opt/containers/<service>/compose.yml`.
-
-`/opt/scripts` contains critical backup infrastructure for essential data. Never modify it without explicit permission.
+Main Docker host.
 
 Services:
 
 - `botify` — custom Discord bot; source: <https://github.com/nicoladen05/botify>
-- `cloudflared` — public exposure, usually `https://<service>.nicoladen.dev`
+- `cloudflared`
 - `immich` — photo library; public: `https://immich.nicoladen.dev`
 - `norish` — recipe library
 - `ocis` — file storage; public: `https://cloud.nicoladen.dev`
@@ -81,7 +78,6 @@ Runs Home Assistant OS.
 Services:
 
 - `homeassistant` — public: `https://homeassistant.nicoladen.dev`, protected with mutual TLS
-- Home Assistant MCP server — preferred interface for agent work
 
 Use the Home Assistant MCP server for Home Assistant changes. If it is unavailable and the task needs it, ask the user to set it up rather than attempting an unsupported workaround.
 
@@ -95,7 +91,7 @@ Services:
 
 ### `vps`
 
-Publicly accessible Oracle Cloud VPS. Use it for Minecraft servers and public non-HTTP services that cannot pass through Cloudflare tunnels. Compose projects live at `/opt/containers/<service>/compose.yml`.
+Publicly accessible Oracle Cloud VPS for public non-HTTP services.
 
 Services:
 
