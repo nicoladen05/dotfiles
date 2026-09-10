@@ -7,11 +7,11 @@ local ok, omarchy_specs = pcall(dofile, theme_file)
 -- Fallback theme
 if not ok then
 	return {
-		"tahayvr/matteblack.nvim",
+		"olivercederborg/poimandres.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("matteblack")
+			vim.cmd.colorscheme("poimandres")
 		end,
 	}
 end
