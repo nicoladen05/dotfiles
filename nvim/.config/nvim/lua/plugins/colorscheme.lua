@@ -12,6 +12,7 @@ if not ok then
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("poimandres")
+			vim.api.nvim_set_hl(0, "WinSeparator", { link = "VertSplit" })
 		end,
 	}
 end
