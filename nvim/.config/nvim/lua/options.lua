@@ -30,6 +30,9 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0 -- Default to the tabstop value.
 
+-- No line wrapping
+vim.opt.wrap = false
+
 -- Better splits
 vim.opt.splitbelow = true
 vim.opt.splitright = true
