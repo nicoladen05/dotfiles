@@ -6,6 +6,7 @@ vim.opt.cursorline = true
 -- Interface
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
+vim.o.showmode = false
 
 -- Mouse
 vim.opt.mouse = "a"
