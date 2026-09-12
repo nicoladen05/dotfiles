@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Clear search highlights
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- Colemak layout: h n e i = left down up right.
 vim.keymap.set({ "n", "v", "o" }, "n", "j")
 vim.keymap.set({ "n", "v", "o" }, "e", "k")
