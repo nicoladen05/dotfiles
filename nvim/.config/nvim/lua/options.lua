@@ -34,6 +34,10 @@ vim.opt.shiftwidth = 0 -- Default to the tabstop value.
 -- No line wrapping
 vim.opt.wrap = false
 
+-- Search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 -- Better splits
 vim.opt.splitbelow = true
 vim.opt.splitright = true
