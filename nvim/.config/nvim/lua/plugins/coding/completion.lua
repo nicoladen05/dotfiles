@@ -20,9 +20,10 @@ return {
 						return cmp.accept()
 					end
 
-					local suggestion = require("copilot.suggestion")
-					if suggestion.is_visible() then
-						suggestion.accept()
+					local suggestion = require("codeium.virtual_text")
+					if suggestion.get_current_completion_item() then
+						local keys = vim.api.nvim_replace_termcodes(suggestion.accept(), true, false, true)
+						vim.api.nvim_feedkeys(keys, "n", false)
 						return true
 					end
 

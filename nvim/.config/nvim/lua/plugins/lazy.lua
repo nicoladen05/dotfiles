@@ -39,7 +39,7 @@ require("lazy").setup({
 
 		require("plugins.coding.autotag"),
 		require("plugins.coding.completion"),
-		require("plugins.coding.copilot"),
+		require("plugins.coding.windsurf"),
 		require("plugins.coding.99"),
 		require("plugins.coding.debugger"),
 		require("plugins.coding.formatting"),
