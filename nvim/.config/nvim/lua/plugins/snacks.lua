@@ -43,6 +43,7 @@ return {
 	},
 	opts = {
 		bigfiles = { enabled = true },
+		notifier = { enabled = true },
 		input = {
 			enabled = true,
 			win = {
