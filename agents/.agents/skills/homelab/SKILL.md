@@ -33,7 +33,7 @@ description: Operate and maintain my homelab hosts and services. Use whenever a 
    - services enabled, disabled, started, stopped, or restarted;
    - containers/images and network exposure changed;
    - validation performed.
-   Write `None` for unchanged categories. Do not claim a change that was not observed.
+     Write `None` for unchanged categories. Do not claim a change that was not observed.
 7. If a service was added or substantially changed, update this skill's inventory through the `update-dotfiles` workflow. Do not record secrets, versions, or transient operational state here.
 
 ## Shared conventions
