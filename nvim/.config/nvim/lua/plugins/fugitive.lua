@@ -20,6 +20,13 @@ return {
 			desc = "Commit",
 		},
 		{
+			"<leader>gm",
+			function()
+				vim.cmd.Git("mergetool")
+			end,
+			desc = "Merge Tool",
+		},
+		{
 			"<leader>grbi",
 			"<cmd>Git rebase -i<cr>",
 			desc = "Interactive Rebase",
