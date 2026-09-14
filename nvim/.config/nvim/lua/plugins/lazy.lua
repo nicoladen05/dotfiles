@@ -42,6 +42,7 @@ require("lazy").setup({
 		require("plugins.coding.windsurf"),
 		require("plugins.coding.99"),
 		require("plugins.coding.debugger"),
+		require("plugins.coding.dial"),
 		require("plugins.coding.formatting"),
 		require("plugins.coding.linting"),
 		require("plugins.coding.lsp"),
