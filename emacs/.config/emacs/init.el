@@ -34,4 +34,7 @@
   (define-key evil-window-map (kbd "C-i") #'evil-window-right))
 (nano-theme-set-dark)
 (nano-refresh-theme)
+(use-package mini-frame :ensure t)
+(require 'nano-colors)
+(require 'nano-minibuffer)
 (load custom-file t)
