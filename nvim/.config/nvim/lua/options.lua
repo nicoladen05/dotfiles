@@ -38,6 +38,9 @@ vim.opt.wrap = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Spelling
+vim.opt.spelllang = { "de_de", "en_us" }
+
 -- Better splits
 vim.opt.splitbelow = true
 vim.opt.splitright = true
