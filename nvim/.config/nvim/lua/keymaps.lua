@@ -68,10 +68,10 @@ vim.keymap.set("n", "<leader>ce", function()
 		diagnostic.col + 1,
 		diagnostic.message
 	)
-	Snacks.terminal.open(
-		{ "pi", "--model", "openai-codex/gpt-5.6-luna", "--thinking", "medium", prompt },
-		{ win = { position = "left", width = 70 } }
-	)
+	local cmd = vim.fn.executable("pi") == 1
+		and { "pi", "--model", "openai-codex/gpt-5.6-luna", "--thinking", "medium", prompt }
+		or { "opencode", "--prompt", prompt }
+	Snacks.terminal.open(cmd, { win = { position = "left", width = 70 } })
 end, { desc = "Explain Diagnostic" })
 
 -- Navigate quickfix list
