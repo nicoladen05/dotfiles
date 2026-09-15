@@ -54,6 +54,22 @@ vim.keymap.set({ "n", "v" }, "gd", vim.lsp.buf.definition)
 vim.keymap.set({ "n", "v" }, "<leader>cd", function()
 	vim.diagnostic.open_float()
 end)
+vim.keymap.set("n", "<leader>ce", function()
+	local cursor = vim.api.nvim_win_get_cursor(0)
+	local diagnostic = vim.diagnostic.get(0, { lnum = cursor[1] - 1 })[1]
+	if not diagnostic then
+		vim.notify("No diagnostic on this line", vim.log.levels.INFO)
+		return
+	end
+
+	local prompt = ("Explain this diagnostic at %s:%d:%d. Explain only; do not change files.\n\n%s"):format(
+		vim.api.nvim_buf_get_name(0),
+		diagnostic.lnum + 1,
+		diagnostic.col + 1,
+		diagnostic.message
+	)
+	Snacks.terminal.open({ "pi", prompt }, { win = { position = "left", width = 50 } })
+end, { desc = "Explain Diagnostic" })
 
 -- Navigate quickfix list
 vim.keymap.set({ "n", "v" }, "]c", "<cmd>cnext<cr>")
