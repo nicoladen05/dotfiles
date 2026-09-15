@@ -5,5 +5,8 @@ return {
 	dependencies = {
 		{ "nvim-orgmode/org-bullets.nvim", opts = {} },
 	},
-	opts = {},
+	opts = {
+		org_agenda_files = "~/org/*.org",
+		org_default_notes_file = "~/org/inbox.org",
+	},
 }
