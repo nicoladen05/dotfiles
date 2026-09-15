@@ -8,5 +8,8 @@ return {
 	opts = {
 		org_agenda_files = "~/org/*.org",
 		org_default_notes_file = "~/org/inbox.org",
+		ui = {
+			input = { use_vim_ui = true },
+		},
 	},
 }
