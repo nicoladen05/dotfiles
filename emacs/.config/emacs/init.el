@@ -20,10 +20,10 @@
     "N" #'evil-join
     "E" #'evil-lookup
     "I" #'evil-window-bottom)
-  (evil-define-key '(normal visual) 'global "k" #'evil-insert)
-  (evil-define-key 'normal 'global "K" #'evil-insert-line)
+  (evil-define-key 'normal 'global "k" #'evil-insert "K" #'evil-insert-line)
   (evil-define-key 'visual 'global "K" #'evil-insert)
   (define-key evil-operator-state-map (kbd "k") evil-inner-text-objects-map)
+  (define-key evil-visual-state-map (kbd "k") evil-inner-text-objects-map)
   (define-key evil-window-map (kbd "h") #'evil-window-left)
   (define-key evil-window-map (kbd "C-h") #'evil-window-left)
   (define-key evil-window-map (kbd "n") #'evil-window-down)
