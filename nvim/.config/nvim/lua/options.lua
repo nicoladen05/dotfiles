@@ -40,6 +40,10 @@ vim.o.smartcase = true
 
 -- Spelling
 vim.opt.spelllang = { "de_de", "en_us" }
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "tex", "plaintex", "typst" },
+	command = "setlocal spell",
+})
 
 -- Better splits
 vim.opt.splitbelow = true

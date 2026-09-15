@@ -41,6 +41,9 @@ vim.keymap.set("x", ">", ">gv")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
+-- Toggle spelling for the current buffer.
+vim.keymap.set("n", "<leader>us", "<cmd>setlocal spell!<cr>", { desc = "Toggle spelling" })
+
 -- Switch between buffers
 vim.keymap.set({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>")
 vim.keymap.set({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>")
