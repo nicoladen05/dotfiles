@@ -70,7 +70,7 @@ vim.keymap.set("n", "<leader>ce", function()
 	)
 	Snacks.terminal.open(
 		{ "pi", "--model", "openai-codex/gpt-5.6-luna", "--thinking", "medium", prompt },
-		{ win = { position = "left", width = 50 } }
+		{ win = { position = "left", width = 70 } }
 	)
 end, { desc = "Explain Diagnostic" })
 
