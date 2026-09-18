@@ -30,7 +30,6 @@ require("lazy").setup({
 	spec = {
 		require("plugins.atlas"),
 		require("plugins.colorscheme"),
-		require("plugins.flash"),
 		require("plugins.fugitive"),
 		require("plugins.git-conflict"),
 		require("plugins.harpoon"),
