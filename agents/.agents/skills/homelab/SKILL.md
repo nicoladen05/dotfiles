@@ -71,6 +71,7 @@ Dedicated AI and coding-agent host.
 Services:
 
 - `hermes-agent`
+- `openclaw` — remote Gateway; Tailscale: `https://agents.coati-newton.ts.net`
 
 ### `homeassistant`
 
