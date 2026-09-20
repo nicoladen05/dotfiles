@@ -22,6 +22,10 @@ return {
 			},
 		})
 
+		vim.lsp.config("basedpyright", {
+			cmd_env = { NODE_OPTIONS = "--max-old-space-size=8192" },
+		})
+
 		local lsp_group = vim.api.nvim_create_augroup("user-lsp", { clear = true })
 
 		vim.api.nvim_create_autocmd("LspAttach", {
