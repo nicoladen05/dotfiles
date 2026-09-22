@@ -5,9 +5,9 @@
   "defaultModel": "gpt-5.6-sol",
   "enabledModels": [
     "openrouter/z-ai/glm-5.3-flash",
-    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-6-luna",
     "openai-codex/gpt-6-astra",
-    "openai-codex/gpt-5.6-sol"
+    "openai-codex/gpt-6-sol"
   ],
   "packages": [
     "npm:pi-spark",
