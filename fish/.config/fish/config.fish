@@ -4,6 +4,7 @@ set -gx BUN_INSTALL "$HOME/.bun"
 fish_add_path --global --move \
     "$BUN_INSTALL/bin" \
     "$HOME/.local/bin" \
+    "$HOME/.local/share/mise/shims" \
     "$HOME/.local/share/pi-node/node-v22.23.1-linux-arm64/bin"
 
 if status is-interactive
