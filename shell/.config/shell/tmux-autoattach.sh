@@ -1,6 +1,8 @@
 # Auto-attach tmux for interactive SSH logins.
 [ -n "$SSH_CONNECTION$SSH_TTY" ] || return 0
 [ -z "$TMUX" ] || return 0
+# herdr panes inherit SSH_* from the server's login; keep them as plain shells.
+[ -z "$HERDR_ENV" ] || return 0
 [ "${TMUX_AUTOATTACH:-1}" = 1 ] || return 0
 case "${LC_ALL:-${LC_CTYPE:-$LANG}}" in
     *UTF-8*|*utf8*) ;;

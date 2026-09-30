@@ -6,6 +6,8 @@ if not set -q SSH_CONNECTION; and not set -q SSH_TTY
     return
 end
 set -q TMUX; and return
+# herdr panes inherit SSH_* from the server's login; keep them as plain shells.
+set -q HERDR_ENV; and return
 if set -q TMUX_AUTOATTACH; and test "$TMUX_AUTOATTACH" != 1
     return
 end
