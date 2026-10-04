@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=No Hesi Launcher
+Comment=No Hesi launcher for Assetto Corsa (Proton)
+Exec=/home/nico/.local/bin/nohesi
+Icon=/home/nico/.local/share/Steam/steamapps/compatdata/244210/pfx/drive_c/proton_shortcuts/icons/128x128/apps/2FB6_NoHesiLauncher.0.png
+Terminal=false
+Type=Application
+Categories=Game;
+StartupWMClass=steam_app_244210

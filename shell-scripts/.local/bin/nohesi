@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Launch the No Hesi launcher inside the Assetto Corsa Proton prefix.
+# It needs WebView2 (extracted, not registered) and Proton 10+.
+set -euo pipefail
+
+STEAM_DIR="${STEAM_DIR:-$HOME/.local/share/Steam}"
+PROTON="${NOHESI_PROTON:-$STEAM_DIR/compatibilitytools.d/GE-Proton10-34/proton}"
+COMPAT="$STEAM_DIR/steamapps/compatdata/244210"
+PFX="$COMPAT/pfx"
+EXE="$PFX/drive_c/users/steamuser/AppData/Local/NoHesi Launcher/NoHesiLauncher.exe"
+EDGECORE="$PFX/drive_c/Program Files (x86)/Microsoft/EdgeCore"
+DPI="${NOHESI_DPI:-144}"           # 96 = 100%, 144 = 150%
+BASE_DPI="${NOHESI_BASE_DPI:-96}"  # prefix DPI for Content Manager and the game
+
+WEBVIEW_VERSION=$(ls -1 "$EDGECORE" | grep -E '^[0-9.]+$' | sort -V | tail -1)
+if [[ -z "$WEBVIEW_VERSION" ]]; then
+  echo "nohesi: no WebView2 runtime found in $EDGECORE" >&2
+  exit 1
+fi
+
+export STEAM_COMPAT_DATA_PATH="$COMPAT"
+export STEAM_COMPAT_CLIENT_INSTALL_PATH="$STEAM_DIR"
+export SteamAppId=244210 SteamGameId=244210
+export WEBVIEW2_BROWSER_EXECUTABLE_FOLDER="C:\\Program Files (x86)\\Microsoft\\EdgeCore\\$WEBVIEW_VERSION"
+export WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS="--no-sandbox"
+
+set_dpi() {
+  "$PROTON" run reg add 'HKCU\Control Panel\Desktop' /v LogPixels /t REG_DWORD /d "$1" /f >/dev/null 2>&1
+}
+
+# DPI is prefix-wide and read when each process starts, so only apply it while
+# the launcher and its WebView start, then restore it for Content Manager and the game.
+set_dpi "$DPI"
+trap 'set_dpi "$BASE_DPI"' EXIT
+
+"$PROTON" run "$EXE" "$@" &
+launcher=$!
+
+for _ in $(seq 60); do
+  pgrep -f -- 'msedgewebview2.exe.*--type=renderer' >/dev/null && break
+  sleep 1
+done
+set_dpi "$BASE_DPI"
+
+wait "$launcher"
