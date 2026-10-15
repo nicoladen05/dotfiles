@@ -95,7 +95,10 @@ Services:
 
 Publicly accessible Oracle Cloud VPS for public non-HTTP services.
 
+It is not reachable over Tailscale from `tag:homelab` devices (such as `docker`) unless the Tailscale ACL allows it.
+
 Services:
 
-- Minecraft server
+- `minecraft-server` — Minecraft server at `/opt/containers/minecraft-server`; Java clients connect through SRV `_minecraft._tcp.mc.nicoladen.dev` → `vps.nicoladen.dev:25566`
+- `mc-dashboard` — status page in the `minecraft-server` Compose project; source: <https://github.com/nicoladen05/mc-dashboard>; Tailscale only on `vps:8080`; public: `https://mc.nicoladen.dev` through `cloudflared` on `docker`
 - TCP forwarding from the Tailscale host `minecraft-server` to the VPS public IP
