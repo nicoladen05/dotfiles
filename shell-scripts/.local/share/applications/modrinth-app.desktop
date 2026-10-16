@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=Game;
+# Upstream wrapper sets WEBKIT_DISABLE_DMABUF_RENDERER=1 on NVIDIA, which forces
+# CPU rendering and makes the UI laggy. Disabling NVIDIA explicit sync instead
+# avoids the "Error 71 (Protocol error)" Wayland crash while keeping GPU rendering.
+Exec=env MODRINTH_EXTERNAL_UPDATE_PROVIDER=1 __NV_DISABLE_EXPLICIT_SYNC=1 /usr/lib/modrinth-app %u
+Icon=modrinth-app
+Name=Modrinth App
+Terminal=false
+Type=Application
+MimeType=application/zip+x-modrinth-mrpack;x-scheme-handler/modrinth
+Comment=Browse, download and play Minecraft mods and modpacks
