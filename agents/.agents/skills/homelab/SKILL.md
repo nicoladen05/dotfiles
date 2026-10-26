@@ -102,3 +102,5 @@ Services:
 - `minecraft-server` — Minecraft server at `/opt/containers/minecraft-server`; Java clients connect through SRV `_minecraft._tcp.mc.nicoladen.dev` → `vps.nicoladen.dev:25566`
 - `mc-dashboard` — status page in the `minecraft-server` Compose project; source: <https://github.com/nicoladen05/mc-dashboard>; Tailscale only on `vps:8080`; public: `https://mc.nicoladen.dev` through `cloudflared` on `docker`
 - TCP forwarding from the Tailscale host `minecraft-server` to the VPS public IP
+- `cloudflared` — own tunnel `vps` (separate from the `docker` tunnel) at `/opt/containers/cloudflared`; host network so routes can target `localhost`; token in `.secrets/tunnel_token`
+- `moodle-alt` — Moodle/Artemis client; runs from `~/claude-sandbox/moodle-alt` with `npm start` on port 8001; public: `https://uni.nicoladen.dev` through the `vps` tunnel
