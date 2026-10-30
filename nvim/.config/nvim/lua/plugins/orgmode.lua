@@ -22,6 +22,13 @@ return {
 	opts = {
 		org_agenda_files = "~/org/*.org",
 		org_default_notes_file = "~/org/inbox.org",
+		org_capture_templates = {
+			n = {
+				description = "Note",
+				target = "~/org/notes.org",
+				template = "* %? %u\n",
+			},
+		},
 		mappings = {
 			org = { org_refile = false },
 		},
