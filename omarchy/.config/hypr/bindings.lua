@@ -58,11 +58,6 @@ o.bind("SUPER + SHIFT + ALT + E", "Email", {
 	webapp = "https://mail.google.com",
 })
 
-o.bind("SUPER + SHIFT + T", "Todo", {
-	webapp = "https://app.todoist.com/app/",
-	focus = true,
-})
-
 o.bind("SUPER + SHIFT + P", "Immich", {
 	webapp = "https://immich.coati-newton.ts.net",
 	focus = true,
