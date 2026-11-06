@@ -1,0 +1,28 @@
+#!/bin/bash
+# Boot Windows once: set the firmware's BootNext to Windows Boot Manager, then
+# reboot through Omarchy. Later boots return to the normal order (Limine).
+#
+# logind can't do this: it only accepts entries it finds itself, and the Limine
+# "Windows" entry isn't among them, so `systemctl reboot --boot-loader-entry`
+# refuses it.
+
+entry=$(efibootmgr | sed -nE 's/^Boot([0-9A-Fa-f]{4})\*?[[:space:]]+Windows Boot Manager.*/\1/p' | head -n1)
+
+if [[ -z $entry ]]; then
+  omarchy-notification-send -u critical "Reboot to Windows failed" "No Windows Boot Manager entry found."
+  exit 1
+fi
+
+pkexec /usr/bin/efibootmgr --bootnext "$entry" >/dev/null
+status=$?
+
+case $status in
+  0) ;;
+  126 | 127) exit 0 ;; # Password dialog dismissed or denied: stay here.
+  *)
+    omarchy-notification-send -u critical "Reboot to Windows failed" "Could not set the next boot entry."
+    exit 1
+    ;;
+esac
+
+exec omarchy-system reboot
