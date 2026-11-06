@@ -7,7 +7,7 @@ description: Operate and maintain my homelab hosts and services. Use whenever a 
 
 ## Safety and access
 
-- Run homelab commands on the target host over Tailscale SSH, never on the local machine: `ssh nico@<host> -- '<command>'`.
+- Run homelab commands on the target host over Tailscale SSH, never on the local machine: `ssh nico@<host> -- '<command>'`. The exception is `homeassistant`, which uses `ssh root@homeassistant -- '<command>'`.
 - Confirm the target host from the inventory below. Ask if it is ambiguous.
 - Do not modify `/opt/scripts` on `docker`, especially its critical backup script, without explicit permission.
 - Do not open a firewall port on `vps` without explicit permission.
@@ -16,7 +16,7 @@ description: Operate and maintain my homelab hosts and services. Use whenever a 
 
 ## Workflow
 
-1. Select the host and connect as `nico` over SSH.
+1. Select the host and connect over SSH as `nico` (`root` on `homeassistant`).
 2. Inspect the relevant remote files, service state, and existing conventions before proposing or making changes.
 3. Before changing anything, record enough remote state to report the task's machine diff:
    - installed packages relevant to the task;
@@ -81,7 +81,13 @@ Services:
 
 - `homeassistant` — public: `https://homeassistant.nicoladen.dev`, protected with mutual TLS
 
-Use the Home Assistant MCP server for Home Assistant changes. If it is unavailable and the task needs it, ask the user to set it up rather than attempting an unsupported workaround.
+Manage Home Assistant over SSH as `root@homeassistant`. No Home Assistant MCP server is configured.
+
+- The SSH session runs in the SSH app container and has a zsh login shell, so quote arguments such as `===`.
+- The configuration is at `/config`, custom integrations are at `/config/custom_components`, and internal state is at `/config/.storage`. Do not edit `.storage` files while Home Assistant is running, and do not print secrets from them.
+- Run commands in the Home Assistant container with `docker exec homeassistant <command>`.
+- Read logs with `docker logs homeassistant`, because `ha core logs` returns only the last 100 lines.
+- Validate configuration changes with `ha core check` before you restart with `ha core restart`.
 
 ### `pihole`
 
