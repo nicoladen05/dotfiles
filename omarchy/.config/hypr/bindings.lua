@@ -68,7 +68,6 @@ o.bind("SUPER + SHIFT + ALT + A", "Gemini", {
 })
 
 -- Custom desktop apps
-hl.unbind("SUPER + SHIFT + SLASH") -- was: 1Password
 hl.unbind("SUPER + SHIFT + G") -- was: Signal
 hl.unbind("SUPER + SHIFT + A") -- was: ChatGPT
 
@@ -80,10 +79,6 @@ o.bind("SUPER + SHIFT + A", "Claude", {
 o.bind("SUPER + SHIFT + G", "Discord", {
 	launch = "vesktop",
 	focus = "^vesktop$",
-})
-
-o.bind("SUPER + SHIFT + SLASH", "Passwords", {
-	launch = "bitwarden-desktop",
 })
 
 -- Standing desk via Home Assistant
