@@ -111,21 +111,6 @@ Access:
   - `hostname`: API URL
 - Load the token with `op run`. The 1Password desktop app then shows an approval prompt to the user. Do not use `op read`, and do not print the secret.
 
-Example:
-
-```bash
-env_file=$(mktemp)
-cat > "$env_file" <<'EOF'
-PROXMOX_TOKEN_ID=op://Personal/Proxmox Agents/username
-PROXMOX_TOKEN_SECRET=op://Personal/Proxmox Agents/credential
-EOF
-op run --env-file="$env_file" -- sh -c \
-  'curl -fsS -H "Authorization: PVEAPIToken=$PROXMOX_TOKEN_ID=$PROXMOX_TOKEN_SECRET" https://pve:8006/api2/json/nodes'
-rm "$env_file"
-```
-
-If the certificate is self-signed, add `-k` to `curl`.
-
 ### `vps`
 
 Publicly accessible Oracle Cloud VPS for public non-HTTP services.
