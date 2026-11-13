@@ -97,6 +97,35 @@ Services:
 
 - `pihole`
 
+### `pve`
+
+Proxmox VE host. Manage it through the Proxmox API at `https://pve:8006/api2/json`, not over SSH.
+
+Access:
+
+- Use the API token `agent@pve!claude`. It has `PVEVMAdmin` on `/pool/agents`, `PVEDatastoreUser` on the storage, and `PVESDNUser` on the bridge.
+- You can create, change, and remove guests only in the pool `agents`. Pass `pool=agents` when you create a VM or container. You cannot access guests outside the pool. Do not try to work around this.
+- The token is in 1Password, in the API Credential item `Proxmox Agents` in the vault `Personal`:
+  - `username`: token ID
+  - `credential`: token secret
+  - `hostname`: API URL
+- Load the token with `op run`. The 1Password desktop app then shows an approval prompt to the user. Do not use `op read`, and do not print the secret.
+
+Example:
+
+```bash
+env_file=$(mktemp)
+cat > "$env_file" <<'EOF'
+PROXMOX_TOKEN_ID=op://Personal/Proxmox Agents/username
+PROXMOX_TOKEN_SECRET=op://Personal/Proxmox Agents/credential
+EOF
+op run --env-file="$env_file" -- sh -c \
+  'curl -fsS -H "Authorization: PVEAPIToken=$PROXMOX_TOKEN_ID=$PROXMOX_TOKEN_SECRET" https://pve:8006/api2/json/nodes'
+rm "$env_file"
+```
+
+If the certificate is self-signed, add `-k` to `curl`.
+
 ### `vps`
 
 Publicly accessible Oracle Cloud VPS for public non-HTTP services.
