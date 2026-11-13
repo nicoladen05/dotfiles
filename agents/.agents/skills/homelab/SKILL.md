@@ -57,7 +57,6 @@ Services:
 - `immich` — photo library; public: `https://immich.nicoladen.dev`
 - `ocis` — file storage; public: `https://cloud.nicoladen.dev`
 - `packwiz-suggestion-bot` — Discord bot for Minecraft mod suggestions; source: <https://github.com/nicoladen05/packwiz-suggestion-bot>
-- `paperless` — scanned-document library
 - `shelfmark` — ebook downloader
 - `vaultwarden` — password manager; public: `https://vaultwarden.nicoladen.dev`
 - `watchtower` — automatic updates for Docker containers
