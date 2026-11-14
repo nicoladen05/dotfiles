@@ -77,8 +77,8 @@ o.bind("SUPER + SHIFT + A", "Claude", {
 })
 
 o.bind("SUPER + SHIFT + G", "Discord", {
-	launch = "vesktop",
-	focus = "^vesktop$",
+	launch = "discord",
+	focus = "^discord$",
 })
 
 -- Standing desk via Home Assistant
