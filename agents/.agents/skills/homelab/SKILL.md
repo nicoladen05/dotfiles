@@ -72,6 +72,10 @@ Services:
   - Upstream requires a private `.env` there for its generated secrets and memory caps (`NOD_*_MEMORY`). Data lives in named Docker volumes, not `/srv/nod`.
   - Update: check out the new tag, then `docker compose --env-file .env up -d --build --wait` in `deployment/self-host`. The source build is slow on this host.
   - Memory is tight (4 GB RAM; swap comes from zram on `pve`), so keep the memory caps low.
+- `cliproxyapi` — CLIProxyAPI, an OpenAI/Gemini/Claude-compatible proxy over CLI OAuth logins; source: <https://github.com/router-for-me/CLIProxyAPI>; Tailscale: `https://cliproxyapi.coati-newton.ts.net` (Tailscale Service `svc:cliproxyapi`)
+  - Native install by the upstream `cliproxyapi-installer` in `~/cliproxyapi` (not Docker); config `~/cliproxyapi/config.yaml`, auth files in `~/.cli-proxy-api`.
+  - Runs as the systemd user unit `cliproxyapi.service` (needs linger for `nico`), listening on `127.0.0.1:8317`. Client API keys are under `access.api-keys`.
+  - Update: re-run the installer; it keeps `config.yaml`.
 
 ### `homeassistant`
 
