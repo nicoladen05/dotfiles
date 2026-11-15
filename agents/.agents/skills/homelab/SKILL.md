@@ -1,6 +1,6 @@
 ---
 name: homelab
-description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
+description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, nod, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
 ---
 
 # Homelab
@@ -60,6 +60,18 @@ Services:
 - `shelfmark` — ebook downloader
 - `vaultwarden` — password manager; public: `https://vaultwarden.nicoladen.dev`
 - `watchtower` — automatic updates for Docker containers
+
+### `nod`
+
+Unprivileged LXC 104 on `pve` (pool `agents`, `nesting=1`, `/dev/net/tun` passed through). Dedicated host for the Nod personal agent, because Nod's server needs the Docker socket.
+
+Services:
+
+- `nod` — n8n's Nod agent, self-host stack built from source; Tailscale: `https://nod.coati-newton.ts.net`
+  - Checkout of `n8n-io/nod` at a release tag in `/opt/containers/nod`; Compose project in `deployment/self-host` (upstream layout, not `compose.yml` at the root).
+  - Upstream requires a private `.env` there for its generated secrets and memory caps (`NOD_*_MEMORY`). Data lives in named Docker volumes, not `/srv/nod`.
+  - Update: check out the new tag, then `docker compose --env-file .env up -d --build --wait` in `deployment/self-host`. The source build is slow on this host.
+  - Memory is tight (4 GB RAM; swap comes from zram on `pve`), so keep the memory caps low.
 
 ### `homeassistant`
 
