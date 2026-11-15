@@ -74,7 +74,7 @@ Services:
   - Memory is tight (4 GB RAM; swap comes from zram on `pve`), so keep the memory caps low.
 - `cliproxyapi` — CLIProxyAPI, an OpenAI/Gemini/Claude-compatible proxy over CLI OAuth logins; source: <https://github.com/router-for-me/CLIProxyAPI>; Tailscale: `https://cliproxyapi.coati-newton.ts.net` (Tailscale Service `svc:cliproxyapi`)
   - Native install by the upstream `cliproxyapi-installer` in `~/cliproxyapi` (not Docker); config `~/cliproxyapi/config.yaml`, auth files in `~/.cli-proxy-api`.
-  - Runs as the systemd user unit `cliproxyapi.service` (needs linger for `nico`), listening on `127.0.0.1:8317`. Client API keys are under `access.api-keys`.
+  - Runs as the systemd user unit `cliproxyapi.service` (needs linger for `nico`), listening on `172.19.0.1:8317`, the gateway of Nod's `outbound` Docker network, so the Nod container can reach it (not on `127.0.0.1`, LAN, or public IPv6); Tailscale Serve proxies to the same address. In Nod, use `http://172.19.0.1:8317/v1`. Client API keys are under `access.api-keys`.
   - Update: re-run the installer; it keeps `config.yaml`.
 
 ### `homeassistant`
