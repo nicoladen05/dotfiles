@@ -1,6 +1,6 @@
 ---
 name: homelab
-description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, agents, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
+description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
 ---
 
 # Homelab
@@ -60,15 +60,6 @@ Services:
 - `shelfmark` — ebook downloader
 - `vaultwarden` — password manager; public: `https://vaultwarden.nicoladen.dev`
 - `watchtower` — automatic updates for Docker containers
-
-### `agents`
-
-Dedicated AI and coding-agent host.
-
-Services:
-
-- `hermes-agent`
-- `openclaw` — remote Gateway; Tailscale: `https://agents.coati-newton.ts.net`
 
 ### `homeassistant`
 
