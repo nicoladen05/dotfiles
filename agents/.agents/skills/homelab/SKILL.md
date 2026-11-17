@@ -77,6 +77,19 @@ Services:
   - Runs as the systemd user unit `cliproxyapi.service` (needs linger for `nico`), listening on `172.19.0.1:8317`, the gateway of Nod's `outbound` Docker network, so the Nod container can reach it (not on `127.0.0.1`, LAN, or public IPv6); Tailscale Serve proxies to the same address. In Nod, use `http://172.19.0.1:8317/v1`. Client API keys are under `access.api-keys`.
   - Update: re-run the installer; it keeps `config.yaml`.
 
+### `openbot`
+
+Unprivileged LXC 105 on `pve` (pool `agents`, Debian 13, `nesting=1`). Dedicated host for OpenBot.
+
+Services:
+
+- `openbot` — OpenBot self-hosted agent server (<https://openbot.run>); source: <https://github.com/nightly-labs/openbot>
+  - Official Docker setup: `/opt/containers/openbot/compose.yml` (upstream `docker/compose.yaml`) with upstream `seccomp.json` beside it; data in the named volume `openbot-data`.
+  - Publishes no port and needs no Tailscale Serve. Clients (desktop app, phone app, `openbot.run/app`) connect through the OpenBot account service.
+  - Commands: `docker compose exec openbot openbot status|login|logs|mobile-connect` in `/opt/containers/openbot`.
+  - No `/dev/net/tun` (passthrough needs `root@pam`), so `tailscaled` runs with `FLAGS="--tun=userspace-networking"` in `/etc/default/tailscaled`.
+  - Update: `docker compose pull && docker compose up -d`.
+
 ### `homeassistant`
 
 Runs Home Assistant OS.
@@ -109,15 +122,18 @@ Access:
 
 - Use the API token `agent@pve!claude`. It has `PVEVMAdmin` on `/pool/agents`, `PVEDatastoreUser` on the storage, and `PVESDNUser` on the bridge.
 - You can create, change, and remove guests only in the pool `agents`. Pass `pool=agents` when you create a VM or container. You cannot access guests outside the pool. Do not try to work around this.
-- The token is in 1Password, in the API Credential item `Proxmox Agents` in the vault `Personal`:
-  - `username`: token ID
+- The token is in 1Password, in the API Credential item `Proxmox Agents` in the vault `Personal`. The API URL is `https://pve:8006/api2/json` (the item has no `hostname` field).
   - `credential`: token secret
-  - `hostname`: API URL
+  - token ID: the second `username` field; the label is ambiguous, so reference it by ID: `op://Personal/Proxmox Agents/ltj4r6tduyblssauoojlg3lthe`
+- The token cannot download templates, ISOs, or cloud images (`Datastore.AllocateTemplate`), cannot pass devices through to containers (`root@pam` only), and cannot read node status (`Sys.Audit`). Ask the user for these steps.
+- The API cannot run commands inside a guest. For the first setup of a new guest, give the user a script to run with `pct enter <vmid>`. The script must check `hostname` first, so that it cannot run on `pve` by mistake.
 - Load the token with `op run`. The 1Password desktop app then shows an approval prompt to the user. Do not use `op read`, and do not print the secret.
 
 ### `vps`
 
 Publicly accessible Oracle Cloud VPS for public non-HTTP services.
+
+When you work from `vps`, the Tailscale ACL blocks SSH to the other homelab hosts. The 1Password CLI is at `~/.local/bin/op`, but its sign-in exists only in a terminal where the user ran `eval $(op signin)`.
 
 It is not reachable over Tailscale from `tag:homelab` devices (such as `docker`) unless the Tailscale ACL allows it.
 
