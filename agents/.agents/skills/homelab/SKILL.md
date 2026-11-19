@@ -68,9 +68,10 @@ Unprivileged LXC 104 on `pve` (pool `agents`, `nesting=1`, `/dev/net/tun` passed
 Services:
 
 - `nod` — n8n's Nod agent, self-host stack built from source; Tailscale: `https://nod.coati-newton.ts.net`
-  - Checkout of `n8n-io/nod` at a release tag in `/opt/containers/nod`; Compose project in `deployment/self-host` (upstream layout, not `compose.yml` at the root).
+  - Checkout of the private fork <https://github.com/nicoladen05/nod> (branch `feat/claude-code-model-connection`, Claude Code model support) in `/opt/containers/nod`, detached at the fork commit; Compose project in `deployment/self-host` (upstream layout, not `compose.yml` at the root).
+  - The untracked `deployment/self-host/compose.override.yaml` mounts the host's `claude` CLI and `~/.claude` into the server container. Keep it across updates.
   - Upstream requires a private `.env` there for its generated secrets and memory caps (`NOD_*_MEMORY`). Data lives in named Docker volumes, not `/srv/nod`.
-  - Update: check out the new tag, then `docker compose --env-file .env up -d --build --wait` in `deployment/self-host`. The source build is slow on this host.
+  - Update: the host has no GitHub credentials for the private fork. Clone the branch locally, `git bundle create` it, copy the bundle to `nod`, and `git fetch <bundle> feat/claude-code-model-connection:refs/remotes/fork/feat/claude-code-model-connection`. Then check out that commit and run `docker compose --env-file .env up -d --build --wait` in `deployment/self-host`. The source build is slow on this host.
   - Memory is tight (4 GB RAM; swap comes from zram on `pve`), so keep the memory caps low.
 - `cliproxyapi` — CLIProxyAPI, an OpenAI/Gemini/Claude-compatible proxy over CLI OAuth logins; source: <https://github.com/router-for-me/CLIProxyAPI>; Tailscale: `https://cliproxyapi.coati-newton.ts.net` (Tailscale Service `svc:cliproxyapi`)
   - Native install by the upstream `cliproxyapi-installer` in `~/cliproxyapi` (not Docker); config `~/cliproxyapi/config.yaml`, auth files in `~/.cli-proxy-api`.
