@@ -1,6 +1,6 @@
 ---
 name: homelab
-description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, nod, homeassistant, pihole, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
+description: Operate and maintain my homelab hosts and services. Use whenever a task concerns the docker, nod, homeassistant, pve, or vps hosts; Docker Compose services; Tailscale Serve; Cloudflare tunnels; Minecraft hosting; or any homelab deployment, configuration, troubleshooting, or architecture question.
 ---
 
 # Homelab
@@ -78,21 +78,6 @@ Services:
   - Runs as the systemd user unit `cliproxyapi.service` (needs linger for `nico`), listening on `172.19.0.1:8317`, the gateway of Nod's `outbound` Docker network, so the Nod container can reach it (not on `127.0.0.1`, LAN, or public IPv6); Tailscale Serve proxies to the same address. In Nod, use `http://172.19.0.1:8317/v1`. Client API keys are under `access.api-keys`.
   - Update: re-run the installer; it keeps `config.yaml`.
 
-### `rakazo`
-
-Unprivileged LXC 105 on `pve` (pool `agents`, `nesting=1`, `/dev/net/tun` passed through). Dedicated host for Rakazo, because its Claude Code model route needs the API and worker to run from a source checkout as the same OS user as a signed-in `claude` CLI.
-
-Services:
-
-- `rakazo` — Rakazo agent platform; source: <https://github.com/elie222/rakazo>; Tailscale: `https://rakazo.coati-newton.ts.net` (Serve proxies to `127.0.0.1:5173`)
-  - Checkout at a release tag in `/opt/containers/rakazo`, run with `pnpm dev` (the only layout that supports the Claude Code CLI; the published images do not). Node comes from nvm and pnpm from Corepack, both for `nico`.
-  - Runs as the systemd user unit `rakazo.service` (needs linger for `nico`). Its `ExecStartPre` starts Postgres from `infra/compose/docker-compose.yml` plus the `docker-compose.postgres-host.yml` overlay (loopback `127.0.0.1:5433`), so data is in that Compose project's named volumes, not `/srv/rakazo`.
-  - Upstream requires a private `.env` in the checkout for its generated secrets and settings. The model is `PI_DEFAULT_PROVIDER=claude-code` with `PI_DEFAULT_CREDENTIALS=host`. Claude Code is installed in `~/.local/bin` and signed in as `nico` with `claude auth login`. Rakazo refuses Claude Code runs if the server has more than one account.
-  - Signups are disabled. The single account was created with `apps/api/src/cli/bootstrap-owner.ts`; its login is the 1Password item `Rakazo` in the vault `Personal`.
-  - Bot computers use the local image `rakazo/computer:local`, built with `pnpm sandbox:build`.
-  - Health: `curl http://127.0.0.1:3100/internal/health`.
-  - Update: check out the new tag, then `pnpm install --frozen-lockfile`, `pnpm sandbox:build`, and `systemctl --user restart rakazo` (`pnpm dev` runs the migrations). Never use `pnpm compose:down`, because it includes `-v` and deletes the volumes.
-
 ### `homeassistant`
 
 Runs Home Assistant OS.
@@ -108,14 +93,6 @@ Manage Home Assistant over SSH as `root@homeassistant`. No Home Assistant MCP se
 - Run commands in the Home Assistant container with `docker exec homeassistant <command>`.
 - Read logs with `docker logs homeassistant`, because `ha core logs` returns only the last 100 lines.
 - Validate configuration changes with `ha core check` before you restart with `ha core restart`.
-
-### `pihole`
-
-Dedicated Pi-hole host.
-
-Services:
-
-- `pihole`
 
 ### `pve`
 
